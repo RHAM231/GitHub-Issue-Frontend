@@ -23,7 +23,8 @@ body, html {
     height: 100%;
     margin: 0;
     font-size: 16px;
-    font-family: 'Merriweather Sans', sans-serif;
+    /* font-family: 'Merriweather Sans', sans-serif; */
+    font-family: 'Varela Round', sans-serif;
     font-weight: 400;
     line-height: 1.8em;
     color: #232629;
@@ -31,7 +32,7 @@ body, html {
 
 /*Sets the default background color for the website*/
 .wrapper {
-    background: #FFFFFF;
+    background: #f6f8fc;
     overflow: auto;
     min-height: 100%;
 }
@@ -52,7 +53,10 @@ body, html {
 
 /*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
-  background: #000000;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 6px 32px -6px #999;
   margin-top: 0;
   padding:0px;
   position: -webkit-sticky;
@@ -64,12 +68,12 @@ body, html {
 
 /*Style and position the logo*/
 .navbar-brand{
-  color: #E7EAED;
-  height: 56px;
-  width: 56px;
+  color: #000000;
+  height: 80px;
+  width: 160px;
   padding:0px 12px;
   margin: 0px;
-  line-height: 56px;
+  line-height: 80px;
 }
 
 /*Adds margin for the dropdown menu for mobile*/
@@ -77,55 +81,66 @@ body, html {
   margin: 0px 20px;
 }
 
+.nav-link {
+    color:#000000;
+}
+
 /*Styles the navbar links. line-height used to vertically center text*/
-.nav-link{
-  color: #E7EAED;
-  line-height: 40px;
+.link-hover::after{
+  text-decoration: none;
+  color: #000000;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3c4ef1;
+  transition: width .3s;
+  /* line-height: 40px; */
 }
 
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
 items*/
-.nav-link:hover, .navbar-brand:hover,
-.fas:hover, .dropdown-item:hover{
+.link-hover:hover::after,
+.fas:hover{
   color: #000000;
-  background: #9AC4E8;
+  text-decoration: none;
+  /* background: #9AC4E8; */
+  width: 100%;
+  transition: width .3s;
 }
 
-/*Hides Bootstrap's built in elements behind the .fas icon below
-by setting all the height and widths to the same size. This ensures
-a uniform hover color when the toggler is pressed or clicked*/
-.navbar-toggler{
-  margin: 0px 0px;
-  padding: 0px 0px;
-  height: 56px;
-  width: 56px;
-  border: none; /*Border removed to avoid alignment issue*/
+.link-dropdown::after{
+  text-decoration: none;
+  color: #000000;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3c4ef1;
+  transition: width .3s;
 }
 
-/*Hides Bootstrap's built in elements behind the .fas icon below
-by setting all the height and widths to the same size. This ensures
-a uniform hover color when pressed or clicked*/
-.navbar-toggler-icon{
-  height: 56px;
-  width: 56px;
+.link-dropdown:hover::after{
+  color: #000000;
+  text-decoration: none;
+  width: 100%;
+  transition: width .3s;
 }
 
-/*Removes Bootstrap's default blue outline from the toggler*/
-.navbar-toggler:focus,.navbar-toggler:active {
-   outline: none;
-   box-shadow: none;
+.navbar-brand:hover, .nav-link:hover {
+    color: #000000;
+    /* background: #9AC4E8; */
 }
 
-/*Styles the toggler icon for the navbar*/
-.fas{
-  background: #000000;
-  font-size: 24px;
-  line-height: 56px;
-  margin: 0px 0px;
-  height: 56px;
-  width: 56px;
-  vertical-align: middle;
-  color: #E7EAED;
+/* .link-dropdown:hover {
+    color: #000000;
+    border-radius: 3px 3px 3px 3px;
+    background: #3c4ef1;
+} */
+
+.dropdown-item:hover{
+    color: #000000;
+    background: #9AC4E8;
 }
 
 /*Styles the dropdown menu opened by the toggler to match the navbar */
@@ -136,7 +151,97 @@ a uniform hover color when pressed or clicked*/
 /*Sets text color for the drop down items*/
 .dropdown-item{
   color: #E7EAED;
+  text-align: center;
 }
+
+.nav-item{
+    text-align: center;
+}
+
+.navbar-collapse{
+    margin-right: 45%;
+    margin-left: 45%;
+    margin-bottom: 25px;
+}
+
+/**************************************************************************/
+/*----NAVBAR ANIMATED TOGGLER----*/
+/**************************************************************************/
+
+/*Sets color and glow for the middle hamburger toggler bar*/
+.navbar-toggler-icon{
+    background: #000000;
+    /* box-shadow: 0 2px 5px rgba(255,76,250,0.5); (237,234,68,.5) */
+  }
+  
+  /*Sets color and glow for the top and bottom hamburger toggler bars*/
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    background: #000000;
+    /* box-shadow: 0 2px 5px rgba(255,76,250,0.5); (237,234,68,.5) */
+  }
+
+/*Controls sizing and spacing for the container for the toggler icon
+below. Child element is .navbar-toggler-icon.*/
+.navbar-toggler{
+    margin: 0px 10px;
+    padding: 0px 0px;
+    position: relative;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  }
+  
+  /*Creates and styles the center bar on the hamburger toggler icon*/
+  .navbar-toggler-icon{
+    width: 40px;
+    height: 5px;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+  }
+  
+  /*Creates the top and bottom toggler bars*/
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    margin: 0px 0 0 -20px;
+    width: 40px;
+    height: 5px;
+    border-radius: 4px;
+    transition: all .5s ease-in-out;
+  }
+  
+  /*Positions the top and bottom toggler bars*/
+  .navbar-toggler-icon::before {
+    transform: translateY(-14px);
+  }
+  .navbar-toggler-icon::after {
+    transform: translateY(14px);
+  }
+  
+  /*Set's final orientation for the toggler bars after animation. Animation
+  activated by hamburger.js in static/js directory*/
+  .navbar-toggler.open .navbar-toggler-icon {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .navbar-toggler.open .navbar-toggler-icon::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .navbar-toggler.open .navbar-toggler-icon::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+  
+  /*Removes Bootstrap's default outline from the toggler*/
+  .navbar-toggler:focus,.navbar-toggler:active {
+     outline: none;
+     box-shadow: none;
+  }
+  
 
 /**************************************************************************/
 /*PARALLAX CONTENT*/
@@ -510,8 +615,8 @@ stays on the same line with the checkbox*/
 
 /*Sets footer size and color*/
 .footer {
-  background: #000000;
-  height: 100px;
+  background: #3c4ef1;
+  height: 200px;
 }
 
 /*Sets footer text color and centers it*/
@@ -528,7 +633,7 @@ footer .footer-link {
 
 /*Sets the hover effect for the link*/
 footer .footer-link:hover {
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
   background: rgba(255, 100, 0, 0.25);
 }
