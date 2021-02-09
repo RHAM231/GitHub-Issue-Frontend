@@ -175,11 +175,69 @@ items*/
 }
 
 /**************************************************************************/
-/*----MASTER SEARCH FORM----*/
+/*----EXTRA----*/
 /**************************************************************************/
 
 .bottom-buffer{
   margin-top:50px;
+}
+
+/**************************************************************************/
+/*----SEARCH RESULTS BUTTONS----*/
+/**************************************************************************/
+
+/*Hides the default Bootstrap button*/
+.hide-button {
+  display:none;
+}
+
+/*Controls spacing around the GitHub button*/
+.button-spacer{
+  height: 58px;
+}
+
+/*Sets style for the the dark and light versions of the GitHub buttons*/
+.issue-button{
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  height: 58px;
+  width: 250px;
+  border-radius: 7px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.icon-background-color{
+  height: 58px;
+  width: 80px;
+  border-radius: 7px 0px 0px 7px;
+  background: #3c4ef1;
+}
+
+/*Styles and positions the GitHub icon within the button*/
+.fa-bug {
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+
+/*Styles and positions the text within the button*/
+.issue-button>span{
+  font-size: 16px;
+  position: absolute;
+  top: 0%;
+  left: 55%;
+  transform: translate(-50%, 50%);
+}
+
+/*Sets hover effects for both color versions of the button*/
+.issue-button:hover{
+  background: #9AC4E8;
+  color: #000000;
 }
 
 /**************************************************************************/
@@ -484,14 +542,14 @@ button*/
   color: #000000;
 }
 
-/*Styles and positions the GitHub icon within the button*/
+/* Styles and positions the GitHub icon within the button
 .fab {
   font-size: 35px;
   position: absolute;
   top: 50%;
   left: 70%;
   transform: translate(-50%, -50%);
-}
+} */
 
 /*Styles and positions the text within the button*/
 .github-logo>span, .github-logo-light>span {
