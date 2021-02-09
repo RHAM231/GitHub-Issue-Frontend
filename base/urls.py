@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('search-index', views.ms_index, name='ms-index'),
 ]

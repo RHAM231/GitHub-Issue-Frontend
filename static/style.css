@@ -158,10 +158,79 @@ items*/
     text-align: center;
 }
 
-.navbar-collapse{
+/* .navbar-collapse{
     margin-right: 45%;
     margin-left: 45%;
     margin-bottom: 25px;
+} */
+
+/* .nav-link{
+  margin-right: 45%;
+  margin-left: 45%;
+} */
+
+.squash{
+  margin-right: 45%;
+  margin-left: 45%;
+}
+
+/**************************************************************************/
+/*----MASTER SEARCH FORM----*/
+/**************************************************************************/
+
+.bottom-buffer{
+  margin-top:50px;
+}
+
+/**************************************************************************/
+/*----MASTER SEARCH FORM----*/
+/**************************************************************************/
+
+.nav-search-text{
+  color: #000000 important;
+  line-height: 40px;
+  font-size: 18px;
+
+}
+
+.button-search{
+  height: 40px;
+  width: 85px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 7px;
+}
+
+.button-search:hover{
+  outline: none;
+}
+
+.login-out-link{
+  color: #000000;
+  line-height: 40px;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.login-out-link:hover{
+  color: #000000;
+  text-decoration: none;
+}
+
+.ms-form-style{
+  width: 260px;
+  height: 40px;
+  background: #e7e9ec;
+  border: none;
+  border-radius: 7px;
+  margin-right: 20px;
+  padding-left: 10px;
+}
+
+.ms-form-style:focus, .form-style:active{
+  outline: none;
+  box-shadow: 0px 0px 15px rgba(177, 229, 253, 0.6);
 }
 
 /**************************************************************************/
