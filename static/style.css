@@ -177,9 +177,7 @@ items*/
 /*----EXTRA----*/
 /**************************************************************************/
 
-.bottom-buffer{
-  margin-top:50px;
-}
+
 
 /**************************************************************************/
 /*----SEARCH RESULTS BUTTONS----*/
@@ -192,7 +190,7 @@ items*/
 
 .button-container{
   height: 80px;
-  width: 350px;
+  width: 400px;
   /* text-align: center; */
   display: flex;
   justify-content: center;
@@ -200,9 +198,9 @@ items*/
 }
 
 /*Controls spacing around the GitHub button*/
-.button-spacer{
-  height: 58px;
-}
+/* .button-spacer{
+  height: 80px;
+} */
 
 /*Sets style for the the dark and light versions of the GitHub buttons*/
 .issue-button{
@@ -212,7 +210,7 @@ items*/
   cursor: pointer;
   position: relative;
   height: 58px;
-  width: 300px;
+  width: 350px;
   border-radius: 7px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -225,38 +223,48 @@ items*/
 }
 
 /*Styles and positions the GitHub icon within the button*/
-.fa-bug, .fa-folder, .fa-file {
+.fa-bug, .fa-folder, .fa-file,
+.fa-project-diagram {
   font-size: 35px;
   position: absolute;
   color: #FFFFFF;
   top: 50%;
-  left: 13%;
+  left: 11%;
   transform: translate(-50%, -50%);
 }
 
 /*Styles and positions the text within the button*/
 .button-title{
-  font-size: 16px;
+  font-size: 18px;
   position: absolute;
-  top: 2%;
-  left: 45%;
-  transform: translate(-50%, 50%);
+  top: 50%;
+  left: 37%;
+  transform: translate(-50%, -50%);
 }
 
 .button-description{
-  font-size: 12px;
+  font-size: 14px;
   white-space: nowrap;
   position: absolute;
   color: #5e5e5e;
-  top: 30%;
-  left: 77%;
-  transform: translate(-50%, 50%);
+  top: 50%;
+  left: 72%;
+  transform: translate(-50%, -50%);
 }
 
 /*Sets hover effects for both color versions of the button*/
 .issue-button:hover{
   height: 80px;
-  width: 350px;
+  width: 400px;
+}
+
+.issue-button:hover > .icon-background-color{
+  height: 80px;
+  width: 86px;
+}
+
+.issue-button:active{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
 }
 
 /**************************************************************************/
@@ -307,7 +315,7 @@ items*/
 
 .ms-form-style:focus, .form-style:active{
   outline: none;
-  box-shadow: 0px 0px 15px rgba(177, 229, 253, 0.6);
+  box-shadow: 0px 0px 15px rgba(60, 78, 241, 0.6);
 }
 
 /**************************************************************************/
