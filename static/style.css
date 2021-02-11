@@ -100,14 +100,13 @@ body, html {
 
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
 items*/
-.link-hover:hover::after,
+/* .link-hover:hover::after,
 .fas:hover{
   color: #000000;
   text-decoration: none;
-  /* background: #9AC4E8; */
   width: 100%;
   transition: width .3s;
-}
+} */
 
 .link-dropdown::after{
   text-decoration: none;
@@ -191,6 +190,15 @@ items*/
   display:none;
 }
 
+.button-container{
+  height: 80px;
+  width: 350px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*Controls spacing around the GitHub button*/
 .button-spacer{
   height: 58px;
@@ -204,40 +212,51 @@ items*/
   cursor: pointer;
   position: relative;
   height: 58px;
-  width: 250px;
+  width: 300px;
   border-radius: 7px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .icon-background-color{
   height: 58px;
-  width: 80px;
+  width: 75px;
   border-radius: 7px 0px 0px 7px;
   background: #3c4ef1;
 }
 
 /*Styles and positions the GitHub icon within the button*/
-.fa-bug {
+.fa-bug, .fa-folder, .fa-file {
   font-size: 35px;
   position: absolute;
+  color: #FFFFFF;
   top: 50%;
-  left: 18%;
+  left: 13%;
   transform: translate(-50%, -50%);
 }
 
 /*Styles and positions the text within the button*/
-.issue-button>span{
+.button-title{
   font-size: 16px;
   position: absolute;
-  top: 0%;
-  left: 55%;
+  top: 2%;
+  left: 45%;
+  transform: translate(-50%, 50%);
+}
+
+.button-description{
+  font-size: 12px;
+  white-space: nowrap;
+  position: absolute;
+  color: #5e5e5e;
+  top: 30%;
+  left: 77%;
   transform: translate(-50%, 50%);
 }
 
 /*Sets hover effects for both color versions of the button*/
 .issue-button:hover{
-  background: #9AC4E8;
-  color: #000000;
+  height: 80px;
+  width: 350px;
 }
 
 /**************************************************************************/
