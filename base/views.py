@@ -8,3 +8,39 @@ def home(request):
 
 def ms_index(request):
     return render(request, 'base/ms_index.html')
+
+
+def project_list(request):
+    return render(request, 'base/project_list.html')
+
+
+def project_contents(request):
+    return render(request, 'base/project_contents.html')
+
+
+def folder_contents(request):
+    return render(request, 'base/folder_contents')
+
+
+def file_contents(request):
+    return render(request, 'base/file_contents.html')
+
+
+def issue_create(request):
+    return render(request, 'base/issue_create.html')
+
+
+def issue_read(request):
+    return render(request, 'base/issue_read.html')
+
+
+def issue_update(request):
+    return render(request, 'base/issue_update.html')
+
+
+def issue_delete(request):
+    return render(request, 'base/issue_delete.html')
+
+
+def issue_list(request):
+    return render(request, 'base/issue_list.html')
