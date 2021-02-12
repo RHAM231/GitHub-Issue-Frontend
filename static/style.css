@@ -174,10 +174,109 @@ items*/
 }
 
 /**************************************************************************/
-/*----EXTRA----*/
+/*----PROJECT LIST PAGE----*/
 /**************************************************************************/
 
+.project-box{
+  background: #FFFFFF;
+  border-radius: 10px;
+  height: 120px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
+.project-header{
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  width:350px;
+}
+
+.project-header > h4{
+  position: absolute;
+  white-space: nowrap;
+  top: 54%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+
+.project-description{
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width:350px;
+}
+
+.project-description > a{
+  position: absolute;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: -5%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+}
+
+.project-date{
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width:350px;
+}
+
+.project-date > a{
+  position: absolute;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: 0%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+}
+
+.project-button{
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width:350px;
+}
+
+.icon-tab{
+  background: #3c4ef1;
+  border-radius: 7px 0px 0px 0px;
+  height: 60px;
+  width: 70px;
+  position: relative;
+  display: inline-block;
+}
+
+.icon-tab > i{
+  font-size: 35px;
+  position: absolute;
+  color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-issues{
+  height: 40px;
+  width: 85px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 7px;
+}
+
+.issues-count{
+  background-color: #e66802e5;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  font-size: 12;
+  color: #FFFFFF;
+}
 
 /**************************************************************************/
 /*----SEARCH RESULTS BUTTONS----*/
@@ -223,8 +322,7 @@ items*/
 }
 
 /*Styles and positions the GitHub icon within the button*/
-.fa-bug, .fa-folder, .fa-file,
-.fa-project-diagram {
+.issue-button > i {
   font-size: 35px;
   position: absolute;
   color: #FFFFFF;
