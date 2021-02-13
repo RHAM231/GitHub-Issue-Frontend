@@ -6,12 +6,15 @@ def home(request):
     return render(request, 'base/home.html')
 
 
-def ms_index(request):
-    return render(request, 'base/ms_index.html')
+def search_results(request):
+    return render(request, 'base/search_results.html')
 
 
 def project_list(request):
-    return render(request, 'base/project_list.html')
+    context = {
+        'issue_count': 123
+    }
+    return render(request, 'base/project_list.html', context)
 
 
 def project_contents(request):

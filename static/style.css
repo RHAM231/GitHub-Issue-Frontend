@@ -227,7 +227,7 @@ items*/
 
 .project-description{
   width: 300px;
-  top: 60%;
+  top: 62%;
   left: -91%;
   transform: translate(50%, 50%);
 }
@@ -239,54 +239,66 @@ items*/
   transform: translate(50%, 50%);
 }
 
-
-/* .project-date{
-  display: inline-block;
-  position: relative;
-  height: 20px;
-  width:350px;
-}
-
-.project-date > a{
-  position: absolute;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  top: 0%;
-  left: 67%;
-  transform: translate(-50%, -50%);
-} */
-
 .project-button{
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  position: relative;
+  width: 120px;
+  height: 40px;
 }
 
-/* .project-button > button{
+.project-button > a{
   position: absolute;
-  top: -80%;
-  left: 75%;
-  transform: translate(50%, -50%);
-} */
+  top: 30%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.project-button > .issues-count{
+  position: absolute;
+  top: 68%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
 
 .button-issues{
   height: 40px;
   width: 85px;
   background: #3c4ef1;
   color: #FFFFFF;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15), 0 6px 20px 0 rgba(0,0,0,0.15);
   border: none;
   border-radius: 7px;
   padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-issues:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #18b5c0;
+}
+
+.button-issues:focus{
+  outline: none;
+  box-shadow: none;
 }
 
 .issues-count{
-  background-color: #e66802e5;
-  border-radius: 10px;
-  height: 20px;
-  width: 20px;
-  font-size: 12;
+  background-color: #e66902;
+  border-radius: 13px;
+  height: 26px;
+  width: 26px;
+  font-size: 16px;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.count-small{
+  font-size: 12px;
 }
 
 /**************************************************************************/
