@@ -179,6 +179,7 @@ items*/
 
 .project-box{
   background: #FFFFFF;
+  position: relative;
   border-radius: 10px;
   height: 120px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -199,49 +200,6 @@ items*/
   transform: translate(-50%, -50%);
 }
 
-.project-description{
-  display: inline-block;
-  position: relative;
-  height: 20px;
-  width:350px;
-}
-
-.project-description > a{
-  position: absolute;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  top: -5%;
-  left: 67%;
-  transform: translate(-50%, -50%);
-}
-
-.project-date{
-  display: inline-block;
-  position: relative;
-  height: 20px;
-  width:350px;
-}
-
-.project-date > a{
-  position: absolute;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  top: 0%;
-  left: 67%;
-  transform: translate(-50%, -50%);
-}
-
-.project-button{
-  display: inline-block;
-  position: relative;
-  height: 20px;
-  width:350px;
-}
-
 .icon-tab{
   background: #3c4ef1;
   border-radius: 7px 0px 0px 0px;
@@ -260,6 +218,58 @@ items*/
   transform: translate(-50%, -50%);
 }
 
+.icon-tab > a{
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-description{
+  width: 300px;
+  top: 60%;
+  left: -91%;
+  transform: translate(50%, 50%);
+}
+
+.project-date{
+  width: 250px;
+  top: 115%;
+  left: -56%;
+  transform: translate(50%, 50%);
+}
+
+
+/* .project-date{
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width:350px;
+}
+
+.project-date > a{
+  position: absolute;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: 0%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+} */
+
+.project-button{
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+/* .project-button > button{
+  position: absolute;
+  top: -80%;
+  left: 75%;
+  transform: translate(50%, -50%);
+} */
+
 .button-issues{
   height: 40px;
   width: 85px;
@@ -267,6 +277,7 @@ items*/
   color: #FFFFFF;
   border: none;
   border-radius: 7px;
+  padding: 0px 0px 0px 0px;
 }
 
 .issues-count{
