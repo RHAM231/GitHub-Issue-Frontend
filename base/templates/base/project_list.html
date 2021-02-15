@@ -14,7 +14,33 @@
     </div>
   </div>
 
-  <div class="row mb-5">
+  <div class="row mb-4">
+    <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 mx-auto">
+      <div class="project-box">
+        <div class="icon-tab">
+          <i class="fas fa-project-diagram"></i>
+          <a class="project-description">Some description text about the project even more text</a>
+          <a class="project-date text-secondary">Updated December 25, 2021</a>
+        </div>
+        <div class="project-header">
+          <h4><a href="{% url 'project-contents' %}">Project 1</a></h4>
+        </div><br>
+        <div class="row justify-content-end">
+          <div class="project-button">
+            <a href="{% url 'issue-list' %}" class="button-issues">Issues</a>
+            <!-- Resize the number text for numbers greater than 99 -->
+            {% if issue_count > 99 %}
+              <div class="issues-count text-center count-small"><a>{{ issue_count }}</a></div>
+            {% else %}
+              <div class="issues-count text-center"><a>{{ issue_count }}</a></div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
     <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 mx-auto">
       <div class="project-box">
         <div class="icon-tab">

@@ -18,11 +18,14 @@ def project_list(request):
 
 
 def project_contents(request):
-    return render(request, 'base/project_contents.html')
+    context = {
+        'issue_count': 123
+    }
+    return render(request, 'base/project_contents.html', context)
 
 
 def folder_contents(request):
-    return render(request, 'base/folder_contents')
+    return render(request, 'base/folder_contents.html')
 
 
 def file_contents(request):
