@@ -19,7 +19,7 @@ def project_list(request):
 
 def project_contents(request):
     context = {
-        'issue_count': 123
+        'issue_count': 0
     }
     return render(request, 'base/project_contents.html', context)
 
