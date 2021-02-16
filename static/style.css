@@ -218,7 +218,7 @@ items*/
 .icon-tab, 
 .icon-tab-folder-file{
   background: #3c4ef1;
-  border-radius: 7px 0px 0px 0px;
+  border-radius: 10px 0px 0px 0px;
   height: 60px;
   width: 70px;
   position: relative;
@@ -282,7 +282,7 @@ items*/
   width: 85px;
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15), 0 6px 20px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
   border: none;
   border-radius: 7px;
   padding: 0px 0px 0px 0px;
@@ -320,7 +320,7 @@ items*/
 }
 
 /**************************************************************************/
-/*----PROJECT CONTENTS PAGE----*/
+/*----PROJECT AND FOLDER CONTENTS PAGE----*/
 /**************************************************************************/
 
 .folder-file-box{
@@ -350,7 +350,7 @@ items*/
 }
 
 .icon-tab-folder-file{
-  border-radius: 7px 0px 0px 7px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .folder-file-date{
@@ -387,6 +387,53 @@ items*/
   top: 110%;
   left: 69%;
   transform: translate(-50%, -50%);
+}
+
+/**************************************************************************/
+/*----FILE CONTENTS PAGE----*/
+/**************************************************************************/
+
+.file-shadow{
+  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+}
+
+.file-box{
+  background: #FFFFFF;
+  position: relative;
+  border-radius: 0px 10px 0px 10px;
+  height: 60px;
+  box-shadow: 0 5px 9px 0 #00000033, 0 4px 12px 0 #00000033;
+}
+
+.file-subheader{
+  background: #FFFFFF;
+  position: relative;
+  height: 50px;
+  box-shadow: 9px 5px 9px -6px #00000033, 0 4px 12px -6px #00000033;
+}
+
+.file-contents{
+  background: #FFFFFF;
+  position: relative;
+  border-radius: 10px 0px 10px 0px;
+  box-shadow: 9px 5px 9px -6px #00000033, 0 4px 12px -6px #00000033;
+}
+
+.index{
+  font-size: 14px;
+  color: #7e7e7e;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50px;
+  height: 20px;
+  text-align: right
+}
+
+.code-text{
+  color: #000000;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 20px;
 }
 
 /**************************************************************************/
