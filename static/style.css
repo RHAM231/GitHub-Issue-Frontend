@@ -400,7 +400,7 @@ items*/
 .file-box{
   background: #FFFFFF;
   position: relative;
-  border-radius: 0px 10px 0px 10px;
+  border-radius: 10px 10px 0px 0px;
   height: 60px;
   box-shadow: 0 5px 9px 0 #00000033, 0 4px 12px 0 #00000033;
 }
@@ -415,8 +415,8 @@ items*/
 .file-contents{
   background: #FFFFFF;
   position: relative;
-  border-radius: 10px 0px 10px 0px;
-  box-shadow: 9px 5px 9px -6px #00000033, 0 4px 12px -6px #00000033;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 5px 9px 0 #00000033, 0 4px 12px 0 #00000033;
 }
 
 .index{
@@ -434,6 +434,7 @@ items*/
   padding-left: 10px;
   padding-right: 10px;
   height: 20px;
+  white-space: nowrap;
 }
 
 /**************************************************************************/
