@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import IssueSearchForm
 
 
 # Create your views here.
@@ -49,4 +50,8 @@ def issue_delete(request):
 
 
 def issue_list(request):
-    return render(request, 'base/issue_list.html')
+    form = IssueSearchForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'base/issue_list.html', context)

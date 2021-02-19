@@ -13,32 +13,44 @@
     </div>
   </div>
 
-  <div class="row mt-4 mb-5">
-    <div class="col-10 col-offset-1 mx-auto">
-      <div class="issues-header">
-        <div class="row mx-0 border-bottom">
-          <div class="col-10">
-            filter search bar
-          </div>
-          <div class="col-2">
-            <div class="float-right">
-              button
+
+
+  <form action="/TBD/" method="GET"></form>
+    {% csrf_token %}
+    <div class="row mt-4 mb-5">
+      <div class="col-10 col-offset-1 mx-auto">
+        <div class="issues-header">
+          <div class="row mx-0 border-bottom header-top">
+            <div class="col-2 my-auto mx-auto">
+              {{ form.filters}}
+            </div>
+            <!-- <div class="col-9 my-auto mx-auto">
+              {{ form.search }}
+            </div> -->
+            <div class="col-2 my-auto">
+              <div class="float-right">
+                <div class="">
+                  <a href="{% url 'issue-list' %}" class="new-issue-button">New Issue</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row mx-0">
-          <div class="col-6">
-            checkbox, open issue, closed
-          </div>
-          <div class="col-6 float-right">
-            <div class="float-right">
-              author, projects, sort
+          <div class="row mx-0 header-bottom">
+            <div class="col-6 my-auto">
+              {{form.select_all}}{{ form.open_closed }}
+            </div>
+            <div class="col-6 my-auto float-right">
+              <div class="float-right">
+                {{ form.author }}{{ form.projects }}{{ form.sort }}
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
+
+
 
   <div class="row mt-4 dynamic-center">
 
