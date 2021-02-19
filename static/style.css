@@ -196,6 +196,29 @@ items*/
   box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
+.header-top, .header-bottom{
+  height: 60px;
+}
+
+.header-bottom{
+  
+}
+
+.new-issue-button{
+  height: 40px;
+  width: 120px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 /**************************************************************************/
 /*----PROJECT LIST PAGE----*/
 /**************************************************************************/
@@ -302,13 +325,13 @@ items*/
   text-align: center;
 }
 
-.button-issues:hover{
+.button-issues:hover, .new-issue-button:hover{
   text-decoration: none;
   color: #FFFFFF;
   background: #18b5c0;
 }
 
-.button-issues:focus{
+.button-issues:focus, .new-issue-button:focus{
   outline: none;
   box-shadow: none;
 }
