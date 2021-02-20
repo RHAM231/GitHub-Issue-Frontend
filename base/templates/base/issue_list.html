@@ -18,7 +18,7 @@
   <form action="/TBD/" method="GET"></form>
     {% csrf_token %}
     <div class="row mt-4 mb-5">
-      <div class="col-10 col-offset-1 mx-auto">
+      <div class="col-md-10 col-md-offset-1 col-sm-12 mx-auto">
         <div class="issues-header">
           <div class="row mx-0 border-bottom header-top">
             <div class="col-12 my-auto mx-auto" style="display: flex;">
@@ -37,107 +37,65 @@
             </div> -->
           </div>
           <div class="row mx-0 header-bottom">
-            <div class="col-6 my-auto">
-              {{ form.select_all }}
-              {% for button in form.open_closed %}
-                {{ button }}
-              {% endfor %}
+            <div class="col-md-4 col-sm-12 my-auto">
+              <a class="vertical-align pl-3 pr-2">{{ form.select_all }}</a>
+              <!-- {% for button in form.open_closed %}
+                <a>{{ button }}</a>
+              {% endfor %} -->
+              <i class="fas fa-bug"></i>
+              <a>{{ form.open_closed.0 }}</a>
+              <i class="pl-2 far fa-check-circle"></i>
+              <a>{{ form.open_closed.1 }}</a>
             </div>
-            <div class="col-6 my-auto float-right">
-              <div class="float-right">
-                {{ form.author }}{{ form.projects }}{{ form.sort }}
+            <div class="col-md-8 col-sm-12 my-auto">
+              <div class="issue-dropdown-filters">
+                <a>{{ form.author }}{{ form.projects }}{{ form.sort }}</a>
               </div>
             </div>
           </div>
         </div>
+        <div class="issues-container py-3">
+
+          <div class="col-12">
+
+            <div class="issue-row py-auto my-3">
+              <div class="col-12 px-0">
+                <div class="issue-tab">
+                  <a class="check-center pl-3 pr-2">{{ form.select_all }}</a>
+                  <i class="fas fa-bug"></i>
+                </div>
+                <b><a class="pl-2" href="">Issue # 1</a></b>
+              </div>
+              <div class="col-12 px-0">
+                <a class="pl-5 sub-date">#1 Opened 7 days ago by User</a>
+              </div>
+            </div>
+
+            <div class="issue-row py-auto my-3">
+              <div class="col-12 px-0">
+                <div class="issue-tab">
+                  <a class="check-center pl-3 pr-2">{{ form.select_all }}</a>
+                  <i class="fas fa-bug"></i>
+                </div>
+                <b><a class="pl-2" href="">Issue # 1</a></b>
+              </div>
+              <div class="col-12 px-0">
+                <a class="pl-5 sub-date">#1 Opened 7 days ago by User</a>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div class="issues-footer py-3 mb-3">
+
+        </div>
+
       </div>
     </div>
   </form>
-
-
-
-  <div class="row mt-4 dynamic-center">
-
-    <div class="col-lg-4 col-md-10 col-sm-10">
-      <div class="row d-flex justify-content-center">
-        <div class="button-container">
-          <a class="button-spacer" href="">
-            <input class="hide-button" type="button" name="" id="issue_id">
-            <label class="issue-button" for="issue_id">
-              <span class="button-title">Issue # 1</span>
-              <span class="button-description">Project: Project 1</span>
-              <div class="icon-background-color"></div>
-              <i class="fas fa-bug"></i>
-            </label>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-10 col-sm-10">
-      <div class="row d-flex justify-content-center">
-        <div class="button-container">
-          <a class="button-spacer" href="">
-            <input class="hide-button" type="button" name="" id="issue_id">
-            <label class="issue-button" for="issue_id">
-              <span class="button-title">Issue # 2</span>
-              <span class="button-description">Project: Project 1</span>
-              <div class="icon-background-color"></div>
-              <i class="fas fa-bug"></i>
-            </label>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-10 col-sm-10">
-      <div class="row d-flex justify-content-center">
-        <div class="button-container">
-          <a class="button-spacer" href="">
-            <input class="hide-button" type="button" name="" id="issue_id">
-            <label class="issue-button" for="issue_id">
-              <span class="button-title">Issue # 2</span>
-              <span class="button-description">Project: Project 1</span>
-              <div class="icon-background-color"></div>
-              <i class="fas fa-bug"></i>
-            </label>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-10 col-sm-10">
-      <div class="row d-flex justify-content-center">
-        <div class="button-container">
-          <a class="button-spacer" href="">
-            <input class="hide-button" type="button" name="" id="issue_id">
-            <label class="issue-button" for="issue_id">
-              <span class="button-title">Issue # 2</span>
-              <span class="button-description">Project: Project 1</span>
-              <div class="icon-background-color"></div>
-              <i class="fas fa-bug"></i>
-            </label>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-10 col-sm-10">
-      <div class="row d-flex justify-content-center">
-        <div class="button-container">
-          <a class="button-spacer" href="">
-            <input class="hide-button" type="button" name="" id="issue_id">
-            <label class="issue-button" for="issue_id">
-              <span class="button-title">Issue # 3</span>
-              <span class="button-description">Project: Project 1</span>
-              <div class="icon-background-color"></div>
-              <i class="fas fa-bug"></i>
-            </label>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <div class="row mb-4"></div>
 </div>
