@@ -200,9 +200,13 @@ items*/
   height: 60px;
 }
 
-.header-bottom{
-  
+.inline{
+  display: inline-block;
 }
+
+/* .header-bottom{
+  
+} */
 
 .new-issue-button{
   height: 40px;
@@ -219,14 +223,38 @@ items*/
   text-align: center;
 }
 
+.form-search{
+  /* display: block; */
+  /* overflow: hidden; */
+  /* width: 100%; */
+  /* margin-left: none; */
+  /* overflow: hidden; */
+  /* flex-grow: 100; */
+  width: calc(100% - 240px);
+}
+
+.issue-test{
+  width: 140px;
+}
+
+.form-filter{
+  /* float: left; */
+  /* display: block; */
+  width: 100px;
+}
+
 .issue-search{
   width: 100%;
+  /* overflow: hidden; */
+  /* flex-grow: 100; */
+  /* width: calc(100% - 120px); */
   height: 40px;
   background: #e7e9ec;
   border: none;
   border-radius: 0px 7px 7px 0px;
   margin-right: 20px;
   padding-left: 10px;
+  /* margin-left: -5px; */
 }
 
 .issue-search:focus, .issue-search:active{
@@ -239,13 +267,41 @@ items*/
   width: 100px;
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  box-shadow: -3px 8px 12px 0 rgba(0,0,0,0.15);
   border: none;
   border-radius: 7px 0px 0px 7px;
 }
 
+.filter-field > option{
+  background: #FFFFFF;
+  margin: 0 auto;
+  color: #000000;
+  border-bottom: #000000;
+}
+
+.filter-field > option:hover{
+  background:chartreuse;
+}
+
 .filter-field:focus{
   outline:none;
+}
+
+#id_author, #id_projects, #id_sort{
+  background: #e7e9ec;
+  color: #000000;
+  box-shadow: none;
+}
+
+#id_projects{
+  border-radius: 0px;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-color: #cecece;
+}
+
+#id_sort{
+  border-radius: 0px 7px 7px 0px;
 }
 
 /**************************************************************************/

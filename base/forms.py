@@ -11,21 +11,33 @@ class MasterSearchForm(forms.Form):
 
 
 FILTER_CHOICES = [
+    ('title', 'Filters'),
     ('open_issues', 'Open Issues'),
     ('closed_issues', 'Closed Issues'),
     ('your_issues', 'Your Issues'),
 ]
 
+OPEN_CLOSED_CHOICES = [
+    ('open', 'Open'),
+    ('closed', 'Closed'),
+]
+
+AUTHOR_CHOICES = [
+    ('title', 'Author'),
+    ('project1', 'Project1'),
+]
+
+PROJECT_CHOICES = [
+    ('title', 'Projects'),
+    ('project1', 'Project1'),
+]
+
 SORT_CHOICES = [
+    ('title', 'Sort'),
     ('newest', 'Newest'),
     ('oldest', 'Oldest'),
     ('recently_updated', 'Recently Updated'),
     ('least_recently_updated', 'Least Recently Updated'),
-]
-
-OPEN_CLOSED_CHOICES = [
-    ('open', 'Open'),
-    ('closed', 'Closed'),
 ]
 
 
@@ -37,7 +49,7 @@ class IssueSearchForm(forms.Form):
         ))
     filters = forms.CharField(
         required=False, 
-        widget=forms.SelectWithDisabled(
+        widget=forms.Select(
             attrs={'class':'filter-field'},
             choices=FILTER_CHOICES))
     select_all = forms.BooleanField(
@@ -47,11 +59,17 @@ class IssueSearchForm(forms.Form):
         widget=forms.RadioSelect(attrs={'class':'test'}))
     author = forms.CharField(
         required=False, 
-        widget=forms.Select(choices=FILTER_CHOICES))
+        widget=forms.Select(
+            attrs={'class':'filter-field'},
+            choices=AUTHOR_CHOICES))
     projects = forms.CharField(
         required=False, 
-        widget=forms.Select(choices=FILTER_CHOICES))
+        widget=forms.Select(
+            attrs={'class':'filter-field'},
+            choices=PROJECT_CHOICES))
     sort = forms.CharField(
         required=False, 
-        widget=forms.Select(choices=SORT_CHOICES))
+        widget=forms.Select(
+            attrs={'class':'filter-field'},
+            choices=SORT_CHOICES))
     
