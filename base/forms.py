@@ -88,7 +88,7 @@ class IssueCreateForm(forms.Form):
     title = forms.CharField(
         label='Title',
         widget=forms.TextInput(
-            attrs={'placeholder':'Issue ...', 'class': 'issue-title'}
+            attrs={'placeholder':'Issue ...'}
         ))
     project_associate = forms.CharField(
         required=False, 
@@ -108,4 +108,5 @@ class IssueCreateForm(forms.Form):
     comment = forms.CharField(
         required=False,
         label='Comment',
-        widget=forms.Textarea())
+        widget=forms.Textarea(
+            attrs={'placeholder':'Description ...'}))

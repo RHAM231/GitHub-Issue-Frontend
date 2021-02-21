@@ -411,9 +411,13 @@ items*/
   border-radius: 25px;
 }
 
+.user-title{
+  line-height: 50px;
+  color: #000000;
+}
+
 .issue-title-label{
   font-size: 20px;
-  /* font-weight: bold; */
 }
 
 #id_title{
@@ -421,6 +425,8 @@ items*/
   width: 100%;
   border: 1px solid;
   border-color: #777777;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #id_title:focus, #id_comment:focus{
@@ -459,6 +465,8 @@ items*/
   border-radius: 7px;
   width: 100%;
   outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .form-button{
