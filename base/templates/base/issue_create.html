@@ -17,26 +17,35 @@
         <div class="form-box py-3">
           <div class="col-10 mx-auto">
             
+            <div class="row my-2">
+              <div class="user-box">
+                <!-- <img class="user-image" src="{{ model_name.0.field_name.url }}"> -->
+                <img class="user-image" src="{% static 'images/user.jpg' %}">
+              </div>
+            </div>
+
+            <div class="issue-title-label row my-1">
+              <a>{{ form.title.label }}</a>
+            </div>
             <div class="row">
                 {{ form.title }}
             </div>
 
             <div class="row my-2">
-              <a>Associate Issue to Projects Folders or Files</a>
+              <a>Associate Issue to Projects, Folders, or Files</a>
             </div>
 
             <div class="row my-2" style="display: flex;">
-            {% for field in form %}
-              {% if '_associate' in field.name %}
-              <!-- <div class="row"> -->
-                <!-- <div class="col-4"> -->
+              {% for field in form %}
+                {% if '_associate' in field.name %}
                   <a class="associate-tag">{{ field }}</a>
-                <!-- </div> -->
-              <!-- </div> -->
-              {% endif %}
-            {% endfor %}
+                {% endif %}
+              {% endfor %}
             </div>
 
+            <div class="row">
+              {{ form.comment.label }}
+            </div>
             <div class="row">
                 {{ form.comment }}
             </div>

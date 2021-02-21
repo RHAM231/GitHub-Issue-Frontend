@@ -86,9 +86,9 @@ class IssueSearchForm(forms.Form):
 
 class IssueCreateForm(forms.Form):
     title = forms.CharField(
-        required=False,
+        label='Title',
         widget=forms.TextInput(
-            attrs={'placeholder':'Title', 'class': 'issue-title'}
+            attrs={'placeholder':'Issue ...', 'class': 'issue-title'}
         ))
     project_associate = forms.CharField(
         required=False, 
@@ -107,4 +107,5 @@ class IssueCreateForm(forms.Form):
             choices=FILE_CHOICES))
     comment = forms.CharField(
         required=False,
-        widget=forms.TextInput)
+        label='Comment',
+        widget=forms.Textarea())
