@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import IssueSearchForm
+from .forms import IssueSearchForm, IssueCreateForm
 
 
 # Create your views here.
@@ -34,7 +34,11 @@ def file_contents(request):
 
 
 def issue_create(request):
-    return render(request, 'base/issue_create.html')
+    form = IssueCreateForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'base/issue_create.html', context)
 
 
 def issue_read(request):

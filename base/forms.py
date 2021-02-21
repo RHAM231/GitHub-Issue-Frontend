@@ -32,6 +32,16 @@ PROJECT_CHOICES = [
     ('project1', 'Project1'),
 ]
 
+FOLDER_CHOICES = [
+    ('title', 'Folders'),
+    ('folder1', 'Folder1'),
+]
+
+FILE_CHOICES = [
+    ('title', 'Files'),
+    ('file1', 'File1'),
+]
+
 SORT_CHOICES = [
     ('title', 'Sort'),
     ('newest', 'Newest'),
@@ -72,4 +82,29 @@ class IssueSearchForm(forms.Form):
         widget=forms.Select(
             attrs={'class':'filter-field'},
             choices=SORT_CHOICES))
-    
+
+
+class IssueCreateForm(forms.Form):
+    title = forms.CharField(
+        required=False,
+        widget=forms.TextInput(
+            attrs={'placeholder':'Title', 'class': 'issue-title'}
+        ))
+    project_associate = forms.CharField(
+        required=False, 
+        widget=forms.Select(
+            attrs={'class':'associate-field'},
+            choices=PROJECT_CHOICES))
+    folder_associate = forms.CharField(
+        required=False, 
+        widget=forms.Select(
+            attrs={'class':'associate-field'},
+            choices=FOLDER_CHOICES))
+    file_associate = forms.CharField(
+        required=False, 
+        widget=forms.Select(
+            attrs={'class':'associate-field'},
+            choices=FILE_CHOICES))
+    comment = forms.CharField(
+        required=False,
+        widget=forms.TextInput)

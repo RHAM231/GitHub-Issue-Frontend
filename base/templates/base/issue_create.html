@@ -8,6 +8,51 @@
   <div class="row mt-5 mb-5"></div>
 
   
+  <form action="/TBD/" method="POST"></form>
+    {% csrf_token %}
+
+    <div class="row mt-4 mb-5">
+      <div class="col-8 col-offset-2 mx-auto">
+
+        <div class="form-box py-3">
+          <div class="col-10 mx-auto">
+            
+            <div class="row">
+                {{ form.title }}
+            </div>
+
+            <div class="row my-2">
+              <a>Associate Issue to Projects Folders or Files</a>
+            </div>
+
+            <div class="row my-2" style="display: flex;">
+            {% for field in form %}
+              {% if '_associate' in field.name %}
+              <!-- <div class="row"> -->
+                <!-- <div class="col-4"> -->
+                  <a class="associate-tag">{{ field }}</a>
+                <!-- </div> -->
+              <!-- </div> -->
+              {% endif %}
+            {% endfor %}
+            </div>
+
+            <div class="row">
+                {{ form.comment }}
+            </div>
+
+            <div class="row d-flex justify-content-center py-3">
+              <input type="submit" value="Submit New Issue" class="form-button">
+            </div>
+        
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </form>
 
 </div>
 
