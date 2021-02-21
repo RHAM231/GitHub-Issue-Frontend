@@ -492,6 +492,54 @@ items*/
 }
 
 /**************************************************************************/
+/*----ISSUE READ PAGE----*/
+/**************************************************************************/
+
+.delete-button{
+  height: 40px;
+  width: 120px;
+  background: #d60000;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.delete-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  /* background: #18b5c0; */
+}
+
+.delete-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.close-button{
+  height: 40px;
+  width: 120px;
+  background: #0f9c2e;
+  color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.close-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  /* background: #18b5c0; */
+}
+
+.close-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+/**************************************************************************/
 /*----PROJECT LIST PAGE----*/
 /**************************************************************************/
 
