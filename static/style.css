@@ -422,6 +422,29 @@ items*/
   text-align: center;
 }
 
+.form-button-cancel{
+  height: 40px;
+  width: 160px;
+  background: #fdfdfd;
+  color: #b90000;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.form-button-cancel:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #b90000;
+}
+
+.form-button-cancel:focus{
+  outline: none;
+  box-shadow: none;
+}
+
 /**************************************************************************/
 /*----ISSUES CREATE PAGE----*/
 /**************************************************************************/

@@ -49,7 +49,11 @@ def issue_read(request):
 
 
 def issue_update(request):
-    return render(request, 'base/issue_update.html')
+    form = IssueCreateForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'base/issue_update.html', context)
 
 
 def issue_delete(request):
