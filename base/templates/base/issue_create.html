@@ -37,7 +37,7 @@
             <div class="row my-2">
               <a>Associate Issue to Project, Folder, or File</a>
             </div>
-            <div class="row my-2" style="display: flex;">
+            <div class="row my-2 d-flex">
               {% for field in form %}
                 {% if '_associate' in field.name %}
                   <a class="associate-tag">{{ field }}</a>

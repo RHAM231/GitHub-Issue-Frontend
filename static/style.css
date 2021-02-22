@@ -390,6 +390,39 @@ items*/
 }
 
 /**************************************************************************/
+/*----ISSUES READ PAGE----*/
+/**************************************************************************/
+
+.issue-open, .issue-closed{
+  background: #3c4ef1;
+  color: #ffffff;
+  width: 90px;
+  height: 30px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.issue-closed{
+  background: #d60000;
+  width: 100px;
+}
+
+.edit-issue-button{
+  height: 40px;
+  width: 80px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/**************************************************************************/
 /*----ISSUES CREATE PAGE----*/
 /**************************************************************************/
 
@@ -520,8 +553,8 @@ items*/
 .close-button{
   height: 40px;
   width: 120px;
-  background: #0f9c2e;
-  color: #000000;
+  background: #3c4ef1;
+  color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
   border: none;
   border-radius: 7px;

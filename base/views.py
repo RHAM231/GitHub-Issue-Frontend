@@ -42,7 +42,10 @@ def issue_create(request):
 
 
 def issue_read(request):
-    return render(request, 'base/issue_read.html')
+    context = {
+        'condition': True,
+    }
+    return render(request, 'base/issue_read.html', context)
 
 
 def issue_update(request):
