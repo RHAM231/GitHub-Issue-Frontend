@@ -78,7 +78,7 @@ body, html {
 
 /*Adds margin for the dropdown menu for mobile*/
 .navbar-collapse{
-  margin: 0px 20px;
+  margin: 0px 20px 20px 20px;
 }
 
 .nav-link {
@@ -100,13 +100,13 @@ body, html {
 
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
 items*/
-/* .link-hover:hover::after,
+.link-hover:hover::after,
 .fas:hover{
   color: #000000;
   text-decoration: none;
   width: 100%;
   transition: width .3s;
-} */
+}
 
 .link-dropdown::after{
   text-decoration: none;
@@ -139,17 +139,17 @@ items*/
 
 .dropdown-item:hover{
     color: #000000;
-    background: #9AC4E8;
+    background: #18b5c0;
 }
 
 /*Styles the dropdown menu opened by the toggler to match the navbar */
 .dropdown-menu{
-  background: #000000;
+  background: #ffffff;
 }
 
 /*Sets text color for the drop down items*/
 .dropdown-item{
-  color: #E7EAED;
+  color: #000000;
   text-align: center;
 }
 
@@ -171,6 +171,38 @@ items*/
 .squash{
   margin-right: 45%;
   margin-left: 45%;
+}
+
+/**************************************************************************/
+/*----NAVBAR CUSTOM BREAKPOINT----*/
+/**************************************************************************/
+
+/*Let's customize the navbar breakpoint to accomodate all our links. We
+use navbar-expand-custom in base.html and then set the breakpoint to a
+value of our choosing. Then we re-apply some CSS to the custom class to
+keep from breaking the navbar.*/
+@media (min-width: 1325px){
+  .navbar-expand-custom {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+      flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-nav .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+  }
+  .navbar-expand-custom .navbar-collapse {
+      display: flex!important;
+  }
+  .navbar-expand-custom .navbar-toggler {
+      display: none;
+  }
+  .navbar-expand-custom .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
 }
 
 /**************************************************************************/
@@ -443,6 +475,17 @@ items*/
 .form-button-cancel:focus{
   outline: none;
   box-shadow: none;
+}
+
+.delete-icon{
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  background: #c90000;
 }
 
 /**************************************************************************/
