@@ -51,6 +51,7 @@ body, html {
 /*HEADER*/
 /**************************************************************************/
 
+
 /*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
   background: #FFFFFF;
@@ -66,18 +67,34 @@ body, html {
   z-index: 9;
 }
 
-.nav-search-mobile{
+.nav-search-collapse{
+  height: 80px;
+  line-height: 80px;
+}
+
+.nav-search-icon{
   width: 40px;
   height: 80px;
-  padding-top: 25px;
+  /* padding-top: 25px;
   text-align: center;
   cursor: pointer;
   background: #ffffff;
-  border: none;
+  border: none; */
+  position: relative;
 }
 
 .nav-search-icon > i{
-  font-size: 30px;
+  font-size: 26px;
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  top: -35%;
+  left: -20%;
+  transform: translate(-50%, 50%);
+}
+
+.hide{
+  display: none;
 }
 
 /*Style and position the logo*/
@@ -92,7 +109,11 @@ body, html {
 
 /*Adds margin for the dropdown menu for mobile*/
 .navbar-collapse{
-  margin: 0px 20px 20px 20px;
+  margin: 0px 20px 0px 20px;
+}
+
+.navbar > .show{
+  margin: 0px 20px 30px 20px;
 }
 
 .nav-link {
@@ -114,8 +135,7 @@ body, html {
 
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
 items*/
-.link-hover:hover::after,
-.fas:hover{
+.link-hover:hover::after{
   color: #000000;
   text-decoration: none;
   width: 100%;
@@ -216,6 +236,12 @@ keep from breaking the navbar.*/
   }
   .navbar-expand-custom .navbar-nav .dropdown-menu {
     position: absolute;
+  }
+}
+
+@media (max-width: 1325px) {
+  .nav-search{
+    display: none;
   }
 }
 

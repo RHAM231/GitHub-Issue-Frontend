@@ -1,12 +1,10 @@
 const menuBtn = document.querySelector('.navbar-toggler');
 var navLinks = document.querySelectorAll('.nav-link');
-console.log(navLinks)
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
     for (var i = 0; i < navLinks.length; ++i) {
-      console.log(i)
       navLinks[i].classList.add('squash');
     };
     menuOpen = true;
