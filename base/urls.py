@@ -14,4 +14,5 @@ urlpatterns = [
     path('issue-update', views.issue_update, name='issue-update'),
     path('issue-delete', views.issue_delete, name='issue-delete'),
     path('issue-list', views.issue_list, name='issue-list'),
+    path('about', views.about, name='about'),
 ]

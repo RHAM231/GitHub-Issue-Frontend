@@ -66,3 +66,7 @@ def issue_list(request):
         'form': form,
     }
     return render(request, 'base/issue_list.html', context)
+
+
+def about(request):
+    return render(request, 'base/about.html')
