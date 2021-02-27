@@ -43,7 +43,7 @@ def folder_contents(request):
 def file_contents(request):
     context = {
         'title': 'Projects',
-        'issues-present': 3,
+        'issues_present': 3,
     }
     return render(request, 'base/file_contents.html', context)
 

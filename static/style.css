@@ -817,7 +817,7 @@ keep from breaking the navbar.*/
   box-shadow: none;
 }
 
-.issues-count{
+.issues-count, .issues-count-btn{
   background-color: #e66902;
   border-radius: 13px;
   height: 26px;
@@ -827,6 +827,16 @@ keep from breaking the navbar.*/
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.issues-count-btn:hover{
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
+}
+
+.issues-count-btn:focus{
+  box-shadow: none;
 }
 
 .count-small{
