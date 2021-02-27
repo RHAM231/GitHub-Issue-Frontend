@@ -1,5 +1,8 @@
 from django import forms
 from .widgets import SelectWithDisabled
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+
 
 class MasterSearchForm(forms.Form):
     master_search = forms.CharField(
@@ -110,3 +113,11 @@ class IssueCreateForm(forms.Form):
         label='Comment',
         widget=forms.Textarea(
             attrs={'placeholder':'Description ...'}))
+
+
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
