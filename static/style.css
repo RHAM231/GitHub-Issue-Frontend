@@ -172,8 +172,8 @@ items*/
 } */
 
 .dropdown-item:hover{
-    color: #000000;
-    background: #18b5c0;
+    color: #ffffff;
+    background: #3c4ef1;
 }
 
 /*Styles the dropdown menu opened by the toggler to match the navbar */
@@ -940,6 +940,27 @@ keep from breaking the navbar.*/
   /* box-shadow: 3px 3px 6px -3px rgba(0,0,0,0.2); */
 }
 
+.code-issue{
+  /* background: #e66902; */
+  background: #e60202;
+  border-radius: 17px;
+}
+
+.code-issue-count{
+  background: #e66902;
+  border-radius: 17px;
+  color: #ffffff;
+}
+
+.issue-present{
+  font-size: 14px;
+  padding-left: 22px;
+  padding-right: 0px;
+  width: 50px;
+  height: 20px;
+  text-align: center
+}
+
 .index{
   font-size: 14px;
   color: #7e7e7e;
@@ -1072,6 +1093,16 @@ keep from breaking the navbar.*/
 
 }
 
+.dummy{
+  background: #3c4ef1;
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  line-height: 400px;
+  color: #ffffff;
+  font-size: 250px;
+}
+
 .button-search{
   height: 40px;
   width: 85px;
@@ -1121,6 +1152,13 @@ keep from breaking the navbar.*/
 /**************************************************************************/
 /*----ABOUT PAGE----*/
 /**************************************************************************/
+
+.logo-box{
+  width: 120px;
+  height: 100px;
+  margin: 20px 20px;
+  line-height: 100px;
+}
 
 .aws-resize{
   width: 80%;
