@@ -3,31 +3,38 @@
 /**************************************************************************/
 
 /*
-WEBSITE BODY, FONT, WRAPPER, BORDERS
+WEBSITE BODY, FONT, WRAPPER
+CURRENT PATH LINKS
 HEADER
-PARALLAX CONTENT
-LINK BUTTON, FORM SUBMIT BUTTON
-CUSTOM GITHUB BUTTON
-ICONS
-CONTACT ME PAGE
-CHECKLIST PAGE
+  NAVBAR
+  NAVBAR CUSTOM BREAKPOINT
+  NAVBAR ANIMATED TOGGLER
+BUTTONS
+BASE PAGES
+  ABOUT
+  HOME
+  SEARCH RESULTS
+PROJECT/FOLDER/FILE PAGES
+  PROJECT CONTENTS
+  PROJECT LIST
+  FOLDER CONTENTS
+  FILE CONTENTS
+ISSUE PAGES
+  ISSUE CREATE
+  ISSUE READ
+  ISSUE UPDATE
+  ISSUE DELETE
+  ISSUE LIST
+USER PAGES
+  LOGIN
+  LOGOUT
+  PROFILE
+  REGISTER
 FOOTER
 */
 
 /**************************************************************************/
-/*USERS*/
-/**************************************************************************/
-
-.content-section {
-  background: #ffffff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
-}
-
-/**************************************************************************/
-/*WEBSITE BODY, FONT, WRAPPER, BORDERS*/
+/*WEBSITE BODY, FONT, WRAPPER*/
 /**************************************************************************/
 
 /*Sets the default font style for the website*/
@@ -53,15 +60,26 @@ body, html {
   overflow-x: hidden;
 }
 
-/*Sets the border dividers to a custom color*/
-.border-custom {
-  border-top: 1px solid #CFCFCF;
+/**************************************************************************/
+/*CURRENT PATH LINKS*/
+/**************************************************************************/
+
+.current-path{
+  font-size: 22px;
+}
+
+.link-divider{
+  font-size: 22px;
+  font-weight: bold;
 }
 
 /**************************************************************************/
 /*HEADER*/
 /**************************************************************************/
 
+/**************************************************************************/
+/*----NAVBAR----*/
+/**************************************************************************/
 
 /*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
@@ -274,16 +292,406 @@ keep from breaking the navbar.*/
 }
 
 /**************************************************************************/
-/*----CURRENT PATH LINKS----*/
+/*----NAVBAR ANIMATED TOGGLER----*/
 /**************************************************************************/
 
-.current-path{
-  font-size: 20px;
+/*Sets color and glow for the middle hamburger toggler bar*/
+.navbar-toggler-icon{
+  background: #000000;
 }
 
-.link-divider{
-  font-size: 20px;
-  font-weight: bold;
+/*Sets color and glow for the top and bottom hamburger toggler bars*/
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  background: #000000;
+}
+
+/*Controls sizing and spacing for the container for the toggler icon
+below. Child element is .navbar-toggler-icon.*/
+.navbar-toggler{
+  margin: 0px 10px;
+  padding: 0px 0px;
+  position: relative;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+/*Creates and styles the center bar on the hamburger toggler icon*/
+.navbar-toggler-icon{
+  width: 40px;
+  height: 5px;
+  border-radius: 4px;
+  transition: all .5s ease-in-out;
+}
+
+/*Creates the top and bottom toggler bars*/
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  margin: 0px 0 0 -20px;
+  width: 40px;
+  height: 5px;
+  border-radius: 4px;
+  transition: all .5s ease-in-out;
+}
+
+/*Positions the top and bottom toggler bars*/
+.navbar-toggler-icon::before {
+  transform: translateY(-14px);
+}
+.navbar-toggler-icon::after {
+  transform: translateY(14px);
+}
+
+/*Set's final orientation for the toggler bars after animation. Animation
+activated by hamburger.js in static/js directory*/
+.navbar-toggler.open .navbar-toggler-icon {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.navbar-toggler.open .navbar-toggler-icon::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.navbar-toggler.open .navbar-toggler-icon::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*Removes Bootstrap's default outline from the toggler*/
+.navbar-toggler:focus,.navbar-toggler:active {
+   outline: none;
+   box-shadow: none;
+}
+
+/**************************************************************************/
+/*BUTTONS*/
+/**************************************************************************/
+
+.edit-issue-button{
+  height: 40px;
+  width: 80px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-button-cancel{
+  height: 40px;
+  width: 160px;
+  background: #fdfdfd;
+  color: #b90000;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.form-button-cancel:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #b90000;
+}
+
+.form-button-cancel:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.sign-up-button{
+  height: 40px;
+  width: 160px;
+  background: #fdfdfd;
+  color: #3c4ef1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.sign-up-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #3c4ef1;
+}
+
+.sign-up-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.new-issue-button{
+  height: 40px;
+  width: 120px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-button{
+  height: 40px;
+  width: 160px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.form-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #18b5c0;
+}
+
+.form-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.delete-button{
+  height: 40px;
+  width: 120px;
+  background: #d60000;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.delete-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.delete-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.close-button{
+  height: 40px;
+  width: 120px;
+  background: #3c4ef1;
+  color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.close-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.close-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.project-button{
+  position: relative;
+  width: 120px;
+  height: 40px;
+}
+
+.project-button > a{
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.project-button > .issues-count{
+  position: absolute;
+  top: 68%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.button-issues{
+  height: 40px;
+  width: 85px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-issues:hover, .new-issue-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #18b5c0;
+}
+
+.button-issues:focus, .new-issue-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.issues-count, .issues-count-btn{
+  background-color: #e66902;
+  border-radius: 13px;
+  height: 26px;
+  width: 26px;
+  font-size: 16px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.issues-count-btn:hover{
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
+}
+
+.issues-count-btn:focus{
+  box-shadow: none;
+}
+
+.count-small{
+  font-size: 12px;
+}
+
+.folder-file-button{
+  position: relative;
+  width: 120px;
+  height: 40px;
+}
+
+.folder-file-button > a{
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.folder-file-button > .issues-count{
+  position: absolute;
+  top: 110%;
+  left: 69%;
+  transform: translate(-50%, -50%);
+}
+
+.hide-button {
+  display:none;
+}
+
+.button-container{
+  height: 80px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**/
+.issue-button{
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  height: 58px;
+  width: 350px;
+  border-radius: 7px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.icon-background-color{
+  height: 58px;
+  width: 75px;
+  border-radius: 7px 0px 0px 7px;
+  background: #3c4ef1;
+}
+
+/**/
+.issue-button > i {
+  font-size: 35px;
+  position: absolute;
+  color: #FFFFFF;
+  top: 50%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+}
+
+/*Styles and positions the text within the button*/
+.button-title{
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+}
+
+.button-description{
+  font-size: 14px;
+  white-space: nowrap;
+  position: absolute;
+  color: #5e5e5e;
+  top: 50%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+}
+
+/*Sets hover effects for both color versions of the button*/
+.issue-button:hover{
+  height: 80px;
+  width: 400px;
+}
+
+.issue-button:hover > .icon-background-color{
+  height: 80px;
+  width: 86px;
+}
+
+.issue-button:active{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+}
+
+.button-search{
+  height: 40px;
+  width: 85px;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 7px;
+}
+
+.button-search:hover{
+  outline: none;
 }
 
 /**************************************************************************/
@@ -381,21 +789,6 @@ keep from breaking the navbar.*/
   line-height: 60px;
 }
 
-.new-issue-button{
-  height: 40px;
-  width: 120px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
 .form-search{
   width: calc(100% - 270px);
 }
@@ -482,44 +875,6 @@ keep from breaking the navbar.*/
   width: 100px;
 }
 
-.edit-issue-button{
-  height: 40px;
-  width: 80px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.form-button-cancel{
-  height: 40px;
-  width: 160px;
-  background: #fdfdfd;
-  color: #b90000;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-}
-
-.form-button-cancel:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #b90000;
-}
-
-.form-button-cancel:focus{
-  outline: none;
-  box-shadow: none;
-}
-
 .delete-icon{
   height: 60px;
   width: 60px;
@@ -529,29 +884,6 @@ keep from breaking the navbar.*/
   text-align: center;
   line-height: 60px;
   background: #c90000;
-}
-
-.sign-up-button{
-  height: 40px;
-  width: 160px;
-  background: #fdfdfd;
-  color: #3c4ef1;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-}
-
-.sign-up-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #3c4ef1;
-}
-
-.sign-up-button:focus{
-  outline: none;
-  box-shadow: none;
 }
 
 /**************************************************************************/
@@ -633,75 +965,11 @@ keep from breaking the navbar.*/
   padding-right: 10px;
 }
 
-.form-button{
-  height: 40px;
-  width: 160px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-}
-
-.form-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #18b5c0;
-}
-
-.form-button:focus{
-  outline: none;
-  box-shadow: none;
-}
-
 /**************************************************************************/
 /*----ISSUE READ PAGE----*/
 /**************************************************************************/
 
-.delete-button{
-  height: 40px;
-  width: 120px;
-  background: #d60000;
-  color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-  text-align: center;
-  line-height: 40px;
-}
 
-.delete-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.delete-button:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-.close-button{
-  height: 40px;
-  width: 120px;
-  background: #3c4ef1;
-  color: #ffffff;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-}
-
-.close-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.close-button:focus{
-  outline: none;
-  box-shadow: none;
-}
 
 /**************************************************************************/
 /*----PROJECT LIST PAGE----*/
@@ -767,7 +1035,6 @@ keep from breaking the navbar.*/
   transform: translate(50%, 50%);
 }
 
-
 @media (max-width:1135px){
 .project-description{width: 300px; left: -91%;}
 }
@@ -777,78 +1044,6 @@ keep from breaking the navbar.*/
   top: 115%;
   left: -56%;
   transform: translate(50%, 50%);
-}
-
-.project-button{
-  position: relative;
-  width: 120px;
-  height: 40px;
-}
-
-.project-button > a{
-  position: absolute;
-  top: 30%;
-  left: 28%;
-  transform: translate(-50%, -50%);
-}
-
-.project-button > .issues-count{
-  position: absolute;
-  top: 68%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-}
-
-.button-issues{
-  height: 40px;
-  width: 85px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.button-issues:hover, .new-issue-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #18b5c0;
-}
-
-.button-issues:focus, .new-issue-button:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-.issues-count, .issues-count-btn{
-  background-color: #e66902;
-  border-radius: 13px;
-  height: 26px;
-  width: 26px;
-  font-size: 16px;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.issues-count-btn:hover{
-  text-decoration: none;
-  color: #ffffff;
-  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
-}
-
-.issues-count-btn:focus{
-  box-shadow: none;
-}
-
-.count-small{
-  font-size: 12px;
 }
 
 /**************************************************************************/
@@ -897,26 +1092,6 @@ keep from breaking the navbar.*/
   white-space: nowrap;
   top: 50%;
   left: -50%;
-  transform: translate(-50%, -50%);
-}
-
-.folder-file-button{
-  position: relative;
-  width: 120px;
-  height: 40px;
-}
-
-.folder-file-button > a{
-  position: absolute;
-  top: 75%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-}
-
-.folder-file-button > .issues-count{
-  position: absolute;
-  top: 110%;
-  left: 69%;
   transform: translate(-50%, -50%);
 }
 
@@ -995,98 +1170,7 @@ keep from breaking the navbar.*/
 /*----SEARCH RESULTS BUTTONS----*/
 /**************************************************************************/
 
-/*Hides the default Bootstrap button*/
-.hide-button {
-  display:none;
-}
 
-.button-container{
-  height: 80px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/**/
-.issue-button{
-  background-color: #FFFFFF;
-  border: none;
-  color: #000000;
-  cursor: pointer;
-  position: relative;
-  height: 58px;
-  width: 350px;
-  border-radius: 7px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.icon-background-color{
-  height: 58px;
-  width: 75px;
-  border-radius: 7px 0px 0px 7px;
-  background: #3c4ef1;
-}
-
-/**/
-.issue-button > i {
-  font-size: 35px;
-  position: absolute;
-  color: #FFFFFF;
-  top: 50%;
-  left: 11%;
-  transform: translate(-50%, -50%);
-}
-
-/*Styles and positions the text within the button*/
-.button-title{
-  font-size: 18px;
-  position: absolute;
-  top: 50%;
-  left: 37%;
-  transform: translate(-50%, -50%);
-}
-
-.button-description{
-  font-size: 14px;
-  white-space: nowrap;
-  position: absolute;
-  color: #5e5e5e;
-  top: 50%;
-  left: 72%;
-  transform: translate(-50%, -50%);
-}
-
-/*Sets hover effects for both color versions of the button*/
-.issue-button:hover{
-  height: 80px;
-  width: 400px;
-}
-
-.issue-button:hover > .icon-background-color{
-  height: 80px;
-  width: 86px;
-}
-
-.issue-button:active{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
-}
-
-@media(max-width:992px){
-  .dynamic-center {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media(max-width:767px){
-  .header-bottom{
-    height: 120px;
-  }
-  .issue-dropdown-filters{
-    float: left;
-  }
-}
 
 /**************************************************************************/
 /*----MASTER SEARCH FORM----*/
@@ -1097,19 +1181,6 @@ keep from breaking the navbar.*/
   line-height: 40px;
   font-size: 18px;
 
-}
-
-.button-search{
-  height: 40px;
-  width: 85px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 7px;
-}
-
-.button-search:hover{
-  outline: none;
 }
 
 .login-out-link{
@@ -1169,82 +1240,6 @@ keep from breaking the navbar.*/
 }
 
 /**************************************************************************/
-/*----NAVBAR ANIMATED TOGGLER----*/
-/**************************************************************************/
-
-/*Sets color and glow for the middle hamburger toggler bar*/
-.navbar-toggler-icon{
-    background: #000000;
-  }
-  
-  /*Sets color and glow for the top and bottom hamburger toggler bars*/
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
-    background: #000000;
-  }
-
-/*Controls sizing and spacing for the container for the toggler icon
-below. Child element is .navbar-toggler-icon.*/
-.navbar-toggler{
-    margin: 0px 10px;
-    padding: 0px 0px;
-    position: relative;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-  }
-  
-  /*Creates and styles the center bar on the hamburger toggler icon*/
-  .navbar-toggler-icon{
-    width: 40px;
-    height: 5px;
-    border-radius: 4px;
-    transition: all .5s ease-in-out;
-  }
-  
-  /*Creates the top and bottom toggler bars*/
-  .navbar-toggler-icon::before,
-  .navbar-toggler-icon::after {
-    content: '';
-    position: absolute;
-    margin: 0px 0 0 -20px;
-    width: 40px;
-    height: 5px;
-    border-radius: 4px;
-    transition: all .5s ease-in-out;
-  }
-  
-  /*Positions the top and bottom toggler bars*/
-  .navbar-toggler-icon::before {
-    transform: translateY(-14px);
-  }
-  .navbar-toggler-icon::after {
-    transform: translateY(14px);
-  }
-  
-  /*Set's final orientation for the toggler bars after animation. Animation
-  activated by hamburger.js in static/js directory*/
-  .navbar-toggler.open .navbar-toggler-icon {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-  }
-  .navbar-toggler.open .navbar-toggler-icon::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-  .navbar-toggler.open .navbar-toggler-icon::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
-  
-  /*Removes Bootstrap's default outline from the toggler*/
-  .navbar-toggler:focus,.navbar-toggler:active {
-     outline: none;
-     box-shadow: none;
-  }
-
-/**************************************************************************/
 /*FOOTER*/
 /**************************************************************************/
 
@@ -1262,4 +1257,87 @@ footer .footer-text {
 
 /**************************************************************************/
 /*END*/
+/**************************************************************************/
+
+
+/**************************************************************************/
+/*USERS and junk*/
+/**************************************************************************/
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+}
+
+@media(max-width:992px){
+  .dynamic-center {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media(max-width:767px){
+  .header-bottom{
+    height: 120px;
+  }
+  .issue-dropdown-filters{
+    float: left;
+  }
+}
+
+/**************************************************************************/
+/*BASE PAGES*/
+/**************************************************************************/
+
+
+
+/**************************************************************************/
+/*----ABOUT----*/
+/**************************************************************************/
+
+
+
+/**************************************************************************/
+/*----HOME----*/
+/**************************************************************************/
+
+
+
+/**************************************************************************/
+/*----SEARCH RESULTS----*/
+/**************************************************************************/
+
+
+
+/**************************************************************************/
+/*PROJECT/FOLDER/FILE PAGES*/
+/**************************************************************************/
+
+/**************************************************************************/
+/*----PROJECT CONTENTS----*/
+/**************************************************************************/
+
+/**************************************************************************/
+/*----PROJECT LIST----*/
+/**************************************************************************/
+
+/**************************************************************************/
+/*----FOLDER CONTENTS----*/
+/**************************************************************************/
+
+/**************************************************************************/
+/*----FILE CONTENTS----*/
+/**************************************************************************/
+
+/**************************************************************************/
+/*ISSUE PAGES*/
+/**************************************************************************/
+
+
+
+/**************************************************************************/
+/*USER PAGES*/
 /**************************************************************************/
