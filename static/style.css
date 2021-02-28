@@ -277,6 +277,9 @@ keep from breaking the navbar.*/
     margin-right: 0px;
     margin-left: 17px;
   }
+  .container-no-margin {
+    margin-top: 40px;
+  }
 }
 
 /**************************************************************************/
@@ -560,6 +563,29 @@ keep from breaking the navbar.*/
   text-align: center;
   line-height: 60px;
   background: #c90000;
+}
+
+.sign-up-button{
+  height: 40px;
+  width: 160px;
+  background: #fdfdfd;
+  color: #3c4ef1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 7px;
+  padding: 0px 0px 0px 0px;
+}
+
+.sign-up-button:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #3c4ef1;
+}
+
+.sign-up-button:focus{
+  outline: none;
+  box-shadow: none;
 }
 
 /**************************************************************************/
