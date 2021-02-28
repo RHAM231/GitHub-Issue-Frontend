@@ -457,6 +457,10 @@ keep from breaking the navbar.*/
   width: 100px;
 }
 
+.filter-field > option{
+  text-align: center;
+}
+
 .issue-search{
   width: 100%;
   /* overflow: hidden; */
@@ -484,13 +488,18 @@ keep from breaking the navbar.*/
   /* box-shadow: -3px 8px 12px 0 rgba(0,0,0,0.15); */
   border: none;
   border-radius: 7px 0px 0px 7px;
+  margin: 0 auto;
 }
 
 .filter-field > option{
   background: #FFFFFF;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   color: #000000;
   border-bottom: #000000;
+}
+
+select{
+  text-align: center;
 }
 
 .filter-field > option:hover{
@@ -499,6 +508,16 @@ keep from breaking the navbar.*/
 
 .filter-field:focus{
   outline:none;
+}
+
+@media(max-width:992px){
+  .dynamic-hide {
+    display: none;
+  }
+}
+
+.pl-custom{
+  padding-left: 15px;
 }
 
 #id_author, #id_projects, #id_sort{
