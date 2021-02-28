@@ -35,7 +35,6 @@ body, html {
     height: 100%;
     margin: 0;
     font-size: 18px;
-    /* font-family: 'Merriweather Sans', sans-serif; */
     font-family: 'Varela Round', sans-serif;
     font-weight: 400;
     line-height: 1.8em;
@@ -87,11 +86,6 @@ body, html {
 .nav-search-icon{
   width: 40px;
   height: 80px;
-  /* padding-top: 25px;
-  text-align: center;
-  cursor: pointer;
-  background: #ffffff;
-  border: none; */
   position: relative;
 }
 
@@ -103,10 +97,6 @@ body, html {
   top: -35%;
   left: -20%;
   transform: translate(-50%, 50%);
-}
-
-.hide{
-  display: none;
 }
 
 /*Style and position the logo*/
@@ -132,7 +122,7 @@ body, html {
     color:#000000;
 }
 
-/*Styles the navbar links. line-height used to vertically center text*/
+/*Styles the navbar links.*/
 .link-hover::after{
   text-decoration: none;
   color: #000000;
@@ -142,7 +132,6 @@ body, html {
   height: 2px;
   background: #3c4ef1;
   transition: width .3s;
-  /* line-height: 40px; */
 }
 
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
@@ -174,14 +163,7 @@ items*/
 
 .navbar-brand:hover, .nav-link:hover {
     color: #000000;
-    /* background: #9AC4E8; */
 }
-
-/* .link-dropdown:hover {
-    color: #000000;
-    border-radius: 3px 3px 3px 3px;
-    background: #3c4ef1;
-} */
 
 .dropdown-item:hover{
     color: #ffffff;
@@ -202,17 +184,6 @@ items*/
 .nav-item{
     text-align: center;
 }
-
-/* .navbar-collapse{
-    margin-right: 45%;
-    margin-left: 45%;
-    margin-bottom: 25px;
-} */
-
-/* .nav-link{
-  margin-right: 45%;
-  margin-left: 45%;
-} */
 
 .squash{
   margin-right: 45%;
@@ -357,14 +328,6 @@ keep from breaking the navbar.*/
   transform: translate(-50%, -50%);
 }
 
-/* .issue-tab > a{
-  position: absolute;
-  background: #3c4ef1;
-  height: 20px;
-  width: 10px;
-  border-radius: 5px 5px 5px 5px;
-} */
-
 .vertical-align{
   line-height: 60px;
 }
@@ -418,10 +381,6 @@ keep from breaking the navbar.*/
   line-height: 60px;
 }
 
-/* .header-bottom{
-  
-} */
-
 .new-issue-button{
   height: 40px;
   width: 120px;
@@ -438,41 +397,17 @@ keep from breaking the navbar.*/
 }
 
 .form-search{
-  /* display: block; */
-  /* overflow: hidden; */
-  /* width: 100%; */
-  /* margin-left: none; */
-  /* overflow: hidden; */
-  /* flex-grow: 100; */
   width: calc(100% - 270px);
-}
-
-.issue-test{
-  width: 140px;
-}
-
-.form-filter{
-  /* float: left; */
-  /* display: block; */
-  width: 100px;
-}
-
-.filter-field > option{
-  text-align: center;
 }
 
 .issue-search{
   width: 100%;
-  /* overflow: hidden; */
-  /* flex-grow: 100; */
-  /* width: calc(100% - 120px); */
   height: 40px;
   background: #e7e9ec;
   border: none;
   border-radius: 0px 7px 7px 0px;
   margin-right: 20px;
   padding-left: 10px;
-  /* margin-left: -5px; */
 }
 
 .issue-search:focus, .issue-search:active{
@@ -485,7 +420,6 @@ keep from breaking the navbar.*/
   width: 100px;
   background: #3c4ef1;
   color: #FFFFFF;
-  /* box-shadow: -3px 8px 12px 0 rgba(0,0,0,0.15); */
   border: none;
   border-radius: 7px 0px 0px 7px;
   margin: 0 auto;
@@ -493,17 +427,8 @@ keep from breaking the navbar.*/
 
 .filter-field > option{
   background: #FFFFFF;
-  /* margin: 0 auto; */
   color: #000000;
   border-bottom: #000000;
-}
-
-select{
-  text-align: center;
-}
-
-.filter-field > option:hover{
-  background:chartreuse;
 }
 
 .filter-field:focus{
@@ -684,7 +609,6 @@ select{
   background: #e7e9ec;
   color: #000000;
   border: none;
-  /* border-radius: 7px 0px 0px 7px;  */
 }
 
 #id_project_associate{
@@ -751,7 +675,6 @@ select{
 .delete-button:hover{
   text-decoration: none;
   color: #FFFFFF;
-  /* background: #18b5c0; */
 }
 
 .delete-button:focus{
@@ -773,7 +696,6 @@ select{
 .close-button:hover{
   text-decoration: none;
   color: #FFFFFF;
-  /* background: #18b5c0; */
 }
 
 .close-button:focus{
@@ -973,7 +895,6 @@ select{
 .folder-file-date > a{
   position: absolute;
   white-space: nowrap;
-  /* width: 50px; */
   top: 50%;
   left: -50%;
   transform: translate(-50%, -50%);
@@ -1018,26 +939,21 @@ select{
   position: relative;
   border-radius: 10px 10px 0px 0px;
   height: 60px;
-  /* box-shadow: 0 5px 9px 0 #00000033, 0 4px 12px 0 #00000033; */
 }
 
 .file-subheader{
   background: #FFFFFF;
   position: relative;
   height: 50px;
-  /* box-shadow: 20px 0 20px -20px rgba(0,0,0,0.2),
-             -20px 0 20px -20px rgba(0,0,0,0.2); */
 }
 
 .file-contents{
   background: #FFFFFF;
   position: relative;
   border-radius: 0px 0px 10px 10px;
-  /* box-shadow: 3px 3px 6px -3px rgba(0,0,0,0.2); */
 }
 
 .code-issue{
-  /* background: #e66902; */
   background: #e60202;
   border-radius: 17px;
 }
@@ -1087,18 +1003,12 @@ select{
 .button-container{
   height: 80px;
   width: 400px;
-  /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*Controls spacing around the GitHub button*/
-/* .button-spacer{
-  height: 80px;
-} */
-
-/*Sets style for the the dark and light versions of the GitHub buttons*/
+/**/
 .issue-button{
   background-color: #FFFFFF;
   border: none;
@@ -1118,7 +1028,7 @@ select{
   background: #3c4ef1;
 }
 
-/*Styles and positions the GitHub icon within the button*/
+/**/
 .issue-button > i {
   font-size: 35px;
   position: absolute;
@@ -1187,16 +1097,6 @@ select{
   line-height: 40px;
   font-size: 18px;
 
-}
-
-.dummy{
-  background: #3c4ef1;
-  text-align: center;
-  height: 400px;
-  width: 400px;
-  line-height: 400px;
-  color: #ffffff;
-  font-size: 250px;
 }
 
 .button-search{
@@ -1275,14 +1175,12 @@ select{
 /*Sets color and glow for the middle hamburger toggler bar*/
 .navbar-toggler-icon{
     background: #000000;
-    /* box-shadow: 0 2px 5px rgba(255,76,250,0.5); (237,234,68,.5) */
   }
   
   /*Sets color and glow for the top and bottom hamburger toggler bars*/
   .navbar-toggler-icon::before,
   .navbar-toggler-icon::after {
     background: #000000;
-    /* box-shadow: 0 2px 5px rgba(255,76,250,0.5); (237,234,68,.5) */
   }
 
 /*Controls sizing and spacing for the container for the toggler icon
@@ -1345,373 +1243,6 @@ below. Child element is .navbar-toggler-icon.*/
      outline: none;
      box-shadow: none;
   }
-  
-
-/**************************************************************************/
-/*PARALLAX CONTENT*/
-/**************************************************************************/
-
-/*Sets global styles and position for all parallax images on the home page*/
-.pimgintro, .pimg1, .pimg2, .pimg3 {
-  position:relative;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-}
-
-/*Sets the image and size for main home page image*/
-.pimgintro {
-  background-image:url(comp1.jpg);
-  min-height: 600px;
-}
-
-/*Sets container height to equal image height*/
-.container-parallax {
-  height: 600px;
-}
-
-/*Sets the image for the 'My Django Website' project*/
-.pimg1 {
-  background-image:url(laptop2.jpg);
-  min-height: 400px;
-}
-
-/*Sets the image for project 2*/
-.pimg2 {
-  background-image:url(mt.jpg);
-  min-height: 700px;
-}
-
-/*Sets the image for project 3*/
-.pimg3 {
-  background-image:url(proj3-TBD.jpg);
-  min-height: 400px;
-}
-
-/*Styling for all home page sections between images*/
-.section{
-  text-align:center;
-  padding:50px 80px;
-}
-
-/*Styles the intro section on the homepage with the listed skills*/
-.section-intro{
-  background-color: #E7EAED;
-  color: #000000;
-  padding:50px 10px;
-}
-
-/*Styles all the other home page sections*/
-.section-light{
-  background-color: #E7EAED;
-  color: #000000;
-}
-
-/*Styles the header text shown on top of the main parallax image*/
-.ptext {
-  width:100%;
-  text-align:center;
-  color:#000000;
-  font-size:24px;
-  letter-spacing:8px;
-  text-transform:uppercase;
-}
-
-/*Styles the sub-header text shown on top of the main parallax image*/
-.ptext-sub {
-  text-align:center;
-  color:#000000;
-  font-size:18px;
-  letter-spacing:2px;
-}
-
-@media(max-width:568px){
-  .pimgintro, .pimg1, .pimg2, .pimg3 {
-    background-attachment:scroll;
-  }
-}
-
-/*Styles the link text on top of each project image*/
-.project-link {
-  text-decoration: none;
-  color: #000000;
-  font-size:24px;
-  letter-spacing:7px;
-  text-transform:uppercase;
-}
-
-/*Sets hover effects for the link text above*/
-.project-link:hover {
-  color: #FFFFFF;
-  text-decoration: none;
-  background: rgba(100, 100, 100, 0.75);
-}
-
-/**************************************************************************/
-/*LINK BUTTON, FORM SUBMIT BUTTON*/
-/**************************************************************************/
-
-/*Sets default styling for all buttons that link to other pages on the
-site and for the contact form submit button.*/
-.link-btn, .link-btn-light, .frm-btn {
-  background-color: #000000;
-  border: none;
-  color: #FFFFFF;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 158px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/*Overrides the dark color for the link button to create a lighter link
-button*/
-.link-btn-light {
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-/*Sets hover effects for the buttons*/
-.link-btn:hover, .link-btn-light:hover, .frm-btn:hover {
-  background-color: #9AC4E8;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-/*Removes Bootstrap's default blue outline from the button when clicked*/
-.frm-btn:focus, .frm-btn:active {
-   outline: none;
-   box-shadow: none;
-}
-
-/**************************************************************************/
-/*CUSTOM GITHUB BUTTON*/
-/**************************************************************************/
-
-/*Hides the default Bootstrap button*/
-#logo, #logo2 {
-  display:none;
-}
-
-/*Controls spacing around the GitHub button*/
-.github-logo2{
-  height: 58px;
-}
-
-/*Sets style for the the dark and light versions of the GitHub buttons*/
-.github-logo, .github-logo-light{
-  background-color: #000000;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  position: relative;
-  height: 58px;
-  width: 158px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/*Overrides button colors defined above to create a lighter version*/
-.github-logo-light{
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-/* Styles and positions the GitHub icon within the button
-.fab {
-  font-size: 35px;
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-} */
-
-/*Styles and positions the text within the button*/
-.github-logo>span, .github-logo-light>span {
-  font-size: 16px;
-  position: absolute;
-  top: 0%;
-  left: 35%;
-  transform: translate(-50%, 50%);
-}
-
-/*Sets hover effects for both color versions of the button*/
-.github-logo:hover, .github-logo-light:hover {
-  background: #9AC4E8;
-  color: #000000;
-}
-
-/**************************************************************************/
-/*ICONS*/
-/**************************************************************************/
-
-/*Hides the default bootstrap button for each icon*/
-#icon-label1, #icon-label2, #icon-label3,
-#icon-label4, #icon-label5, #icon-label6,
-#icon-label7, #icon-label8, #icon-label9,
-#icon-label10, #icon-label11, #icon-label12 {
-  display:none;
-}
-
-/*Sets the image and background color for each icon. Background color is
-set to match solid tiles to preserve color on hover effect. Id's named
-after each logo to avoid manual updates as skills are added to the
-database*/
-
-/*JavaScript*/
-#js-id {
-  background-image: url(js_55.png);
-  background-color: #F0DB4F;
-}
-
-/*HTML5*/
-#ht5-id {
-  background-image: url(html5_45.png);
-  background-color: #FFFFFF;
-}
-
-/*GitHub*/
-#gh-id {
-  background-image: url(github_60.png);
-  background-color: #000000;
-}
-
-/*Git*/
-#git-id {
-  background-image: url(git_45.png);
-  background-color: #FFFFFF;
-}
-
-/*PyCharm*/
-#pc-id {
-  background-image: url(pc_45.png);
-  background-color: #FFFFFF;
-}
-
-/*Bootstrap*/
-#bst-id {
-  background-image: url(bst_55.png);
-  background-color: #7952B3;
-}
-
-/*Python*/
-#pyt-id {
-  background-image: url(pyt_45.png);
-  background-color: #FFFFFF;
-}
-
-/*Django*/
-#dj-id {
-  background-image: url(dj_45.png);
-  background-color: #092E20;
-}
-
-/*Amazon Web Services*/
-#aws-id {
-  background-image: url(aws_55.png);
-  background-color: #232F3F;
-}
-
-/*CSS3*/
-#c3-id {
-  background-image: url(css3_45.png);
-  background-color: #FFFFFF;
-}
-
-/*Microsoft Visual Studio Code*/
-#vs-id {
-  background-image: url(vs_55.png);
-  background-color: #FFFFFF;
-}
-
-/*Ubuntu*/
-#ubt-id {
-  background-image: url(ubt_45.png);
-  background-color: #FFFFFF;
-}
-
-/*Styles the container holding the icons. Size is set to contain the
-larger tile on hover.*/
-.box{
-  height: 150px;
-  width: 150px;
-}
-
-/*Styles the tile inside the box*/
-.icon-logo{
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  height: 100px;
-  width: 100px;
-  margin: 15px 15px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/*Sets hover effects for the tiles*/
-.icon-logo:hover {
-  height: 125px;
-  width: 100px;
-  margin: 15px 10px;
-}
-
-/**************************************************************************/
-/*CONTACT ME PAGE*/
-/**************************************************************************/
-
-/*Adds custom styling to form fields*/
-#id_name, #id_sender, #id_subject, #id_message {
-  background: #FFFFFF;
-  border: none;
-  border-radius: 0px;
-  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 5px 15px 0 rgba(0,0,0,0.19);
-}
-
-/*Changes the color of Bootstrap's on-click blue outline for the form
-fields to match the hover color for the buttons*/
-#id_name:focus, #id_name:active,
-#id_sender:focus, #id_sender:active,
-#id_subject:focus, #id_subject:active,
-#id_message:focus, #id_message:active {
-  box-shadow: 0 0 0 0.2rem rgba(154, 196, 232, 0.7);
-}
-
-/*Styles the success text on the contact success page*/
-.stext {
-    width:100%;
-    text-align:center;
-    color:#000000;
-    font-size:20px;
-    letter-spacing:8px;
-    text-transform:uppercase;
-}
-
-/*Creates background contrast for .stext above. rgb used to support older
-websites*/
-.contrast {
-  background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/**************************************************************************/
-/*CHECKLIST PAGE*/
-/**************************************************************************/
-
-/*Sets checklist margin on the web checklist page and hides the default
-checklist button*/
-.check {
-  padding-left: 1rem;
-  list-style-type: none;
-}
-
-/*Sets margins for the text next to the checkbox and ensures that the text
-stays on the same line with the checkbox*/
-.check label {
-  display : inline;
-  padding-right : 4px;
-}
 
 /**************************************************************************/
 /*FOOTER*/
@@ -1727,19 +1258,6 @@ stays on the same line with the checkbox*/
 footer .footer-text {
   color: #FFFFFF;
   text-align: center;
-}
-
-/*Sets link text colors and centers them*/
-footer .footer-link {
-  color: #FFFFFF;
-  text-align: center;
-}
-
-/*Sets the hover effect for the link*/
-footer .footer-link:hover {
-  color: #FFFFFF;
-  text-decoration: none;
-  background: rgba(255, 100, 0, 0.25);
 }
 
 /**************************************************************************/
