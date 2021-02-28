@@ -21,9 +21,9 @@ FOOTER
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
 /**************************************************************************/
@@ -511,9 +511,11 @@ select{
 }
 
 @media(max-width:992px){
-  .dynamic-hide {
-    display: none;
-  }
+  .dynamic-hide {display: none;}
+}
+
+@media(max-width:665px){
+  .dynamic-hide-small {display: none;}
 }
 
 .pl-custom{
@@ -795,7 +797,7 @@ select{
   display: inline-block;
   position: relative;
   height: 60px;
-  width:350px;
+  width:220px;
 }
 
 .project-header > h4{
@@ -804,7 +806,7 @@ select{
   width: 100px;
   height: 30px;
   top: 54%;
-  left: 18%;
+  left: 28%;
   transform: translate(-50%, -50%);
 }
 
@@ -837,10 +839,15 @@ select{
 }
 
 .project-description{
-  width: 300px;
+  width: 500px;
   top: 62%;
-  left: -91%;
+  left: -234%;
   transform: translate(50%, 50%);
+}
+
+
+@media (max-width:1135px){
+.project-description{width: 300px; left: -91%;}
 }
 
 .project-date{
