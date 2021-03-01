@@ -1,7 +1,6 @@
 /**************************************************************************/
 /*TABLE OF CONTENTS*/
 /**************************************************************************/
-
 /*
 WEBSITE BODY, FONT, WRAPPER
 CURRENT PATH LINKS
@@ -33,27 +32,25 @@ USER PAGES
   REGISTER
 FOOTER
 */
-
 /**************************************************************************/
 /*WEBSITE BODY, FONT, WRAPPER*/
 /**************************************************************************/
-
 /*Sets the default font style for the website*/
 body, html {
-    height: 100%;
-    margin: 0;
-    font-size: 18px;
-    font-family: 'Varela Round', sans-serif;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #232629;
+  height: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #232629;
 }
 
 /*Sets the default background color for the website*/
 .wrapper {
-    background: #f6f8fc;
-    overflow: auto;
-    min-height: 100%;
+  background: #f6f8fc;
+  overflow: auto;
+  min-height: 100%;
 }
 
 /*Gets rid of the annoying horizontal scroll bar on the home page*/
@@ -64,12 +61,11 @@ body, html {
 /**************************************************************************/
 /*CURRENT PATH LINKS*/
 /**************************************************************************/
-
-.current-path{
+.current-path {
   font-size: 22px;
 }
 
-.link-divider{
+.link-divider {
   font-size: 22px;
   font-weight: bold;
 }
@@ -77,11 +73,9 @@ body, html {
 /**************************************************************************/
 /*HEADER*/
 /**************************************************************************/
-
 /**************************************************************************/
 /*----NAVBAR----*/
 /**************************************************************************/
-
 /*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
   background: #FFFFFF;
@@ -89,7 +83,7 @@ body, html {
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 6px 32px -6px #999;
   margin-top: 0;
-  padding:0px;
+  padding: 0px;
   position: -webkit-sticky;
   position: fixed;
   right: 0;
@@ -97,18 +91,18 @@ body, html {
   z-index: 9;
 }
 
-.nav-search-collapse{
+.nav-search-collapse {
   height: 80px;
   line-height: 80px;
 }
 
-.nav-search-icon{
+.nav-search-icon {
   width: 40px;
   height: 80px;
   position: relative;
 }
 
-.nav-search-icon > i{
+.nav-search-icon > i {
   font-size: 26px;
   width: 60px;
   height: 10px;
@@ -119,175 +113,190 @@ body, html {
 }
 
 /*Style and position the logo*/
-.navbar-brand{
+.navbar-brand {
   color: #000000;
   height: 80px;
   width: 160px;
-  padding:0px 12px;
+  padding: 0px 12px;
   margin: 0px;
   line-height: 80px;
 }
 
 /*Adds margin for the dropdown menu for mobile*/
-.navbar-collapse{
+.navbar-collapse {
   margin: 0px 20px 0px 20px;
 }
 
-.navbar > .show{
+.navbar > .show {
   margin: 0px 20px 30px 20px;
 }
 
 .nav-link {
-    color:#000000;
+  color: #000000;
 }
 
 /*Styles the navbar links.*/
-.link-hover::after{
+.link-hover::after {
   text-decoration: none;
   color: #000000;
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 2px;
   background: #3c4ef1;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 /*Sets hover effects for the navbar links, logo, toggler, and drop down
 items*/
-.link-hover:hover::after{
+.link-hover:hover::after {
   color: #000000;
   text-decoration: none;
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
-.link-dropdown::after{
+.link-dropdown::after {
   text-decoration: none;
   color: #000000;
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 2px;
   background: #3c4ef1;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
-.link-dropdown:hover::after{
+.link-dropdown:hover::after {
   color: #000000;
   text-decoration: none;
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .navbar-brand:hover, .nav-link:hover {
-    color: #000000;
+  color: #000000;
 }
 
-.dropdown-item:hover{
-    color: #ffffff;
-    background: #3c4ef1;
+.dropdown-item:hover {
+  color: #ffffff;
+  background: #3c4ef1;
 }
 
 /*Styles the dropdown menu opened by the toggler to match the navbar */
-.dropdown-menu{
+.dropdown-menu {
   background: #ffffff;
 }
 
 /*Sets text color for the drop down items*/
-.dropdown-item{
+.dropdown-item {
   color: #000000;
   text-align: center;
 }
 
-.nav-item{
-    text-align: center;
+.nav-item {
+  text-align: center;
 }
 
-.squash{
+.squash {
   margin-right: 45%;
   margin-left: 45%;
 }
-@media (max-width: 576px){
-  .squash{margin-right: 30%; margin-left: 30%;}
-}
-@media (max-width: 768px){
-  .squash{margin-right: 35%; margin-left: 35%;
-  }
-}
-@media (max-width: 992px){
-  .squash{margin-right: 38%; margin-left: 38%;
-  }
-}
-@media (max-width: 1200px){
-  .squash{margin-right: 40%; margin-left: 40%;
-  }
-}
 
+@media (max-width: 576px) {
+  .squash {
+    margin-right: 30%;
+    margin-left: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .squash {
+    margin-right: 35%;
+    margin-left: 35%;
+  }
+}
+@media (max-width: 992px) {
+  .squash {
+    margin-right: 38%;
+    margin-left: 38%;
+  }
+}
+@media (max-width: 1200px) {
+  .squash {
+    margin-right: 40%;
+    margin-left: 40%;
+  }
+}
 /**************************************************************************/
 /*----NAVBAR CUSTOM BREAKPOINT----*/
 /**************************************************************************/
-
 /*Let's customize the navbar breakpoint to accomodate all our links. We
 use navbar-expand-custom in base.html and then set the breakpoint to a
 value of our choosing. Then we re-apply some CSS to the custom class to
 keep from breaking the navbar.*/
-@media (min-width: 1325px){
+@media (min-width: 1325px) {
   .navbar-expand-custom {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
+
   .navbar-expand-custom .navbar-nav {
-      flex-direction: row;
+    flex-direction: row;
   }
+
   .navbar-expand-custom .navbar-nav .nav-link {
-      padding-right: .5rem;
-      padding-left: .5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
+
   .navbar-expand-custom .navbar-collapse {
-      display: flex!important;
+    display: flex !important;
   }
+
   .navbar-expand-custom .navbar-toggler {
-      display: none;
+    display: none;
   }
+
   .navbar-expand-custom .navbar-nav .dropdown-menu {
     position: absolute;
   }
-  .nav-search-collapse{
+
+  .nav-search-collapse {
     display: none;
   }
 }
-
 @media (max-width: 1325px) {
-  .login-out-link{
+  .login-out-link {
     margin-left: 0px;
   }
-  .nav-search{
+
+  .nav-search {
     display: none;
   }
 }
-
 /* Make our mobile search bar drop to a second line on very small screens */
 @media (max-width: 600px) {
-  .navbar{
-    flex-wrap:wrap;
+  .navbar {
+    flex-wrap: wrap;
   }
-  .nav-search-collapse{
+
+  .nav-search-collapse {
     width: 100%;
     order: 3;
     text-align: center;
   }
-  #id_master_search{
+
+  #id_master_search {
     margin-right: 0px;
     margin-left: 17px;
   }
+
   .container-no-margin {
     margin-top: 40px;
   }
 }
-
-.table-scroll{
+.table-scroll {
   overflow-x: auto;
   white-space: nowrap;
 }
@@ -295,9 +304,8 @@ keep from breaking the navbar.*/
 /**************************************************************************/
 /*----NAVBAR ANIMATED TOGGLER----*/
 /**************************************************************************/
-
 /*Sets color and glow for the middle hamburger toggler bar*/
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   background: #000000;
 }
 
@@ -309,7 +317,7 @@ keep from breaking the navbar.*/
 
 /*Controls sizing and spacing for the container for the toggler icon
 below. Child element is .navbar-toggler-icon.*/
-.navbar-toggler{
+.navbar-toggler {
   margin: 0px 10px;
   padding: 0px 0px;
   position: relative;
@@ -317,33 +325,34 @@ below. Child element is .navbar-toggler-icon.*/
   width: 80px;
   height: 80px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /*Creates and styles the center bar on the hamburger toggler icon*/
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   width: 40px;
   height: 5px;
   border-radius: 4px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /*Creates the top and bottom toggler bars*/
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   margin: 0px 0 0 -20px;
   width: 40px;
   height: 5px;
   border-radius: 4px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /*Positions the top and bottom toggler bars*/
 .navbar-toggler-icon::before {
   transform: translateY(-14px);
 }
+
 .navbar-toggler-icon::after {
   transform: translateY(14px);
 }
@@ -355,31 +364,31 @@ activated by hamburger.js in static/js directory*/
   background: transparent;
   box-shadow: none;
 }
+
 .navbar-toggler.open .navbar-toggler-icon::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
+
 .navbar-toggler.open .navbar-toggler-icon::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
 /*Removes Bootstrap's default outline from the toggler*/
-.navbar-toggler:focus,.navbar-toggler:active {
-   outline: none;
-   box-shadow: none;
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
 }
 
 /**************************************************************************/
 /*----MASTER SEARCH FORM----*/
 /**************************************************************************/
-
-.nav-search-text{
+.nav-search-text {
   color: #000000 important;
   line-height: 40px;
   font-size: 18px;
-
 }
 
-.login-out-link{
+.login-out-link {
   color: #000000;
   line-height: 40px;
   font-size: 18px;
@@ -387,17 +396,16 @@ activated by hamburger.js in static/js directory*/
 }
 
 @media (max-width: 1325px) {
-  .login-out-link{
+  .login-out-link {
     margin-left: 0px;
   }
 }
-
-.login-out-link:hover{
+.login-out-link:hover {
   color: #000000;
   text-decoration: none;
 }
 
-.ms-form-style{
+.ms-form-style {
   width: 260px;
   height: 40px;
   background: #e7e9ec;
@@ -407,7 +415,7 @@ activated by hamburger.js in static/js directory*/
   padding-left: 10px;
 }
 
-.ms-form-style:focus, .form-style:active{
+.ms-form-style:focus, .form-style:active {
   outline: none;
   box-shadow: 0px 0px 15px rgba(60, 78, 241, 0.6);
 }
@@ -415,10 +423,12 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*BUTTONS*/
 /**************************************************************************/
-
-.edit-issue-button,
+/**************************************************************************/
+/*----BUTTON STYLES----*/
+/**************************************************************************/
+.button-style-1, .edit-issue-button,
 .new-issue-button,
-.button-issues{
+.button-issues {
   height: 40px;
   width: 80px;
   border: none;
@@ -426,89 +436,54 @@ activated by hamburger.js in static/js directory*/
   padding: 0px 0px 0px 0px;
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-.new-issue-button{
+.new-issue-button {
   width: 120px;
 }
 
-.button-issues{
+.button-issues {
   width: 85px;
 }
 
-.sign-up-button, .form-button-cancel{
+.sign-up-button, .form-button-cancel,
+.form-button, .close-button {
   height: 40px;
   width: 160px;
   background: #fdfdfd;
   color: #3c4ef1;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
   border: 1px solid;
   border-color: #000000;
   border-radius: 7px;
   padding: 0px 0px 0px 0px;
 }
 
-.form-button-cancel{
+.form-button-cancel {
   color: #b90000;
 }
 
-
-.form-button, .close-button{
-  height: 40px;
-  width: 160px;
+.form-button, .close-button {
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
   border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
 }
 
-.close-button{
+.close-button {
   width: 120px;
 }
 
-.form-button-cancel:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #b90000;
-}
-
-.form-button-cancel:focus,
-.sign-up-button:focus,
-.form-button:focus,
-.delete-button:focus,
-.close-button:focus,
-.button-issues:focus,
-.new-issue-button:focus,
-.issues-count-btn:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-.sign-up-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #3c4ef1;
-}
-
-.form-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #18b5c0;
-}
-
-.delete-button{
+.delete-button {
   height: 40px;
   width: 120px;
   background: #d60000;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 7px;
   padding: 0px 0px 0px 0px;
@@ -516,43 +491,78 @@ activated by hamburger.js in static/js directory*/
   line-height: 40px;
 }
 
-.delete-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
+.button-position-abs, .button-title, .issue-button > i, .folder-file-button > .issues-count, .folder-file-button > a, .project-button > .issues-count, .project-button > a {
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
-.close-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.project-button{
+.button-position-rel, .folder-file-button, .project-button {
   position: relative;
   width: 120px;
   height: 40px;
 }
 
-.project-button > a{
-  position: absolute;
+.project-button > a {
   top: 30%;
   left: 28%;
-  transform: translate(-50%, -50%);
 }
 
-.project-button > .issues-count{
-  position: absolute;
+.project-button > .issues-count {
   top: 68%;
   left: 60%;
-  transform: translate(-50%, -50%);
 }
 
-.button-issues:hover, .new-issue-button:hover{
+.folder-file-button > a {
+  top: 75%;
+  left: 35%;
+}
+
+.folder-file-button > .issues-count {
+  top: 110%;
+  left: 69%;
+}
+
+/**************************************************************************/
+/*----BUTTON HOVER EFFECTS----*/
+/**************************************************************************/
+.delete-button:hover, .close-button:hover, .sign-up-button:hover,
+.form-button:hover, .form-button-cancel:hover, .button-issues:hover,
+.new-issue-button:hover, .issues-count-btn:hover {
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.sign-up-button:hover {
+  background: #3c4ef1;
+}
+
+.form-button:hover, .button-issues:hover, .new-issue-button:hover {
   background: #18b5c0;
 }
 
-.issues-count, .issues-count-btn{
+.form-button-cancel:hover {
+  background: #b90000;
+}
+
+.issues-count-btn:hover {
+  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
+}
+
+/**************************************************************************/
+/*----BUTTON FOCUS EFFECTS----*/
+/**************************************************************************/
+.button-focus, .form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
+.delete-button:focus, .close-button:focus, .button-issues:focus,
+.new-issue-button:focus, .issues-count-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.double-box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.issues-count, .issues-count-btn {
   background-color: #e66902;
   border-radius: 13px;
   height: 26px;
@@ -564,37 +574,11 @@ activated by hamburger.js in static/js directory*/
   justify-content: center;
 }
 
-.issues-count-btn:hover{
-  text-decoration: none;
-  color: #ffffff;
-  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
-}
-
-.count-small{
+.count-small {
   font-size: 12px;
 }
 
-.folder-file-button{
-  position: relative;
-  width: 120px;
-  height: 40px;
-}
-
-.folder-file-button > a{
-  position: absolute;
-  top: 75%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-}
-
-.folder-file-button > .issues-count{
-  position: absolute;
-  top: 110%;
-  left: 69%;
-  transform: translate(-50%, -50%);
-}
-
-.button-container{
+.button-container {
   height: 80px;
   width: 400px;
   display: flex;
@@ -603,7 +587,7 @@ activated by hamburger.js in static/js directory*/
 }
 
 /**/
-.issue-button{
+.issue-button {
   background-color: #FFFFFF;
   border: none;
   color: #000000;
@@ -612,10 +596,10 @@ activated by hamburger.js in static/js directory*/
   height: 58px;
   width: 350px;
   border-radius: 7px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.icon-background-color{
+.icon-background-color {
   height: 58px;
   width: 75px;
   border-radius: 7px 0px 0px 7px;
@@ -625,23 +609,19 @@ activated by hamburger.js in static/js directory*/
 /**/
 .issue-button > i {
   font-size: 35px;
-  position: absolute;
   color: #FFFFFF;
   top: 50%;
   left: 11%;
-  transform: translate(-50%, -50%);
 }
 
 /*Styles and positions the text within the button*/
-.button-title{
+.button-title {
   font-size: 18px;
-  position: absolute;
   top: 50%;
   left: 37%;
-  transform: translate(-50%, -50%);
 }
 
-.button-description{
+.button-description {
   font-size: 14px;
   white-space: nowrap;
   position: absolute;
@@ -652,21 +632,21 @@ activated by hamburger.js in static/js directory*/
 }
 
 /*Sets hover effects for both color versions of the button*/
-.issue-button:hover{
+.issue-button:hover {
   height: 80px;
   width: 400px;
 }
 
-.issue-button:hover > .icon-background-color{
+.issue-button:hover > .icon-background-color {
   height: 80px;
   width: 86px;
 }
 
-.issue-button:active{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+.issue-button:active {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.button-search{
+.button-search {
   height: 40px;
   width: 85px;
   background: #3c4ef1;
@@ -675,95 +655,81 @@ activated by hamburger.js in static/js directory*/
   border-radius: 7px;
 }
 
-.button-search:hover{
+.button-search:hover {
   outline: none;
 }
 
 /**************************************************************************/
 /*junk*/
 /**************************************************************************/
-
-@media(max-width:992px){
+@media (max-width: 992px) {
   .dynamic-center {
     display: flex;
     justify-content: center;
   }
 }
-
-@media(max-width:767px){
-  .header-bottom{
+@media (max-width: 767px) {
+  .header-bottom {
     height: 120px;
   }
-  .issue-dropdown-filters{
+
+  .issue-dropdown-filters {
     float: left;
   }
 }
-
 /**************************************************************************/
 /*BASE PAGES*/
 /**************************************************************************/
-
-
-
 /**************************************************************************/
 /*----ABOUT----*/
 /**************************************************************************/
-
-.logo-box{
+.logo-box {
   width: 120px;
   height: 100px;
   margin: 20px 20px;
   line-height: 100px;
 }
 
-.aws-resize{
+.aws-resize {
   width: 80%;
 }
 
-.docker-resize{
+.docker-resize {
   width: 50%;
 }
 
-.DRF-resize{
+.DRF-resize {
   width: 50%;
 }
 
 /**************************************************************************/
 /*----HOME----*/
 /**************************************************************************/
-
-
-
 /**************************************************************************/
 /*----SEARCH RESULTS----*/
 /**************************************************************************/
-
-
-
 /**************************************************************************/
 /*PROJECT/FOLDER/FILE PAGES*/
 /**************************************************************************/
-
 /**************************************************************************/
 /*----PROJECT & FOLDER CONTENTS----*/
 /**************************************************************************/
-
-.folder-file-box{
+.folder-file-box {
   background: #FFFFFF;
   position: relative;
   border-radius: 10px;
   height: 60px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.folder-file-header{
+.folder-file-header {
   display: inline-block;
   position: relative;
   height: 60px;
   width: 100px;
 }
 
-.folder-file-header > .custom-header{
+.folder-file-header > .custom-header {
   position: absolute;
   white-space: nowrap;
   font-size: 24px;
@@ -774,18 +740,18 @@ activated by hamburger.js in static/js directory*/
   transform: translate(50%, -50%);
 }
 
-.icon-tab-folder-file{
+.icon-tab-folder-file {
   border-radius: 10px 0px 0px 10px;
 }
 
-.folder-file-date{
+.folder-file-date {
   display: inline-block;
   position: relative;
   height: 60px;
   width: 50px;
 }
 
-.folder-file-date > a{
+.folder-file-date > a {
   position: absolute;
   white-space: nowrap;
   top: 50%;
@@ -793,27 +759,25 @@ activated by hamburger.js in static/js directory*/
   transform: translate(-50%, -50%);
 }
 
-
 /**************************************************************************/
 /*----PROJECT LIST----*/
 /**************************************************************************/
-
-.project-box{
+.project-box {
   background: #FFFFFF;
   position: relative;
   border-radius: 10px;
   height: 120px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.project-header{
+.project-header {
   display: inline-block;
   position: relative;
   height: 60px;
-  width:220px;
+  width: 220px;
 }
 
-.project-header > h4{
+.project-header > h4 {
   position: absolute;
   white-space: nowrap;
   width: 100px;
@@ -823,8 +787,8 @@ activated by hamburger.js in static/js directory*/
   transform: translate(-50%, -50%);
 }
 
-.icon-tab, 
-.icon-tab-folder-file{
+.icon-tab,
+.icon-tab-folder-file {
   background: #3c4ef1;
   border-radius: 10px 0px 0px 0px;
   height: 60px;
@@ -833,8 +797,8 @@ activated by hamburger.js in static/js directory*/
   display: inline-block;
 }
 
-.icon-tab > i, 
-.icon-tab-folder-file >i{
+.icon-tab > i,
+.icon-tab-folder-file > i {
   font-size: 35px;
   position: absolute;
   color: #FFFFFF;
@@ -844,25 +808,27 @@ activated by hamburger.js in static/js directory*/
 }
 
 .icon-tab > a,
-.icon-tab-folder-file> a{
+.icon-tab-folder-file > a {
   position: absolute;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.project-description{
+.project-description {
   width: 500px;
   top: 62%;
   left: -234%;
   transform: translate(50%, 50%);
 }
 
-@media (max-width:1135px){
-.project-description{width: 300px; left: -91%;}
+@media (max-width: 1135px) {
+  .project-description {
+    width: 300px;
+    left: -91%;
+  }
 }
-
-.project-date{
+.project-date {
   width: 250px;
   top: 115%;
   left: -56%;
@@ -872,67 +838,66 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*----FILE CONTENTS----*/
 /**************************************************************************/
-
-.shadow-container{
+.shadow-container {
   border-radius: 10px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.p-custom{
+.p-custom {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.file-box{
+.file-box {
   background: #FFFFFF;
   position: relative;
   border-radius: 10px 10px 0px 0px;
   height: 60px;
 }
 
-.file-subheader{
+.file-subheader {
   background: #FFFFFF;
   position: relative;
   height: 50px;
 }
 
-.file-contents{
+.file-contents {
   background: #FFFFFF;
   position: relative;
   border-radius: 0px 0px 10px 10px;
 }
 
-.code-issue{
+.code-issue {
   background: #e60202;
   border-radius: 17px;
 }
 
-.code-issue-count{
+.code-issue-count {
   background: #e66902;
   border-radius: 17px;
   color: #ffffff;
 }
 
-.issue-present{
+.issue-present {
   font-size: 14px;
   padding-left: 22px;
   padding-right: 0px;
   width: 50px;
   height: 20px;
-  text-align: center
+  text-align: center;
 }
 
-.index{
+.index {
   font-size: 14px;
   color: #7e7e7e;
   padding-left: 10px;
   padding-right: 10px;
   width: 50px;
   height: 20px;
-  text-align: right
+  text-align: right;
 }
 
-.code-text{
+.code-text {
   color: #000000;
   padding-left: 10px;
   padding-right: 10px;
@@ -943,39 +908,37 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*ISSUE PAGES*/
 /**************************************************************************/
-
 /**************************************************************************/
 /*----ISSUE CREATE----*/
 /**************************************************************************/
-
-.form-box{
+.form-box {
   background: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.user-box{
+.user-box {
   height: 50px;
   width: 50px;
   border-radius: 25px;
 }
 
-.user-image{
+.user-image {
   width: 100%;
   height: 100%;
   border-radius: 25px;
 }
 
-.user-title{
+.user-title {
   line-height: 50px;
   color: #000000;
 }
 
-.issue-title-label{
+.issue-title-label {
   font-size: 20px;
 }
 
-#id_title{
+#id_title {
   border-radius: 7px;
   width: 100%;
   border: 1px solid;
@@ -984,16 +947,16 @@ activated by hamburger.js in static/js directory*/
   padding-right: 10px;
 }
 
-#id_title:focus, #id_comment:focus{
+#id_title:focus, #id_comment:focus {
   border-color: #3c4ef1;
   outline: none;
 }
 
-.associate-tag{
+.associate-tag {
   width: 33.33%;
 }
 
-.associate-field{
+.associate-field {
   height: 40px;
   width: 100%;
   background: #e7e9ec;
@@ -1001,21 +964,21 @@ activated by hamburger.js in static/js directory*/
   border: none;
 }
 
-#id_project_associate{
+#id_project_associate {
   border-radius: 7px 0px 0px 7px;
 }
 
-#id_folder_associate{
+#id_folder_associate {
   border-right: 1px solid;
   border-left: 1px solid;
   border-color: #cecece;
 }
 
-#id_file_associate{
+#id_file_associate {
   border-radius: 0px 7px 7px 0px;
 }
 
-#id_comment{
+#id_comment {
   border-radius: 7px;
   width: 100%;
   outline: none;
@@ -1026,8 +989,7 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*----ISSUE READ----*/
 /**************************************************************************/
-
-.issue-open, .issue-closed{
+.issue-open, .issue-closed {
   background: #3c4ef1;
   color: #ffffff;
   width: 90px;
@@ -1036,12 +998,12 @@ activated by hamburger.js in static/js directory*/
   text-align: center;
 }
 
-.issue-closed{
+.issue-closed {
   background: #d60000;
   width: 100px;
 }
 
-.delete-icon{
+.delete-icon {
   height: 60px;
   width: 60px;
   border-radius: 30px;
@@ -1055,31 +1017,28 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*----ISSUE UPDATE----*/
 /**************************************************************************/
-
 /**************************************************************************/
 /*----ISSUE DELETE----*/
 /**************************************************************************/
-
 /**************************************************************************/
 /*----ISSUE LIST----*/
 /**************************************************************************/
-
-.issues-header{
+.issues-header {
   background: #ffffff;
   border-radius: 10px 10px 0px 0px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.header-top, .header-bottom{
+.header-top, .header-bottom {
   height: 60px;
 }
 
-.issue-tab > i, .issue-tab > a{
+.issue-tab > i, .issue-tab > a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.issue-tab{
+.issue-tab {
   width: 75px;
   height: 30px;
   position: relative;
@@ -1087,7 +1046,7 @@ activated by hamburger.js in static/js directory*/
   border-radius: 5px 5px 5px 5px;
 }
 
-.search-glass{
+.search-glass {
   height: 40px;
   width: 30px;
   background: #e7e9ec;
@@ -1095,71 +1054,71 @@ activated by hamburger.js in static/js directory*/
   position: relative;
 }
 
-.search-glass > i{
+.search-glass > i {
   position: absolute;
   top: 50%;
   left: 70%;
   transform: translate(-50%, -50%);
 }
 
-.vertical-align{
+.vertical-align {
   line-height: 60px;
 }
 
-.issues-container{
+.issues-container {
   background: #f6f8fc;
-  box-shadow: inset 0 5px 9px 0 rgba(0,0,0,0.2), inset 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: inset 0 5px 9px 0 rgba(0, 0, 0, 0.2), inset 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.issues-footer{
+.issues-footer {
   background: #ffffff;
   height: 40px;
   border-radius: 0px 0px 10px 10px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.issue-row{
+.issue-row {
   background: #ffffff;
   height: 60px;
   border-radius: 5px;
-  box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 3px 9px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 3px 9px 0 rgba(0, 0, 0, 0.19);
 }
 
-.issue-row > div{
+.issue-row > div {
   display: flex;
 }
 
-.sub-date{
+.sub-date {
   font-size: 12px;
   color: #3a3a3a;
 }
 
-.issue-row > b{
+.issue-row > b {
   text-decoration: none;
   color: #000000;
 }
 
-.check-center{
+.check-center {
   line-height: 30px;
 }
 
-.inline{
+.inline {
   display: inline-block;
 }
 
-.issue-dropdown-filters{
+.issue-dropdown-filters {
   float: right;
 }
 
-.issue-dropdown-filters > a{
+.issue-dropdown-filters > a {
   line-height: 60px;
 }
 
-.form-search{
+.form-search {
   width: calc(100% - 270px);
 }
 
-.issue-search{
+.issue-search {
   width: 100%;
   height: 40px;
   background: #e7e9ec;
@@ -1169,12 +1128,12 @@ activated by hamburger.js in static/js directory*/
   padding-left: 10px;
 }
 
-.issue-search:focus, .issue-search:active{
+.issue-search:focus, .issue-search:active {
   outline: none;
   box-shadow: 0px 0px 15px rgba(60, 78, 241, 0.6);
 }
 
-.filter-field{
+.filter-field {
   height: 40px;
   width: 100px;
   background: #3c4ef1;
@@ -1184,61 +1143,61 @@ activated by hamburger.js in static/js directory*/
   margin: 0 auto;
 }
 
-.filter-field > option{
+.filter-field > option {
   background: #FFFFFF;
   color: #000000;
   border-bottom: #000000;
 }
 
-.filter-field:focus{
-  outline:none;
+.filter-field:focus {
+  outline: none;
 }
 
-@media(max-width:992px){
-  .dynamic-hide {display: none;}
+@media (max-width: 992px) {
+  .dynamic-hide {
+    display: none;
+  }
 }
-
-@media(max-width:665px){
-  .dynamic-hide-small {display: none;}
+@media (max-width: 665px) {
+  .dynamic-hide-small {
+    display: none;
+  }
 }
-
-.pl-custom{
+.pl-custom {
   padding-left: 15px;
 }
 
-#id_author, #id_projects, #id_sort{
+#id_author, #id_projects, #id_sort {
   background: #e7e9ec;
   color: #000000;
   box-shadow: none;
 }
 
-#id_projects{
+#id_projects {
   border-radius: 0px;
   border-right: 1px solid;
   border-left: 1px solid;
   border-color: #cecece;
 }
 
-#id_sort{
+#id_sort {
   border-radius: 0px 7px 7px 0px;
 }
 
 /**************************************************************************/
 /*USER PAGES*/
 /**************************************************************************/
-
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
 /**************************************************************************/
 /*FOOTER*/
 /**************************************************************************/
-
 /*Sets footer size and color*/
 .footer {
   background: #3c4ef1;
@@ -1254,3 +1213,5 @@ footer .footer-text {
 /**************************************************************************/
 /*END*/
 /**************************************************************************/
+
+/*# sourceMappingURL=test.css.map */

@@ -11,6 +11,9 @@ HEADER
   NAVBAR ANIMATED TOGGLER
   MASTER SEARCH FORM
 BUTTONS
+  BUTTON STYLES
+  BUTTON HOVER EFFECTS
+  BUTTON FOCUS EFFECTS
 BASE PAGES
   ABOUT
   HOME
@@ -376,7 +379,6 @@ activated by hamburger.js in static/js directory*/
   color: #000000 important;
   line-height: 40px;
   font-size: 18px;
-
 }
 
 .login-out-link{
@@ -416,9 +418,11 @@ activated by hamburger.js in static/js directory*/
 /*BUTTONS*/
 /**************************************************************************/
 
-.edit-issue-button,
-.new-issue-button,
-.button-issues{
+/**************************************************************************/
+/*----BUTTON STYLES----*/
+/**************************************************************************/
+
+.button-style-1{
   height: 40px;
   width: 80px;
   border: none;
@@ -433,6 +437,12 @@ activated by hamburger.js in static/js directory*/
   text-align: center;
 }
 
+.edit-issue-button,
+.new-issue-button,
+.button-issues{
+  @extend .button-style-1;
+}
+
 .new-issue-button{
   width: 120px;
 }
@@ -441,7 +451,8 @@ activated by hamburger.js in static/js directory*/
   width: 85px;
 }
 
-.sign-up-button, .form-button-cancel{
+.sign-up-button, .form-button-cancel,
+.form-button, .close-button{
   height: 40px;
   width: 160px;
   background: #fdfdfd;
@@ -457,50 +468,14 @@ activated by hamburger.js in static/js directory*/
   color: #b90000;
 }
 
-
 .form-button, .close-button{
-  height: 40px;
-  width: 160px;
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
   border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
 }
 
 .close-button{
   width: 120px;
-}
-
-.form-button-cancel:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #b90000;
-}
-
-.form-button-cancel:focus,
-.sign-up-button:focus,
-.form-button:focus,
-.delete-button:focus,
-.close-button:focus,
-.button-issues:focus,
-.new-issue-button:focus,
-.issues-count-btn:focus{
-  outline: none;
-  box-shadow: none;
-}
-
-.sign-up-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #3c4ef1;
-}
-
-.form-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-  background: #18b5c0;
 }
 
 .delete-button{
@@ -516,40 +491,108 @@ activated by hamburger.js in static/js directory*/
   line-height: 40px;
 }
 
-.delete-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
+.button-position-abs{
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
-.close-button:hover{
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.project-button{
+.button-position-rel{
   position: relative;
   width: 120px;
   height: 40px;
 }
 
+.project-button{
+  @extend .button-position-rel;
+}
+
 .project-button > a{
-  position: absolute;
+  @extend .button-position-abs;
   top: 30%;
   left: 28%;
-  transform: translate(-50%, -50%);
 }
 
 .project-button > .issues-count{
-  position: absolute;
+  @extend .button-position-abs;
   top: 68%;
   left: 60%;
-  transform: translate(-50%, -50%);
 }
 
-.button-issues:hover, .new-issue-button:hover{
+.folder-file-button{
+  @extend .button-position-rel;
+}
+    
+.folder-file-button > a{
+  @extend .button-position-abs;
+  top: 75%;
+  left: 35%;
+}
+
+.folder-file-button > .issues-count{
+  @extend .button-position-abs;
+  top: 110%;
+  left: 69%;
+}
+
+/**************************************************************************/
+/*----BUTTON HOVER EFFECTS----*/
+/**************************************************************************/
+
+.delete-button:hover, .close-button:hover, .sign-up-button:hover,
+.form-button:hover, .form-button-cancel:hover, .button-issues:hover,
+.new-issue-button:hover, .issues-count-btn:hover{
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.sign-up-button:hover{
+  background: #3c4ef1;
+}
+
+.form-button:hover, .button-issues:hover, .new-issue-button:hover{
   background: #18b5c0;
+}
+
+.form-button-cancel:hover{
+  background: #b90000;
+}
+
+.issues-count-btn:hover{
+  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
+}
+
+.button-search:hover{
+  outline: none;
+}
+
+/*Sets hover effects for both color versions of the button*/
+.issue-button:hover{
+  height: 80px;
+  width: 400px;
+}
+
+.issue-button:hover > .icon-background-color{
+  height: 80px;
+  width: 86px;
+}
+
+/**************************************************************************/
+/*----BUTTON FOCUS EFFECTS----*/
+/**************************************************************************/
+
+.button-focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
+.delete-button:focus, .close-button:focus, .button-issues:focus,
+.new-issue-button:focus, .issues-count-btn:focus{
+  @extend .button-focus;
+}
+
+.double-box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
 }
 
 .issues-count, .issues-count-btn{
@@ -564,34 +607,8 @@ activated by hamburger.js in static/js directory*/
   justify-content: center;
 }
 
-.issues-count-btn:hover{
-  text-decoration: none;
-  color: #ffffff;
-  box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
-}
-
 .count-small{
   font-size: 12px;
-}
-
-.folder-file-button{
-  position: relative;
-  width: 120px;
-  height: 40px;
-}
-
-.folder-file-button > a{
-  position: absolute;
-  top: 75%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-}
-
-.folder-file-button > .issues-count{
-  position: absolute;
-  top: 110%;
-  left: 69%;
-  transform: translate(-50%, -50%);
 }
 
 .button-container{
@@ -615,51 +632,30 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.icon-background-color{
-  height: 58px;
-  width: 75px;
-  border-radius: 7px 0px 0px 7px;
-  background: #3c4ef1;
-}
-
 /**/
 .issue-button > i {
   font-size: 35px;
-  position: absolute;
+  @extend .button-position-abs;
   color: #FFFFFF;
   top: 50%;
   left: 11%;
-  transform: translate(-50%, -50%);
 }
 
 /*Styles and positions the text within the button*/
 .button-title{
+  @extend .button-position-abs;
   font-size: 18px;
-  position: absolute;
   top: 50%;
   left: 37%;
-  transform: translate(-50%, -50%);
 }
 
 .button-description{
+  @extend .button-position-abs;
   font-size: 14px;
   white-space: nowrap;
-  position: absolute;
   color: #5e5e5e;
   top: 50%;
   left: 72%;
-  transform: translate(-50%, -50%);
-}
-
-/*Sets hover effects for both color versions of the button*/
-.issue-button:hover{
-  height: 80px;
-  width: 400px;
-}
-
-.issue-button:hover > .icon-background-color{
-  height: 80px;
-  width: 86px;
 }
 
 .issue-button:active{
@@ -673,10 +669,6 @@ activated by hamburger.js in static/js directory*/
   color: #FFFFFF;
   border: none;
   border-radius: 7px;
-}
-
-.button-search:hover{
-  outline: none;
 }
 
 /**************************************************************************/
@@ -738,7 +730,12 @@ activated by hamburger.js in static/js directory*/
 /*----SEARCH RESULTS----*/
 /**************************************************************************/
 
-
+.icon-background-color{
+  height: 58px;
+  width: 75px;
+  border-radius: 7px 0px 0px 7px;
+  background: #3c4ef1;
+}
 
 /**************************************************************************/
 /*PROJECT/FOLDER/FILE PAGES*/
