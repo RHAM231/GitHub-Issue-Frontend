@@ -4,12 +4,18 @@
 /*
 WEBSITE BODY, FONT, WRAPPER
 CURRENT PATH LINKS
+MEDIA QUERIES
 HEADER
   NAVBAR
   NAVBAR CUSTOM BREAKPOINT
   NAVBAR ANIMATED TOGGLER
   MASTER SEARCH FORM
 BUTTONS
+  BUTTON STYLES
+    BUTTON STYLES: PARENT CLASSES
+    BUTTON STYLES: CHILD CLASSES
+  BUTTON HOVER EFFECTS
+  BUTTON FOCUS EFFECTS
 BASE PAGES
   ABOUT
   HOME
@@ -70,6 +76,18 @@ body, html {
   font-weight: bold;
 }
 
+/**************************************************************************/
+/*MEDIA QUERIES*/
+/**************************************************************************/
+@media (max-width: 767px) {
+  .header-bottom {
+    height: 120px;
+  }
+
+  .issue-dropdown-filters {
+    float: left;
+  }
+}
 /**************************************************************************/
 /*HEADER*/
 /**************************************************************************/
@@ -382,12 +400,6 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*----MASTER SEARCH FORM----*/
 /**************************************************************************/
-.nav-search-text {
-  color: #000000 important;
-  line-height: 40px;
-  font-size: 18px;
-}
-
 .login-out-link {
   color: #000000;
   line-height: 40px;
@@ -426,52 +438,48 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*----BUTTON STYLES----*/
 /**************************************************************************/
-.button-style-1, .edit-issue-button,
-.new-issue-button,
-.button-issues {
+/**************************************************************************/
+/*--------BUTTON STYLES: PARENT CLASSES----*/
+/**************************************************************************/
+.hide-button {
+  display: none;
+}
+
+.button-style-global, .button-search, .delete-button, .sign-up-button, .form-button-cancel, .form-button, .close-button, .edit-issue-button, .new-issue-button, .issue-button {
   height: 40px;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+  padding: 0px 0px 0px 0px;
+}
+
+.button-style-1, .edit-issue-button, .new-issue-button, .issue-button {
   width: 80px;
   border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
+.button-style-2, .sign-up-button, .form-button-cancel, .form-button, .close-button {
+  width: 160px;
+  border: 1px solid;
+  border-color: #000000;
+  background: #fdfdfd;
+  color: #3c4ef1;
+}
+
+/**************************************************************************/
+/*--------BUTTON STYLES: CHILD CLASSES----*/
+/**************************************************************************/
 .new-issue-button {
   width: 120px;
 }
 
-.button-issues {
+.issue-button {
   width: 85px;
-}
-
-.sign-up-button, .form-button-cancel,
-.form-button, .close-button {
-  height: 40px;
-  width: 160px;
-  background: #fdfdfd;
-  color: #3c4ef1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-}
-
-.form-button-cancel {
-  color: #b90000;
-}
-
-.form-button, .close-button {
-  background: #3c4ef1;
-  color: #FFFFFF;
-  border: none;
 }
 
 .close-button {
@@ -479,24 +487,37 @@ activated by hamburger.js in static/js directory*/
 }
 
 .delete-button {
-  height: 40px;
   width: 120px;
+  border: none;
   background: #d60000;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
   text-align: center;
   line-height: 40px;
 }
 
-.button-position-abs, .button-title, .issue-button > i, .folder-file-button > .issues-count, .folder-file-button > a, .project-button > .issues-count, .project-button > a {
+.form-button-cancel {
+  color: #b90000;
+}
+
+.button-search {
+  width: 85px;
+  border: none;
+  background: #3c4ef1;
+  color: #FFFFFF;
+}
+
+.form-button, .close-button {
+  background: #3c4ef1;
+  color: #FFFFFF;
+  border: none;
+}
+
+.button-position-abs, .button-description, .button-title, .issue-tile > i, .folder-file-button > .issues-count, .folder-file-button > a, .project-button > .issues-count, .project-button > a {
   position: absolute;
   transform: translate(-50%, -50%);
 }
 
-.button-position-rel, .folder-file-button, .project-button {
+.button-position-rel, .project-button, .folder-file-button {
   position: relative;
   width: 120px;
   height: 40px;
@@ -526,7 +547,7 @@ activated by hamburger.js in static/js directory*/
 /*----BUTTON HOVER EFFECTS----*/
 /**************************************************************************/
 .delete-button:hover, .close-button:hover, .sign-up-button:hover,
-.form-button:hover, .form-button-cancel:hover, .button-issues:hover,
+.form-button:hover, .form-button-cancel:hover, .issue-button:hover,
 .new-issue-button:hover, .issues-count-btn:hover {
   text-decoration: none;
   color: #FFFFFF;
@@ -536,7 +557,7 @@ activated by hamburger.js in static/js directory*/
   background: #3c4ef1;
 }
 
-.form-button:hover, .button-issues:hover, .new-issue-button:hover {
+.form-button:hover, .issue-button:hover, .new-issue-button:hover {
   background: #18b5c0;
 }
 
@@ -548,18 +569,29 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0px 0px 15px rgba(51, 65, 255, 0.6);
 }
 
+.button-search:hover {
+  outline: none;
+}
+
+/*Sets hover effects for both color versions of the button*/
+.issue-tile:hover {
+  height: 80px;
+  width: 400px;
+}
+
+.issue-tile:hover > .icon-background-color {
+  height: 80px;
+  width: 86px;
+}
+
 /**************************************************************************/
 /*----BUTTON FOCUS EFFECTS----*/
 /**************************************************************************/
-.button-focus, .form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
-.delete-button:focus, .close-button:focus, .button-issues:focus,
+.form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
+.delete-button:focus, .close-button:focus, .issue-button:focus,
 .new-issue-button:focus, .issues-count-btn:focus {
   outline: none;
   box-shadow: none;
-}
-
-.double-box-shadow {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
 }
 
 .issues-count, .issues-count-btn {
@@ -587,7 +619,7 @@ activated by hamburger.js in static/js directory*/
 }
 
 /**/
-.issue-button {
+.issue-tile {
   background-color: #FFFFFF;
   border: none;
   color: #000000;
@@ -599,19 +631,16 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.icon-background-color {
-  height: 58px;
-  width: 75px;
-  border-radius: 7px 0px 0px 7px;
-  background: #3c4ef1;
-}
-
 /**/
-.issue-button > i {
+.issue-tile > i {
   font-size: 35px;
   color: #FFFFFF;
   top: 50%;
   left: 11%;
+}
+
+.issue-tile:active {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 /*Styles and positions the text within the button*/
@@ -624,59 +653,11 @@ activated by hamburger.js in static/js directory*/
 .button-description {
   font-size: 14px;
   white-space: nowrap;
-  position: absolute;
   color: #5e5e5e;
   top: 50%;
   left: 72%;
-  transform: translate(-50%, -50%);
 }
 
-/*Sets hover effects for both color versions of the button*/
-.issue-button:hover {
-  height: 80px;
-  width: 400px;
-}
-
-.issue-button:hover > .icon-background-color {
-  height: 80px;
-  width: 86px;
-}
-
-.issue-button:active {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
-}
-
-.button-search {
-  height: 40px;
-  width: 85px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 7px;
-}
-
-.button-search:hover {
-  outline: none;
-}
-
-/**************************************************************************/
-/*junk*/
-/**************************************************************************/
-@media (max-width: 992px) {
-  .dynamic-center {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (max-width: 767px) {
-  .header-bottom {
-    height: 120px;
-  }
-
-  .issue-dropdown-filters {
-    float: left;
-  }
-}
 /**************************************************************************/
 /*BASE PAGES*/
 /**************************************************************************/
@@ -708,6 +689,19 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 /*----SEARCH RESULTS----*/
 /**************************************************************************/
+.icon-background-color {
+  height: 58px;
+  width: 75px;
+  border-radius: 7px 0px 0px 7px;
+  background: #3c4ef1;
+}
+
+@media (max-width: 992px) {
+  .dynamic-center {
+    display: flex;
+    justify-content: center;
+  }
+}
 /**************************************************************************/
 /*PROJECT/FOLDER/FILE PAGES*/
 /**************************************************************************/

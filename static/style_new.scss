@@ -5,6 +5,7 @@
 /*
 WEBSITE BODY, FONT, WRAPPER
 CURRENT PATH LINKS
+MEDIA QUERIES
 HEADER
   NAVBAR
   NAVBAR CUSTOM BREAKPOINT
@@ -12,6 +13,8 @@ HEADER
   MASTER SEARCH FORM
 BUTTONS
   BUTTON STYLES
+    BUTTON STYLES: PARENT CLASSES
+    BUTTON STYLES: CHILD CLASSES
   BUTTON HOVER EFFECTS
   BUTTON FOCUS EFFECTS
 BASE PAGES
@@ -75,6 +78,20 @@ body, html {
 .link-divider{
   font-size: 22px;
   font-weight: bold;
+}
+
+/**************************************************************************/
+/*MEDIA QUERIES*/
+/**************************************************************************/
+
+// 
+@media(max-width:767px){
+  .header-bottom{
+    height: 120px;
+  }
+  .issue-dropdown-filters{
+    float: left;
+  }
 }
 
 /**************************************************************************/
@@ -375,12 +392,6 @@ activated by hamburger.js in static/js directory*/
 /*----MASTER SEARCH FORM----*/
 /**************************************************************************/
 
-.nav-search-text{
-  color: #000000 important;
-  line-height: 40px;
-  font-size: 18px;
-}
-
 .login-out-link{
   color: #000000;
   line-height: 40px;
@@ -422,56 +433,64 @@ activated by hamburger.js in static/js directory*/
 /*----BUTTON STYLES----*/
 /**************************************************************************/
 
-.button-style-1{
+/**************************************************************************/
+/*--------BUTTON STYLES: PARENT CLASSES----*/
+/**************************************************************************/
+
+// Hides the default html button element
+.hide-button{
+  display:none;
+}
+
+// Sets a global style for most buttons to inherit from
+.button-style-global{
   height: 40px;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
+  padding: 0px 0px 0px 0px;
+}
+
+// Global button style 1
+.button-style-1{
   width: 80px;
   border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
   background: #3c4ef1;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
-.edit-issue-button,
-.new-issue-button,
-.button-issues{
+// Global button style 2
+.button-style-2{
+  width: 160px;
+  border: 1px solid;
+  border-color: #000000;
+  background: #fdfdfd;
+  color: #3c4ef1;
+}
+
+.edit-issue-button, .new-issue-button, .issue-button{
+  @extend .button-style-global;
   @extend .button-style-1;
 }
+
+.sign-up-button, .form-button-cancel, .form-button, .close-button{
+  @extend .button-style-global;
+  @extend .button-style-2;
+}
+
+/**************************************************************************/
+/*--------BUTTON STYLES: CHILD CLASSES----*/
+/**************************************************************************/
 
 .new-issue-button{
   width: 120px;
 }
 
-.button-issues{
+.issue-button{
   width: 85px;
-}
-
-.sign-up-button, .form-button-cancel,
-.form-button, .close-button{
-  height: 40px;
-  width: 160px;
-  background: #fdfdfd;
-  color: #3c4ef1;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
-}
-
-.form-button-cancel{
-  color: #b90000;
-}
-
-.form-button, .close-button{
-  background: #3c4ef1;
-  color: #FFFFFF;
-  border: none;
 }
 
 .close-button{
@@ -479,16 +498,32 @@ activated by hamburger.js in static/js directory*/
 }
 
 .delete-button{
-  height: 40px;
+  @extend .button-style-global;
   width: 120px;
+  border: none;
   background: #d60000;
   color: #FFFFFF;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
-  border: none;
-  border-radius: 7px;
-  padding: 0px 0px 0px 0px;
   text-align: center;
   line-height: 40px;
+}
+
+.form-button-cancel{
+  color: #b90000;
+}
+
+// 
+.button-search{
+  @extend .button-style-global;
+  width: 85px;
+  border: none;
+  background: #3c4ef1;
+  color: #FFFFFF;
+}
+
+.form-button, .close-button{
+  background: #3c4ef1;
+  color: #FFFFFF;
+  border: none;
 }
 
 .button-position-abs{
@@ -502,7 +537,7 @@ activated by hamburger.js in static/js directory*/
   height: 40px;
 }
 
-.project-button{
+.project-button, .folder-file-button{
   @extend .button-position-rel;
 }
 
@@ -516,10 +551,6 @@ activated by hamburger.js in static/js directory*/
   @extend .button-position-abs;
   top: 68%;
   left: 60%;
-}
-
-.folder-file-button{
-  @extend .button-position-rel;
 }
     
 .folder-file-button > a{
@@ -539,7 +570,7 @@ activated by hamburger.js in static/js directory*/
 /**************************************************************************/
 
 .delete-button:hover, .close-button:hover, .sign-up-button:hover,
-.form-button:hover, .form-button-cancel:hover, .button-issues:hover,
+.form-button:hover, .form-button-cancel:hover, .issue-button:hover,
 .new-issue-button:hover, .issues-count-btn:hover{
   text-decoration: none;
   color: #FFFFFF;
@@ -549,7 +580,7 @@ activated by hamburger.js in static/js directory*/
   background: #3c4ef1;
 }
 
-.form-button:hover, .button-issues:hover, .new-issue-button:hover{
+.form-button:hover, .issue-button:hover, .new-issue-button:hover{
   background: #18b5c0;
 }
 
@@ -566,12 +597,12 @@ activated by hamburger.js in static/js directory*/
 }
 
 /*Sets hover effects for both color versions of the button*/
-.issue-button:hover{
+.issue-tile:hover{
   height: 80px;
   width: 400px;
 }
 
-.issue-button:hover > .icon-background-color{
+.issue-tile:hover > .icon-background-color{
   height: 80px;
   width: 86px;
 }
@@ -580,19 +611,11 @@ activated by hamburger.js in static/js directory*/
 /*----BUTTON FOCUS EFFECTS----*/
 /**************************************************************************/
 
-.button-focus{
+.form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
+.delete-button:focus, .close-button:focus, .issue-button:focus,
+.new-issue-button:focus, .issues-count-btn:focus{
   outline: none;
   box-shadow: none;
-}
-
-.form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
-.delete-button:focus, .close-button:focus, .button-issues:focus,
-.new-issue-button:focus, .issues-count-btn:focus{
-  @extend .button-focus;
-}
-
-.double-box-shadow {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15), 0 4px 6px 0 rgba(0,0,0,0.15);
 }
 
 .issues-count, .issues-count-btn{
@@ -620,7 +643,7 @@ activated by hamburger.js in static/js directory*/
 }
 
 /**/
-.issue-button{
+.issue-tile{
   background-color: #FFFFFF;
   border: none;
   color: #000000;
@@ -633,12 +656,17 @@ activated by hamburger.js in static/js directory*/
 }
 
 /**/
-.issue-button > i {
+.issue-tile > i {
   font-size: 35px;
   @extend .button-position-abs;
   color: #FFFFFF;
   top: 50%;
   left: 11%;
+}
+
+// 
+.issue-tile:active{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
 }
 
 /*Styles and positions the text within the button*/
@@ -649,6 +677,7 @@ activated by hamburger.js in static/js directory*/
   left: 37%;
 }
 
+// 
 .button-description{
   @extend .button-position-abs;
   font-size: 14px;
@@ -658,44 +687,9 @@ activated by hamburger.js in static/js directory*/
   left: 72%;
 }
 
-.issue-button:active{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
-}
-
-.button-search{
-  height: 40px;
-  width: 85px;
-  background: #3c4ef1;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 7px;
-}
-
-/**************************************************************************/
-/*junk*/
-/**************************************************************************/
-
-@media(max-width:992px){
-  .dynamic-center {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media(max-width:767px){
-  .header-bottom{
-    height: 120px;
-  }
-  .issue-dropdown-filters{
-    float: left;
-  }
-}
-
 /**************************************************************************/
 /*BASE PAGES*/
 /**************************************************************************/
-
-
 
 /**************************************************************************/
 /*----ABOUT----*/
@@ -735,6 +729,14 @@ activated by hamburger.js in static/js directory*/
   width: 75px;
   border-radius: 7px 0px 0px 7px;
   background: #3c4ef1;
+}
+
+// 
+@media(max-width:992px){
+  .dynamic-center {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /**************************************************************************/
@@ -856,7 +858,7 @@ activated by hamburger.js in static/js directory*/
 }
 
 @media (max-width:1135px){
-.project-description{width: 300px; left: -91%;}
+  .project-description{width: 300px; left: -91%;}
 }
 
 .project-date{
