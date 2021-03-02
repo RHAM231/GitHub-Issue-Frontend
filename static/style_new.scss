@@ -71,27 +71,15 @@ body, html {
 /*CURRENT PATH LINKS*/
 /**************************************************************************/
 
+// Style the current path header at the top of list and detail pages
 .current-path{
   font-size: 22px;
 }
 
+// Style the dividers between the current path links
 .link-divider{
   font-size: 22px;
   font-weight: bold;
-}
-
-/**************************************************************************/
-/*MEDIA QUERIES*/
-/**************************************************************************/
-
-// 
-@media(max-width:767px){
-  .header-bottom{
-    height: 120px;
-  }
-  .issue-dropdown-filters{
-    float: left;
-  }
 }
 
 /**************************************************************************/
@@ -117,17 +105,15 @@ body, html {
   z-index: 9;
 }
 
-.nav-search-collapse{
-  height: 80px;
-  line-height: 80px;
-}
-
+// Set size and position of magnifying glass container on 
+// navbar search
 .nav-search-icon{
   width: 40px;
   height: 80px;
   position: relative;
 }
 
+// Set style of nav-search icon
 .nav-search-icon > i{
   font-size: 26px;
   width: 60px;
@@ -153,16 +139,18 @@ body, html {
   margin: 0px 20px 0px 20px;
 }
 
+// Add margin to the bottom of the navbar on mobile
 .navbar > .show{
   margin: 0px 20px 30px 20px;
 }
 
+// Set color of nav-links if desired
 .nav-link {
-    color:#000000;
+  color:#000000;
 }
 
-/*Styles the navbar links.*/
-.link-hover::after{
+/*Creates the link hover effect.*/
+.link-effect::after{
   text-decoration: none;
   color: #000000;
   content: '';
@@ -173,45 +161,17 @@ body, html {
   transition: width .3s;
 }
 
-/*Sets hover effects for the navbar links, logo, toggler, and drop down
-items*/
-.link-hover:hover::after{
+/*Sets hover effects for the navbar links*/
+.link-effect:hover::after{
   color: #000000;
   text-decoration: none;
   width: 100%;
   transition: width .3s;
 }
 
-.link-dropdown::after{
-  text-decoration: none;
-  color: #000000;
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #3c4ef1;
-  transition: width .3s;
-}
-
-.link-dropdown:hover::after{
-  color: #000000;
-  text-decoration: none;
-  width: 100%;
-  transition: width .3s;
-}
-
+// Remove the default blue hyperlink color on hover
 .navbar-brand:hover, .nav-link:hover {
-    color: #000000;
-}
-
-.dropdown-item:hover{
-    color: #ffffff;
-    background: #3c4ef1;
-}
-
-/*Styles the dropdown menu opened by the toggler to match the navbar */
-.dropdown-menu{
-  background: #ffffff;
+  color: #000000;
 }
 
 /*Sets text color for the drop down items*/
@@ -220,28 +180,20 @@ items*/
   text-align: center;
 }
 
-.nav-item{
-    text-align: center;
+// Set hover effect for the dropdown items
+.dropdown-item:hover{
+  color: #ffffff;
+  background: #3c4ef1;
 }
 
-.squash{
-  margin-right: 45%;
-  margin-left: 45%;
+/*Styles the dropdown menu opened by the toggler to match the navbar */
+.dropdown-menu{
+  background: #ffffff;
 }
-@media (max-width: 576px){
-  .squash{margin-right: 30%; margin-left: 30%;}
-}
-@media (max-width: 768px){
-  .squash{margin-right: 35%; margin-left: 35%;
-  }
-}
-@media (max-width: 992px){
-  .squash{margin-right: 38%; margin-left: 38%;
-  }
-}
-@media (max-width: 1200px){
-  .squash{margin-right: 40%; margin-left: 40%;
-  }
+
+// Centers the nav-links on the navbar dropdown for mobile
+.nav-item{
+  text-align: center;
 }
 
 /**************************************************************************/
@@ -279,6 +231,7 @@ keep from breaking the navbar.*/
   }
 }
 
+// Swap search bars for different size screens
 @media (max-width: 1325px) {
   .login-out-link{
     margin-left: 0px;
@@ -307,21 +260,16 @@ keep from breaking the navbar.*/
   }
 }
 
-.table-scroll{
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
 /**************************************************************************/
 /*----NAVBAR ANIMATED TOGGLER----*/
 /**************************************************************************/
 
-/*Sets color and glow for the middle hamburger toggler bar*/
+/*Sets colorfor the middle hamburger toggler bar*/
 .navbar-toggler-icon{
   background: #000000;
 }
 
-/*Sets color and glow for the top and bottom hamburger toggler bars*/
+/*Sets color for the top and bottom hamburger toggler bars*/
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   background: #000000;
@@ -392,6 +340,7 @@ activated by hamburger.js in static/js directory*/
 /*----MASTER SEARCH FORM----*/
 /**************************************************************************/
 
+// Set login link style in the navbar
 .login-out-link{
   color: #000000;
   line-height: 40px;
@@ -399,17 +348,13 @@ activated by hamburger.js in static/js directory*/
   margin-left: 15px;
 }
 
-@media (max-width: 1325px) {
-  .login-out-link{
-    margin-left: 0px;
-  }
-}
-
+// Set hover effect for link
 .login-out-link:hover{
   color: #000000;
   text-decoration: none;
 }
 
+// Style the search field
 .ms-form-style{
   width: 260px;
   height: 40px;
@@ -420,6 +365,7 @@ activated by hamburger.js in static/js directory*/
   padding-left: 10px;
 }
 
+// Set focus effect for the search field
 .ms-form-style:focus, .form-style:active{
   outline: none;
   box-shadow: 0px 0px 15px rgba(60, 78, 241, 0.6);
@@ -437,12 +383,12 @@ activated by hamburger.js in static/js directory*/
 /*--------BUTTON STYLES: PARENT CLASSES----*/
 /**************************************************************************/
 
-// Hides the default html button element
+// Hide the default html button element
 .hide-button{
   display:none;
 }
 
-// Sets a global style for most buttons to inherit from
+// Set a global style for most buttons to inherit from
 .button-style-global{
   height: 40px;
   border-radius: 7px;
@@ -471,20 +417,36 @@ activated by hamburger.js in static/js directory*/
   color: #3c4ef1;
 }
 
-.edit-issue-button, .new-issue-button, .issue-button{
-  @extend .button-style-global;
-  @extend .button-style-1;
+// Create a parent relative position style for buttons
+.button-position-rel{
+  position: relative;
+  width: 120px;
+  height: 40px;
 }
 
-.sign-up-button, .form-button-cancel, .form-button, .close-button{
-  @extend .button-style-global;
-  @extend .button-style-2;
+// Create a child absolute position style for buttons
+.button-position-abs{
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 /**************************************************************************/
 /*--------BUTTON STYLES: CHILD CLASSES----*/
 /**************************************************************************/
 
+// Instantiate issue buttons
+.edit-issue-button, .new-issue-button, .issue-button{
+  @extend .button-style-global;
+  @extend .button-style-1;
+}
+
+// Instantiate form buttons
+.sign-up-button, .form-button-cancel, .form-button, .close-button{
+  @extend .button-style-global;
+  @extend .button-style-2;
+}
+
+// Customize buttons further by overiding global styles above
 .new-issue-button{
   width: 120px;
 }
@@ -497,6 +459,10 @@ activated by hamburger.js in static/js directory*/
   width: 120px;
 }
 
+.form-button-cancel{
+  color: #b90000;
+}
+
 .delete-button{
   @extend .button-style-global;
   width: 120px;
@@ -507,11 +473,6 @@ activated by hamburger.js in static/js directory*/
   line-height: 40px;
 }
 
-.form-button-cancel{
-  color: #b90000;
-}
-
-// 
 .button-search{
   @extend .button-style-global;
   width: 85px;
@@ -526,17 +487,8 @@ activated by hamburger.js in static/js directory*/
   border: none;
 }
 
-.button-position-abs{
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-
-.button-position-rel{
-  position: relative;
-  width: 120px;
-  height: 40px;
-}
-
+// Create the buttons with issue counts on the project, folder, and file list pages
+// Inherit from button position styles above
 .project-button, .folder-file-button{
   @extend .button-position-rel;
 }
@@ -565,10 +517,30 @@ activated by hamburger.js in static/js directory*/
   left: 69%;
 }
 
+// Create an orange circle icon with issue count for issue button
+// Also doubles as a button on the file contents page next to loc
+.issues-count, .issues-count-btn{
+  background-color: #e66902;
+  border-radius: 13px;
+  height: 26px;
+  width: 26px;
+  font-size: 16px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Adjust our font size for three digit numbers on issue count above
+.count-small{
+  font-size: 12px;
+}
+
 /**************************************************************************/
 /*----BUTTON HOVER EFFECTS----*/
 /**************************************************************************/
 
+// Remove default hover styles for the buttons
 .delete-button:hover, .close-button:hover, .sign-up-button:hover,
 .form-button:hover, .form-button-cancel:hover, .issue-button:hover,
 .new-issue-button:hover, .issues-count-btn:hover{
@@ -576,6 +548,7 @@ activated by hamburger.js in static/js directory*/
   color: #FFFFFF;
 }
 
+// Customize individual button hover effects
 .sign-up-button:hover{
   background: #3c4ef1;
 }
@@ -596,95 +569,16 @@ activated by hamburger.js in static/js directory*/
   outline: none;
 }
 
-/*Sets hover effects for both color versions of the button*/
-.issue-tile:hover{
-  height: 80px;
-  width: 400px;
-}
-
-.issue-tile:hover > .icon-background-color{
-  height: 80px;
-  width: 86px;
-}
-
 /**************************************************************************/
 /*----BUTTON FOCUS EFFECTS----*/
 /**************************************************************************/
 
+// Remove default focus effect for buttons
 .form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
 .delete-button:focus, .close-button:focus, .issue-button:focus,
 .new-issue-button:focus, .issues-count-btn:focus{
   outline: none;
   box-shadow: none;
-}
-
-.issues-count, .issues-count-btn{
-  background-color: #e66902;
-  border-radius: 13px;
-  height: 26px;
-  width: 26px;
-  font-size: 16px;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.count-small{
-  font-size: 12px;
-}
-
-.button-container{
-  height: 80px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/**/
-.issue-tile{
-  background-color: #FFFFFF;
-  border: none;
-  color: #000000;
-  cursor: pointer;
-  position: relative;
-  height: 58px;
-  width: 350px;
-  border-radius: 7px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/**/
-.issue-tile > i {
-  font-size: 35px;
-  @extend .button-position-abs;
-  color: #FFFFFF;
-  top: 50%;
-  left: 11%;
-}
-
-// 
-.issue-tile:active{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
-}
-
-/*Styles and positions the text within the button*/
-.button-title{
-  @extend .button-position-abs;
-  font-size: 18px;
-  top: 50%;
-  left: 37%;
-}
-
-// 
-.button-description{
-  @extend .button-position-abs;
-  font-size: 14px;
-  white-space: nowrap;
-  color: #5e5e5e;
-  top: 50%;
-  left: 72%;
 }
 
 /**************************************************************************/
@@ -695,6 +589,7 @@ activated by hamburger.js in static/js directory*/
 /*----ABOUT----*/
 /**************************************************************************/
 
+// Style the logos on the about page
 .logo-box{
   width: 120px;
   height: 100px;
@@ -724,6 +619,29 @@ activated by hamburger.js in static/js directory*/
 /*----SEARCH RESULTS----*/
 /**************************************************************************/
 
+// Create and style the results tiles on the search results page
+.results-tile-container{
+  height: 80px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Create the label for the tile
+.results-tile{
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  height: 58px;
+  width: 350px;
+  border-radius: 7px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+// Style the color tab that contains the icon
 .icon-background-color{
   height: 58px;
   width: 75px;
@@ -731,7 +649,51 @@ activated by hamburger.js in static/js directory*/
   background: #3c4ef1;
 }
 
-// 
+// Style the icon inside the tiles
+.results-tile > i {
+  font-size: 35px;
+  @extend .button-position-abs;
+  color: #FFFFFF;
+  top: 50%;
+  left: 11%;
+}
+
+// Set click effect for the tiles
+.results-tile:active{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+}
+
+/*Styles and positions the title text within the tile*/
+.results-tile-title{
+  @extend .button-position-abs;
+  font-size: 18px;
+  top: 50%;
+  left: 37%;
+}
+
+/*Styles and positions the description text within the tile*/
+.results-tile-description{
+  @extend .button-position-abs;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #5e5e5e;
+  top: 50%;
+  left: 72%;
+}
+
+// Enlarge the search result tiles on hover
+.results-tile:hover{
+  height: 80px;
+  width: 400px;
+}
+
+// Enlarge the color tab to match the tile above on hover
+.results-tile:hover > .icon-background-color{
+  height: 80px;
+  width: 86px;
+}
+
+// Center project, folder, and file tiles at Bootstrap breakpoint
 @media(max-width:992px){
   .dynamic-center {
     display: flex;
@@ -747,7 +709,21 @@ activated by hamburger.js in static/js directory*/
 /*----PROJECT & FOLDER CONTENTS----*/
 /**************************************************************************/
 
-.folder-file-box{
+// Create an inheritance class for the below elements
+.inline-block-relative{
+  display: inline-block;
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+// Style the top level html element for folder and file containers and for project
+// containers on the project list page
+.folder-file-box,
+.project-box{
   background: #FFFFFF;
   position: relative;
   border-radius: 10px;
@@ -755,13 +731,14 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
+// Style the header container
 .folder-file-header{
-  display: inline-block;
-  position: relative;
+  @extend .inline-block-relative;
   height: 60px;
   width: 100px;
 }
 
+// Style and position the header within the above container
 .folder-file-header > .custom-header{
   position: absolute;
   white-space: nowrap;
@@ -773,23 +750,29 @@ activated by hamburger.js in static/js directory*/
   transform: translate(50%, -50%);
 }
 
+// Create the icon tab for the project list, and folder and file contents pages
+.icon-tab, 
 .icon-tab-folder-file{
+  @extend .inline-block-relative;
+  background: #3c4ef1;
   border-radius: 10px 0px 0px 10px;
+  height: 60px;
+  width: 70px;
 }
 
+// Create a date text container for the style below
 .folder-file-date{
-  display: inline-block;
-  position: relative;
+  @extend .inline-block-relative;
   height: 60px;
   width: 50px;
 }
 
+// Style the date text on the folder and file boxes
 .folder-file-date > a{
-  position: absolute;
+  @extend .position-absolute;
   white-space: nowrap;
   top: 50%;
   left: -50%;
-  transform: translate(-50%, -50%);
 }
 
 
@@ -797,51 +780,44 @@ activated by hamburger.js in static/js directory*/
 /*----PROJECT LIST----*/
 /**************************************************************************/
 
+// Overide height on the project box class above
 .project-box{
-  background: #FFFFFF;
-  position: relative;
-  border-radius: 10px;
   height: 120px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+// Style the project header container
 .project-header{
-  display: inline-block;
-  position: relative;
+  @extend .inline-block-relative;
   height: 60px;
   width:220px;
 }
 
+// Style the project header text
 .project-header > h4{
-  position: absolute;
+  @extend .position-absolute;
   white-space: nowrap;
   width: 100px;
   height: 30px;
   top: 54%;
   left: 28%;
-  transform: translate(-50%, -50%);
 }
 
-.icon-tab, 
-.icon-tab-folder-file{
-  background: #3c4ef1;
+// Overide border radius on .icon-tab-folder-file above
+.icon-tab{
   border-radius: 10px 0px 0px 0px;
-  height: 60px;
-  width: 70px;
-  position: relative;
-  display: inline-block;
 }
 
+// Style the icons for the project list and folder and file contents pages
 .icon-tab > i, 
 .icon-tab-folder-file >i{
+  @extend .position-absolute;
   font-size: 35px;
-  position: absolute;
   color: #FFFFFF;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
+// Style icon tab text
 .icon-tab > a,
 .icon-tab-folder-file> a{
   position: absolute;
@@ -850,6 +826,7 @@ activated by hamburger.js in static/js directory*/
   text-overflow: ellipsis;
 }
 
+// Style the project description text on the project list page
 .project-description{
   width: 500px;
   top: 62%;
@@ -857,10 +834,12 @@ activated by hamburger.js in static/js directory*/
   transform: translate(50%, 50%);
 }
 
+// Resize the text above for smaller browsers
 @media (max-width:1135px){
   .project-description{width: 300px; left: -91%;}
 }
 
+// Style the project date text
 .project-date{
   width: 250px;
   top: 115%;
@@ -872,16 +851,20 @@ activated by hamburger.js in static/js directory*/
 /*----FILE CONTENTS----*/
 /**************************************************************************/
 
-.shadow-container{
+// Create the top level html element for file contents so we can apply a
+// box-shadow property to the entire set of rows without it looking weird
+.file-contents-box{
   border-radius: 10px;
   box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
+// Custom padding to get tabs to align properly
 .p-custom{
   padding-left: 15px;
   padding-right: 15px;
 }
 
+// Container for all the file contents
 .file-box{
   background: #FFFFFF;
   position: relative;
@@ -889,29 +872,34 @@ activated by hamburger.js in static/js directory*/
   height: 60px;
 }
 
+// Style the subheader text
 .file-subheader{
   background: #FFFFFF;
   position: relative;
   height: 50px;
 }
 
+// Style the code text
 .file-contents{
   background: #FFFFFF;
   position: relative;
   border-radius: 0px 0px 10px 10px;
 }
 
+// Highlight issue text when an issue is present
 .code-issue{
   background: #e60202;
   border-radius: 17px;
 }
 
+// Create an orange circle for the issue count next to the text
 .code-issue-count{
   background: #e66902;
   border-radius: 17px;
   color: #ffffff;
 }
 
+// Style the table column on the far left for issues
 .issue-present{
   font-size: 14px;
   padding-left: 22px;
@@ -921,6 +909,7 @@ activated by hamburger.js in static/js directory*/
   text-align: center
 }
 
+// Style the code line number column
 .index{
   font-size: 14px;
   color: #7e7e7e;
@@ -931,11 +920,18 @@ activated by hamburger.js in static/js directory*/
   text-align: right
 }
 
+// Style the code text column
 .code-text{
   color: #000000;
   padding-left: 10px;
   padding-right: 10px;
   height: 20px;
+  white-space: nowrap;
+}
+
+// Set our file contents page to scroll on small screens
+.table-scroll{
+  overflow-x: auto;
   white-space: nowrap;
 }
 
@@ -947,29 +943,34 @@ activated by hamburger.js in static/js directory*/
 /*----ISSUE CREATE----*/
 /**************************************************************************/
 
+// Style the top level html element for the form
 .form-box{
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
+// Create a container for the user information
 .user-box{
   height: 50px;
   width: 50px;
   border-radius: 25px;
 }
 
+// Style the user image
 .user-image{
   width: 100%;
   height: 100%;
   border-radius: 25px;
 }
 
+// Style the user title
 .user-title{
   line-height: 50px;
   color: #000000;
 }
 
+// Enlarge the issue title text
 .issue-title-label{
   font-size: 20px;
 }
@@ -1071,6 +1072,12 @@ activated by hamburger.js in static/js directory*/
 
 .header-top, .header-bottom{
   height: 60px;
+}
+
+@media(max-width:767px){
+  .header-bottom{
+    height: 120px;
+  }
 }
 
 .issue-tab > i, .issue-tab > a{
@@ -1193,14 +1200,6 @@ activated by hamburger.js in static/js directory*/
   outline:none;
 }
 
-@media(max-width:992px){
-  .dynamic-hide {display: none;}
-}
-
-@media(max-width:665px){
-  .dynamic-hide-small {display: none;}
-}
-
 .pl-custom{
   padding-left: 15px;
 }
@@ -1232,6 +1231,49 @@ activated by hamburger.js in static/js directory*/
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
+}
+
+/**************************************************************************/
+/*MEDIA QUERIES*/
+/**************************************************************************/
+
+// Adjust margin for nav-link hover effects for mobile dropdown
+.squash{
+  margin-right: 45%;
+  margin-left: 45%;
+}
+@media (max-width: 576px){
+  .squash{margin-right: 30%; margin-left: 30%;}
+}
+@media (max-width: 768px){
+  .squash{margin-right: 35%; margin-left: 35%;
+  }
+}
+@media (max-width: 992px){
+  .squash{margin-right: 38%; margin-left: 38%;
+  }
+}
+@media (max-width: 1200px){
+  .squash{margin-right: 40%; margin-left: 40%;
+  }
+}
+
+// Float the Author, Projects, Sort filters to the left on
+// the Issues List page
+@media(max-width:767px){
+  .issue-dropdown-filters{
+    float: left;
+  }
+}
+
+// Hide text on project/folder/file tiles for smaller screens
+@media(max-width:992px){
+  .dynamic-hide {display: none;}
+}
+
+// Hide text on project/folder/file tiles for smaller screens
+@media(max-width:665px){
+  .dynamic-hide-small {display: none;}
 }
 
 /**************************************************************************/
