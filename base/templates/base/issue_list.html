@@ -27,7 +27,7 @@
                 <i class="fas fa-search"></i>
               </div>
               <div class="form-search">{{ form.search }}</div>
-              <div class="float-right mx-auto">
+              <div class="header-btn-container float-right mx-auto">
                 <a href="{% url 'issue-create' %}" class="new-issue-button">New Issue</a>
               </div>
             </div>
@@ -40,17 +40,14 @@
             </div> -->
           </div>
           <div class="row mx-0 header-bottom">
-            <div class="col-md-4 col-sm-12 my-auto">
-              <a class="vertical-align pl-3 pr-2">{{ form.select_all }}</a>
-              <!-- {% for button in form.open_closed %}
-                <a>{{ button }}</a>
-              {% endfor %} -->
-              <i class="fas fa-bug"></i>
+            <div class="col-md-4 col-sm-12 d-flex vertical-align" style="white-space: nowrap;">
+              <a class="pl-3 pr-2">{{ form.select_all }}</a>
+              <i class="pr-2 fas fa-bug"></i>
               <a>{{ form.open_closed.0 }}</a>
-              <i class="pl-2 far fa-check-circle"></i>
+              <i class="pr-2 pl-2 far fa-check-circle"></i>
               <a>{{ form.open_closed.1 }}</a>
             </div>
-            <div class="col-md-8 col-sm-12 my-auto">
+            <div class="col-md-8 col-sm-12">
               <div class="issue-dropdown-filters">
                 <a>{{ form.author }}{{ form.projects }}{{ form.sort }}</a>
               </div>

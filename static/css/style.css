@@ -835,6 +835,16 @@ body, html {
 }
 
 @media (max-width: 767px) {
+  .header-btn-container {
+    order: 1;
+  }
+}
+.header-bottom > div {
+  white-space: nowrap;
+  height: 60px;
+}
+
+@media (max-width: 767px) {
   .header-bottom {
     height: 120px;
   }
@@ -865,7 +875,7 @@ body, html {
   left: 70%;
 }
 
-.vertical-align {
+.vertical-align > a, .vertical-align > i {
   line-height: 60px;
 }
 

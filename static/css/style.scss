@@ -1103,6 +1103,19 @@ body, html {
   height: 60px;
 }
 
+@media(max-width:767px){
+  .header-btn-container{
+    order: 1;
+  }
+}
+
+// Force the two columns in header bottom to stay at fixed height
+// Keep the elements on one line
+.header-bottom > div{
+  white-space: nowrap;
+  height: 60px;
+}
+
 // Adjust our vertical spacing for the header for smaller devices
 @media(max-width:767px){
   .header-bottom{
@@ -1141,8 +1154,8 @@ body, html {
   left: 70%;
 }
 
-// Vertically align the select all checkbox
-.vertical-align{
+// Vertically align the select all checkbox and open/closed radio buttons
+.vertical-align > a, .vertical-align > i{
   line-height: 60px;
 }
 
