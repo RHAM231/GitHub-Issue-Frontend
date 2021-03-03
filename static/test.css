@@ -220,10 +220,6 @@ keep from breaking the navbar.*/
   }
 }
 @media (max-width: 1325px) {
-  .login-out-link {
-    margin-left: 0px;
-  }
-
   .nav-search {
     display: none;
   }
@@ -247,6 +243,35 @@ keep from breaking the navbar.*/
 
   .container-no-margin {
     margin-top: 40px;
+  }
+}
+.squash {
+  margin-right: 45%;
+  margin-left: 45%;
+}
+
+@media (max-width: 576px) {
+  .squash {
+    margin-right: 30%;
+    margin-left: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .squash {
+    margin-right: 35%;
+    margin-left: 35%;
+  }
+}
+@media (max-width: 992px) {
+  .squash {
+    margin-right: 38%;
+    margin-left: 38%;
+  }
+}
+@media (max-width: 1200px) {
+  .squash {
+    margin-right: 40%;
+    margin-left: 40%;
   }
 }
 /**************************************************************************/
@@ -337,8 +362,13 @@ activated by hamburger.js in static/js directory*/
   margin-left: 15px;
 }
 
+@media (max-width: 1325px) {
+  .login-out-link {
+    margin-left: 0px;
+  }
+}
 .login-out-link:hover {
-  color: #000000;
+  color: #3c4ef1;
   text-decoration: none;
 }
 
@@ -637,7 +667,7 @@ activated by hamburger.js in static/js directory*/
   position: relative;
 }
 
-.position-absolute, .icon-tab > i,
+.position-absolute, .search-glass > i, .icon-tab > i,
 .icon-tab-folder-file > i, .project-header > h4, .folder-file-date > a {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -822,11 +852,21 @@ activated by hamburger.js in static/js directory*/
   white-space: nowrap;
 }
 
+@media (max-width: 992px) {
+  .dynamic-hide {
+    display: none;
+  }
+}
+@media (max-width: 665px) {
+  .dynamic-hide-small {
+    display: none;
+  }
+}
 /**************************************************************************/
 /*ISSUE PAGES*/
 /**************************************************************************/
 /**************************************************************************/
-/*----ISSUE CREATE----*/
+/*----ISSUE CREATE AND UPDATE----*/
 /**************************************************************************/
 .form-box {
   background: #ffffff;
@@ -855,7 +895,7 @@ activated by hamburger.js in static/js directory*/
   font-size: 20px;
 }
 
-#id_title {
+#id_title, #id_comment {
   border-radius: 7px;
   width: 100%;
   border: 1px solid;
@@ -895,14 +935,6 @@ activated by hamburger.js in static/js directory*/
   border-radius: 0px 7px 7px 0px;
 }
 
-#id_comment {
-  border-radius: 7px;
-  width: 100%;
-  outline: none;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 /**************************************************************************/
 /*----ISSUE READ----*/
 /**************************************************************************/
@@ -920,6 +952,9 @@ activated by hamburger.js in static/js directory*/
   width: 100px;
 }
 
+/**************************************************************************/
+/*----ISSUE DELETE----*/
+/**************************************************************************/
 .delete-icon {
   height: 60px;
   width: 60px;
@@ -931,12 +966,6 @@ activated by hamburger.js in static/js directory*/
   background: #c90000;
 }
 
-/**************************************************************************/
-/*----ISSUE UPDATE----*/
-/**************************************************************************/
-/**************************************************************************/
-/*----ISSUE DELETE----*/
-/**************************************************************************/
 /**************************************************************************/
 /*----ISSUE LIST----*/
 /**************************************************************************/
@@ -977,10 +1006,8 @@ activated by hamburger.js in static/js directory*/
 }
 
 .search-glass > i {
-  position: absolute;
   top: 50%;
   left: 70%;
-  transform: translate(-50%, -50%);
 }
 
 .vertical-align {
@@ -992,22 +1019,11 @@ activated by hamburger.js in static/js directory*/
   box-shadow: inset 0 5px 9px 0 rgba(0, 0, 0, 0.2), inset 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-.issues-footer {
-  background: #ffffff;
-  height: 40px;
-  border-radius: 0px 0px 10px 10px;
-  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
-}
-
 .issue-row {
   background: #ffffff;
   height: 60px;
   border-radius: 5px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 3px 9px 0 rgba(0, 0, 0, 0.19);
-}
-
-.issue-row > div {
-  display: flex;
 }
 
 .sub-date {
@@ -1036,6 +1052,11 @@ activated by hamburger.js in static/js directory*/
   line-height: 60px;
 }
 
+@media (max-width: 767px) {
+  .issue-dropdown-filters {
+    float: left;
+  }
+}
 .form-search {
   width: calc(100% - 270px);
 }
@@ -1096,6 +1117,13 @@ activated by hamburger.js in static/js directory*/
   border-radius: 0px 7px 7px 0px;
 }
 
+.issues-footer {
+  background: #ffffff;
+  height: 40px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
+}
+
 /**************************************************************************/
 /*USER PAGES*/
 /**************************************************************************/
@@ -1107,53 +1135,6 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-/**************************************************************************/
-/*MEDIA QUERIES*/
-/**************************************************************************/
-.squash {
-  margin-right: 45%;
-  margin-left: 45%;
-}
-
-@media (max-width: 576px) {
-  .squash {
-    margin-right: 30%;
-    margin-left: 30%;
-  }
-}
-@media (max-width: 768px) {
-  .squash {
-    margin-right: 35%;
-    margin-left: 35%;
-  }
-}
-@media (max-width: 992px) {
-  .squash {
-    margin-right: 38%;
-    margin-left: 38%;
-  }
-}
-@media (max-width: 1200px) {
-  .squash {
-    margin-right: 40%;
-    margin-left: 40%;
-  }
-}
-@media (max-width: 767px) {
-  .issue-dropdown-filters {
-    float: left;
-  }
-}
-@media (max-width: 992px) {
-  .dynamic-hide {
-    display: none;
-  }
-}
-@media (max-width: 665px) {
-  .dynamic-hide-small {
-    display: none;
-  }
-}
 /**************************************************************************/
 /*FOOTER*/
 /**************************************************************************/
