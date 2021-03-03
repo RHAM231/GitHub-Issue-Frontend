@@ -1,50 +1,48 @@
-/**************************************************************************/
-/*TABLE OF CONTENTS*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+////////////////////////////////////////////////////////////////////////////
 
-/*
-WEBSITE BODY, FONT, WRAPPER
-CURRENT PATH LINKS
-MEDIA QUERIES
-HEADER
-  NAVBAR
-  NAVBAR CUSTOM BREAKPOINT
-  NAVBAR ANIMATED TOGGLER
-  MASTER SEARCH FORM
-BUTTONS
-  BUTTON STYLES
-    BUTTON STYLES: PARENT CLASSES
-    BUTTON STYLES: CHILD CLASSES
-  BUTTON HOVER EFFECTS
-  BUTTON FOCUS EFFECTS
-BASE PAGES
-  ABOUT
-  HOME
-  SEARCH RESULTS
-PROJECT/FOLDER/FILE PAGES
-  PROJECT CONTENTS
-  PROJECT LIST
-  FOLDER CONTENTS
-  FILE CONTENTS
-ISSUE PAGES
-  ISSUE CREATE
-  ISSUE READ
-  ISSUE UPDATE
-  ISSUE DELETE
-  ISSUE LIST
-USER PAGES
-  LOGIN
-  LOGOUT
-  PROFILE
-  REGISTER
-FOOTER
-*/
+// WEBSITE BODY, FONT, WRAPPER
+// CURRENT PATH LINKS
+// MEDIA QUERIES
+// HEADER
+//   NAVBAR
+//   NAVBAR CUSTOM BREAKPOINT
+//   NAVBAR ANIMATED TOGGLER
+//   MASTER SEARCH FORM
+// BUTTONS
+//   BUTTON STYLES
+//     BUTTON STYLES: PARENT CLASSES
+//     BUTTON STYLES: CHILD CLASSES
+//   BUTTON HOVER EFFECTS
+//   BUTTON FOCUS EFFECTS
+// BASE PAGES
+//   ABOUT
+//   HOME
+//   SEARCH RESULTS
+// PROJECT/FOLDER/FILE PAGES
+//   PROJECT CONTENTS
+//   PROJECT LIST
+//   FOLDER CONTENTS
+//   FILE CONTENTS
+// ISSUE PAGES
+//   ISSUE CREATE
+//   ISSUE READ
+//   ISSUE UPDATE
+//   ISSUE DELETE
+//   ISSUE LIST
+// USER PAGES
+//   LOGIN
+//   LOGOUT
+//   PROFILE
+//   REGISTER
+// FOOTER
 
-/**************************************************************************/
-/*WEBSITE BODY, FONT, WRAPPER*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// WEBSITE BODY, FONT, WRAPPER
+////////////////////////////////////////////////////////////////////////////
 
-/*Sets the default font style for the website*/
+// Sets the default font style for the website
 body, html {
     height: 100%;
     margin: 0;
@@ -55,21 +53,21 @@ body, html {
     color: #232629;
 }
 
-/*Sets the default background color for the website*/
+// Sets the default background color for the website
 .wrapper {
     background: #f6f8fc;
     overflow: auto;
     min-height: 100%;
 }
 
-/*Gets rid of the annoying horizontal scroll bar on the home page*/
+// Gets rid of the annoying horizontal scroll bar on the home page
 .container-no-margin {
   overflow-x: hidden;
 }
 
-/**************************************************************************/
-/*CURRENT PATH LINKS*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// CURRENT PATH LINKS
+////////////////////////////////////////////////////////////////////////////
 
 // Style the current path header at the top of list and detail pages
 .current-path{
@@ -82,15 +80,15 @@ body, html {
   font-weight: bold;
 }
 
-/**************************************************************************/
-/*HEADER*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// HEADER
+////////////////////////////////////////////////////////////////////////////
 
-/**************************************************************************/
-/*----NAVBAR----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----NAVBAR----
+////////////////////////////////////////////////////////////////////////////
 
-/*Set background color and remove default Bootstrap margins and padding*/
+// Set background color and remove default Bootstrap margins and padding
 .navbar {
   background: #FFFFFF;
   -webkit-box-shadow: 0 8px 6px -6px #999;
@@ -124,7 +122,7 @@ body, html {
   transform: translate(-50%, 50%);
 }
 
-/*Style and position the logo*/
+// Style and position the logo
 .navbar-brand{
   color: #000000;
   height: 80px;
@@ -134,7 +132,7 @@ body, html {
   line-height: 80px;
 }
 
-/*Adds margin for the dropdown menu for mobile*/
+// Adds margin for the dropdown menu for mobile
 .navbar-collapse{
   margin: 0px 20px 0px 20px;
 }
@@ -149,7 +147,7 @@ body, html {
   color:#000000;
 }
 
-/*Creates the link hover effect.*/
+// Creates the link hover effect.
 .link-effect::after{
   text-decoration: none;
   color: #000000;
@@ -161,7 +159,7 @@ body, html {
   transition: width .3s;
 }
 
-/*Sets hover effects for the navbar links*/
+// Sets hover effects for the navbar links
 .link-effect:hover::after{
   color: #000000;
   text-decoration: none;
@@ -174,7 +172,7 @@ body, html {
   color: #000000;
 }
 
-/*Sets text color for the drop down items*/
+// Sets text color for the drop down items
 .dropdown-item{
   color: #000000;
   text-align: center;
@@ -186,7 +184,7 @@ body, html {
   background: #3c4ef1;
 }
 
-/*Styles the dropdown menu opened by the toggler to match the navbar */
+// Styles the dropdown menu opened by the toggler to match the navbar
 .dropdown-menu{
   background: #ffffff;
 }
@@ -196,14 +194,14 @@ body, html {
   text-align: center;
 }
 
-/**************************************************************************/
-/*----NAVBAR CUSTOM BREAKPOINT----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----NAVBAR CUSTOM BREAKPOINT----
+////////////////////////////////////////////////////////////////////////////
 
-/*Let's customize the navbar breakpoint to accomodate all our links. We
-use navbar-expand-custom in base.html and then set the breakpoint to a
-value of our choosing. Then we re-apply some CSS to the custom class to
-keep from breaking the navbar.*/
+// Let's customize the navbar breakpoint to accomodate all our links. We
+// use navbar-expand-custom in base.html and then set the breakpoint to a
+// value of our choosing. Then we re-apply some CSS to the custom class to
+// keep from breaking the navbar.
 @media (min-width: 1325px){
   .navbar-expand-custom {
       flex-direction: row;
@@ -238,7 +236,7 @@ keep from breaking the navbar.*/
   }
 }
 
-/* Make our mobile search bar drop to a second line on very small screens */
+// Make our mobile search bar drop to a second line on very small screens
 @media (max-width: 600px) {
   .navbar{
     flex-wrap:wrap;
@@ -278,23 +276,23 @@ keep from breaking the navbar.*/
   }
 }
 
-/**************************************************************************/
-/*----NAVBAR ANIMATED TOGGLER----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----NAVBAR ANIMATED TOGGLER----
+////////////////////////////////////////////////////////////////////////////
 
-/*Sets colorfor the middle hamburger toggler bar*/
+// Sets colorfor the middle hamburger toggler bar
 .navbar-toggler-icon{
   background: #000000;
 }
 
-/*Sets color for the top and bottom hamburger toggler bars*/
+// Sets color for the top and bottom hamburger toggler bars
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   background: #000000;
 }
 
-/*Controls sizing and spacing for the container for the toggler icon
-below. Child element is .navbar-toggler-icon.*/
+// Controls sizing and spacing for the container for the toggler icon
+// below. Child element is .navbar-toggler-icon.
 .navbar-toggler{
   margin: 0px 10px;
   padding: 0px 0px;
@@ -306,7 +304,7 @@ below. Child element is .navbar-toggler-icon.*/
   transition: all .5s ease-in-out;
 }
 
-/*Creates and styles the center bar on the hamburger toggler icon*/
+// Creates and styles the center bar on the hamburger toggler icon
 .navbar-toggler-icon{
   width: 40px;
   height: 5px;
@@ -314,7 +312,7 @@ below. Child element is .navbar-toggler-icon.*/
   transition: all .5s ease-in-out;
 }
 
-/*Creates the top and bottom toggler bars*/
+// Creates the top and bottom toggler bars
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   content: '';
@@ -326,7 +324,7 @@ below. Child element is .navbar-toggler-icon.*/
   transition: all .5s ease-in-out;
 }
 
-/*Positions the top and bottom toggler bars*/
+// Positions the top and bottom toggler bars
 .navbar-toggler-icon::before {
   transform: translateY(-14px);
 }
@@ -334,8 +332,8 @@ below. Child element is .navbar-toggler-icon.*/
   transform: translateY(14px);
 }
 
-/*Set's final orientation for the toggler bars after animation. Animation
-activated by hamburger.js in static/js directory*/
+// Set's final orientation for the toggler bars after animation. Animation
+// activated by hamburger.js in static/js directory
 .navbar-toggler.open .navbar-toggler-icon {
   transform: translateX(-50px);
   background: transparent;
@@ -348,15 +346,15 @@ activated by hamburger.js in static/js directory*/
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-/*Removes Bootstrap's default outline from the toggler*/
+// Removes Bootstrap's default outline from the toggler
 .navbar-toggler:focus,.navbar-toggler:active {
    outline: none;
    box-shadow: none;
 }
 
-/**************************************************************************/
-/*----MASTER SEARCH FORM----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----MASTER SEARCH FORM----
+////////////////////////////////////////////////////////////////////////////
 
 // Set login link style in the navbar
 .login-out-link{
@@ -396,17 +394,17 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0px 0px 15px rgba(60, 78, 241, 0.6);
 }
 
-/**************************************************************************/
-/*BUTTONS*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// BUTTONS
+////////////////////////////////////////////////////////////////////////////
 
-/**************************************************************************/
-/*----BUTTON STYLES----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----BUTTON STYLES----
+////////////////////////////////////////////////////////////////////////////
 
-/**************************************************************************/
-/*--------BUTTON STYLES: PARENT CLASSES----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// --------BUTTON STYLES: PARENT CLASSES----
+////////////////////////////////////////////////////////////////////////////
 
 // Hide the default html button element
 .hide-button{
@@ -455,9 +453,9 @@ activated by hamburger.js in static/js directory*/
   transform: translate(-50%, -50%);
 }
 
-/**************************************************************************/
-/*--------BUTTON STYLES: CHILD CLASSES----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// --------BUTTON STYLES: CHILD CLASSES----
+////////////////////////////////////////////////////////////////////////////
 
 // Instantiate issue buttons
 .edit-issue-button, .new-issue-button, .issue-button{
@@ -512,8 +510,8 @@ activated by hamburger.js in static/js directory*/
   border: none;
 }
 
-// Create the buttons with issue counts on the project, folder, and file list pages
-// Inherit from button position styles above
+// Create the buttons with issue counts on the project, folder, and file
+// list pages. Inherit from button position styles above
 .project-button, .folder-file-button{
   @extend .button-position-rel;
 }
@@ -561,9 +559,9 @@ activated by hamburger.js in static/js directory*/
   font-size: 12px;
 }
 
-/**************************************************************************/
-/*----BUTTON HOVER EFFECTS----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----BUTTON HOVER EFFECTS----
+////////////////////////////////////////////////////////////////////////////
 
 // Remove default hover styles for the buttons
 .delete-button:hover, .close-button:hover, .sign-up-button:hover,
@@ -594,9 +592,9 @@ activated by hamburger.js in static/js directory*/
   outline: none;
 }
 
-/**************************************************************************/
-/*----BUTTON FOCUS EFFECTS----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----BUTTON FOCUS EFFECTS----
+////////////////////////////////////////////////////////////////////////////
 
 // Remove default focus effect for buttons
 .form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
@@ -606,13 +604,13 @@ activated by hamburger.js in static/js directory*/
   box-shadow: none;
 }
 
-/**************************************************************************/
-/*BASE PAGES*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// BASE PAGES
+////////////////////////////////////////////////////////////////////////////
 
-/**************************************************************************/
-/*----ABOUT----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----ABOUT----
+////////////////////////////////////////////////////////////////////////////
 
 // Style the logos on the about page
 .logo-box{
@@ -634,15 +632,15 @@ activated by hamburger.js in static/js directory*/
   width: 50%;
 }
 
-/**************************************************************************/
-/*----HOME----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----HOME----
+////////////////////////////////////////////////////////////////////////////
 
 
 
-/**************************************************************************/
-/*----SEARCH RESULTS----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----SEARCH RESULTS----
+////////////////////////////////////////////////////////////////////////////
 
 // Create and style the results tiles on the search results page
 .results-tile-container{
@@ -688,7 +686,7 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
 }
 
-/*Styles and positions the title text within the tile*/
+// Styles and positions the title text within the tile
 .results-tile-title{
   @extend .button-position-abs;
   font-size: 18px;
@@ -696,7 +694,7 @@ activated by hamburger.js in static/js directory*/
   left: 37%;
 }
 
-/*Styles and positions the description text within the tile*/
+// Styles and positions the description text within the tile
 .results-tile-description{
   @extend .button-position-abs;
   font-size: 14px;
@@ -726,13 +724,13 @@ activated by hamburger.js in static/js directory*/
   }
 }
 
-/**************************************************************************/
-/*PROJECT/FOLDER/FILE PAGES*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// PROJECT/FOLDER/FILE PAGES
+////////////////////////////////////////////////////////////////////////////
 
-/**************************************************************************/
-/*----PROJECT & FOLDER CONTENTS----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----PROJECT & FOLDER CONTENTS----
+////////////////////////////////////////////////////////////////////////////
 
 // Create an inheritance class for the below elements
 .inline-block-relative{
@@ -801,9 +799,9 @@ activated by hamburger.js in static/js directory*/
 }
 
 
-/**************************************************************************/
-/*----PROJECT LIST----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----PROJECT LIST----
+////////////////////////////////////////////////////////////////////////////
 
 // Overide height on the project box class above
 .project-box{
@@ -872,9 +870,9 @@ activated by hamburger.js in static/js directory*/
   transform: translate(50%, 50%);
 }
 
-/**************************************************************************/
-/*----FILE CONTENTS----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----FILE CONTENTS----
+////////////////////////////////////////////////////////////////////////////
 
 // Create the top level html element for file contents so we can apply a
 // box-shadow property to the entire set of rows without it looking weird
@@ -970,13 +968,13 @@ activated by hamburger.js in static/js directory*/
   .dynamic-hide-small {display: none;}
 }
 
-/**************************************************************************/
-/*ISSUE PAGES*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ISSUE PAGES
+////////////////////////////////////////////////////////////////////////////
 
-/**************************************************************************/
-/*----ISSUE CREATE AND UPDATE----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----ISSUE CREATE AND UPDATE----
+////////////////////////////////////////////////////////////////////////////
 
 // Style the top level html element for the form
 .form-box{
@@ -1055,10 +1053,11 @@ activated by hamburger.js in static/js directory*/
   border-radius: 0px 7px 7px 0px;
 }
 
-/**************************************************************************/
-/*----ISSUE READ----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----ISSUE READ----
+////////////////////////////////////////////////////////////////////////////
 
+// Style the issue state tabs on the issue detail page
 .issue-open, .issue-closed{
   background: #3c4ef1;
   color: #ffffff;
@@ -1073,10 +1072,11 @@ activated by hamburger.js in static/js directory*/
   width: 100px;
 }
 
-/**************************************************************************/
-/*----ISSUE DELETE----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----ISSUE DELETE----
+////////////////////////////////////////////////////////////////////////////
 
+// Create and style the delete icon on the issues delete page
 .delete-icon{
   height: 60px;
   width: 60px;
@@ -1088,9 +1088,9 @@ activated by hamburger.js in static/js directory*/
   background: #c90000;
 }
 
-/**************************************************************************/
-/*----ISSUE LIST----*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// ----ISSUE LIST----
+////////////////////////////////////////////////////////////////////////////
 
 // Style the headers at the top of the issue list box
 .issues-header{
@@ -1268,9 +1268,9 @@ activated by hamburger.js in static/js directory*/
 }
 
 
-/**************************************************************************/
-/*USER PAGES*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// USER PAGES
+////////////////////////////////////////////////////////////////////////////
 
 // Add some styling to the user forms: login, logout, register, and profile
 .content-section {
@@ -1281,22 +1281,22 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 5px 9px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.19);
 }
 
-/**************************************************************************/
-/*FOOTER*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// FOOTER
+////////////////////////////////////////////////////////////////////////////
 
-/*Sets footer size and color*/
+// Sets footer size and color
 .footer {
   background: #3c4ef1;
   height: 200px;
 }
 
-/*Sets footer text color and centers it*/
+// Sets footer text color and centers it
 footer .footer-text {
   color: #FFFFFF;
   text-align: center;
 }
 
-/**************************************************************************/
-/*END*/
-/**************************************************************************/
+////////////////////////////////////////////////////////////////////////////
+// END
+////////////////////////////////////////////////////////////////////////////

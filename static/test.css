@@ -1,47 +1,3 @@
-/**************************************************************************/
-/*TABLE OF CONTENTS*/
-/**************************************************************************/
-/*
-WEBSITE BODY, FONT, WRAPPER
-CURRENT PATH LINKS
-MEDIA QUERIES
-HEADER
-  NAVBAR
-  NAVBAR CUSTOM BREAKPOINT
-  NAVBAR ANIMATED TOGGLER
-  MASTER SEARCH FORM
-BUTTONS
-  BUTTON STYLES
-    BUTTON STYLES: PARENT CLASSES
-    BUTTON STYLES: CHILD CLASSES
-  BUTTON HOVER EFFECTS
-  BUTTON FOCUS EFFECTS
-BASE PAGES
-  ABOUT
-  HOME
-  SEARCH RESULTS
-PROJECT/FOLDER/FILE PAGES
-  PROJECT CONTENTS
-  PROJECT LIST
-  FOLDER CONTENTS
-  FILE CONTENTS
-ISSUE PAGES
-  ISSUE CREATE
-  ISSUE READ
-  ISSUE UPDATE
-  ISSUE DELETE
-  ISSUE LIST
-USER PAGES
-  LOGIN
-  LOGOUT
-  PROFILE
-  REGISTER
-FOOTER
-*/
-/**************************************************************************/
-/*WEBSITE BODY, FONT, WRAPPER*/
-/**************************************************************************/
-/*Sets the default font style for the website*/
 body, html {
   height: 100%;
   margin: 0;
@@ -52,21 +8,16 @@ body, html {
   color: #232629;
 }
 
-/*Sets the default background color for the website*/
 .wrapper {
   background: #f6f8fc;
   overflow: auto;
   min-height: 100%;
 }
 
-/*Gets rid of the annoying horizontal scroll bar on the home page*/
 .container-no-margin {
   overflow-x: hidden;
 }
 
-/**************************************************************************/
-/*CURRENT PATH LINKS*/
-/**************************************************************************/
 .current-path {
   font-size: 22px;
 }
@@ -76,13 +27,6 @@ body, html {
   font-weight: bold;
 }
 
-/**************************************************************************/
-/*HEADER*/
-/**************************************************************************/
-/**************************************************************************/
-/*----NAVBAR----*/
-/**************************************************************************/
-/*Set background color and remove default Bootstrap margins and padding*/
 .navbar {
   background: #FFFFFF;
   -webkit-box-shadow: 0 8px 6px -6px #999;
@@ -113,7 +57,6 @@ body, html {
   transform: translate(-50%, 50%);
 }
 
-/*Style and position the logo*/
 .navbar-brand {
   color: #000000;
   height: 80px;
@@ -123,7 +66,6 @@ body, html {
   line-height: 80px;
 }
 
-/*Adds margin for the dropdown menu for mobile*/
 .navbar-collapse {
   margin: 0px 20px 0px 20px;
 }
@@ -136,7 +78,6 @@ body, html {
   color: #000000;
 }
 
-/*Creates the link hover effect.*/
 .link-effect::after {
   text-decoration: none;
   color: #000000;
@@ -148,7 +89,6 @@ body, html {
   transition: width 0.3s;
 }
 
-/*Sets hover effects for the navbar links*/
 .link-effect:hover::after {
   color: #000000;
   text-decoration: none;
@@ -160,7 +100,6 @@ body, html {
   color: #000000;
 }
 
-/*Sets text color for the drop down items*/
 .dropdown-item {
   color: #000000;
   text-align: center;
@@ -171,7 +110,6 @@ body, html {
   background: #3c4ef1;
 }
 
-/*Styles the dropdown menu opened by the toggler to match the navbar */
 .dropdown-menu {
   background: #ffffff;
 }
@@ -180,13 +118,6 @@ body, html {
   text-align: center;
 }
 
-/**************************************************************************/
-/*----NAVBAR CUSTOM BREAKPOINT----*/
-/**************************************************************************/
-/*Let's customize the navbar breakpoint to accomodate all our links. We
-use navbar-expand-custom in base.html and then set the breakpoint to a
-value of our choosing. Then we re-apply some CSS to the custom class to
-keep from breaking the navbar.*/
 @media (min-width: 1325px) {
   .navbar-expand-custom {
     flex-direction: row;
@@ -224,7 +155,6 @@ keep from breaking the navbar.*/
     display: none;
   }
 }
-/* Make our mobile search bar drop to a second line on very small screens */
 @media (max-width: 600px) {
   .navbar {
     flex-wrap: wrap;
@@ -274,22 +204,15 @@ keep from breaking the navbar.*/
     margin-left: 40%;
   }
 }
-/**************************************************************************/
-/*----NAVBAR ANIMATED TOGGLER----*/
-/**************************************************************************/
-/*Sets colorfor the middle hamburger toggler bar*/
 .navbar-toggler-icon {
   background: #000000;
 }
 
-/*Sets color for the top and bottom hamburger toggler bars*/
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   background: #000000;
 }
 
-/*Controls sizing and spacing for the container for the toggler icon
-below. Child element is .navbar-toggler-icon.*/
 .navbar-toggler {
   margin: 0px 10px;
   padding: 0px 0px;
@@ -301,7 +224,6 @@ below. Child element is .navbar-toggler-icon.*/
   transition: all 0.5s ease-in-out;
 }
 
-/*Creates and styles the center bar on the hamburger toggler icon*/
 .navbar-toggler-icon {
   width: 40px;
   height: 5px;
@@ -309,7 +231,6 @@ below. Child element is .navbar-toggler-icon.*/
   transition: all 0.5s ease-in-out;
 }
 
-/*Creates the top and bottom toggler bars*/
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   content: "";
@@ -321,7 +242,6 @@ below. Child element is .navbar-toggler-icon.*/
   transition: all 0.5s ease-in-out;
 }
 
-/*Positions the top and bottom toggler bars*/
 .navbar-toggler-icon::before {
   transform: translateY(-14px);
 }
@@ -330,8 +250,6 @@ below. Child element is .navbar-toggler-icon.*/
   transform: translateY(14px);
 }
 
-/*Set's final orientation for the toggler bars after animation. Animation
-activated by hamburger.js in static/js directory*/
 .navbar-toggler.open .navbar-toggler-icon {
   transform: translateX(-50px);
   background: transparent;
@@ -346,15 +264,11 @@ activated by hamburger.js in static/js directory*/
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-/*Removes Bootstrap's default outline from the toggler*/
 .navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
   box-shadow: none;
 }
 
-/**************************************************************************/
-/*----MASTER SEARCH FORM----*/
-/**************************************************************************/
 .login-out-link {
   color: #000000;
   line-height: 40px;
@@ -387,15 +301,6 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0px 0px 15px rgba(60, 78, 241, 0.6);
 }
 
-/**************************************************************************/
-/*BUTTONS*/
-/**************************************************************************/
-/**************************************************************************/
-/*----BUTTON STYLES----*/
-/**************************************************************************/
-/**************************************************************************/
-/*--------BUTTON STYLES: PARENT CLASSES----*/
-/**************************************************************************/
 .hide-button {
   display: none;
 }
@@ -437,9 +342,6 @@ activated by hamburger.js in static/js directory*/
   transform: translate(-50%, -50%);
 }
 
-/**************************************************************************/
-/*--------BUTTON STYLES: CHILD CLASSES----*/
-/**************************************************************************/
 .new-issue-button {
   width: 120px;
 }
@@ -514,9 +416,6 @@ activated by hamburger.js in static/js directory*/
   font-size: 12px;
 }
 
-/**************************************************************************/
-/*----BUTTON HOVER EFFECTS----*/
-/**************************************************************************/
 .delete-button:hover, .close-button:hover, .sign-up-button:hover,
 .form-button:hover, .form-button-cancel:hover, .issue-button:hover,
 .new-issue-button:hover, .issues-count-btn:hover {
@@ -544,9 +443,6 @@ activated by hamburger.js in static/js directory*/
   outline: none;
 }
 
-/**************************************************************************/
-/*----BUTTON FOCUS EFFECTS----*/
-/**************************************************************************/
 .form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
 .delete-button:focus, .close-button:focus, .issue-button:focus,
 .new-issue-button:focus, .issues-count-btn:focus {
@@ -554,12 +450,6 @@ activated by hamburger.js in static/js directory*/
   box-shadow: none;
 }
 
-/**************************************************************************/
-/*BASE PAGES*/
-/**************************************************************************/
-/**************************************************************************/
-/*----ABOUT----*/
-/**************************************************************************/
 .logo-box {
   width: 120px;
   height: 100px;
@@ -579,12 +469,6 @@ activated by hamburger.js in static/js directory*/
   width: 50%;
 }
 
-/**************************************************************************/
-/*----HOME----*/
-/**************************************************************************/
-/**************************************************************************/
-/*----SEARCH RESULTS----*/
-/**************************************************************************/
 .results-tile-container {
   height: 80px;
   width: 400px;
@@ -623,14 +507,12 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-/*Styles and positions the title text within the tile*/
 .results-tile-title {
   font-size: 18px;
   top: 50%;
   left: 37%;
 }
 
-/*Styles and positions the description text within the tile*/
 .results-tile-description {
   font-size: 14px;
   white-space: nowrap;
@@ -655,12 +537,6 @@ activated by hamburger.js in static/js directory*/
     justify-content: center;
   }
 }
-/**************************************************************************/
-/*PROJECT/FOLDER/FILE PAGES*/
-/**************************************************************************/
-/**************************************************************************/
-/*----PROJECT & FOLDER CONTENTS----*/
-/**************************************************************************/
 .inline-block-relative, .project-header, .folder-file-date, .icon-tab,
 .icon-tab-folder-file, .folder-file-header {
   display: inline-block;
@@ -717,9 +593,6 @@ activated by hamburger.js in static/js directory*/
   left: -50%;
 }
 
-/**************************************************************************/
-/*----PROJECT LIST----*/
-/**************************************************************************/
 .project-box {
   height: 120px;
 }
@@ -777,9 +650,6 @@ activated by hamburger.js in static/js directory*/
   transform: translate(50%, 50%);
 }
 
-/**************************************************************************/
-/*----FILE CONTENTS----*/
-/**************************************************************************/
 .file-contents-box {
   border-radius: 10px;
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
@@ -862,12 +732,6 @@ activated by hamburger.js in static/js directory*/
     display: none;
   }
 }
-/**************************************************************************/
-/*ISSUE PAGES*/
-/**************************************************************************/
-/**************************************************************************/
-/*----ISSUE CREATE AND UPDATE----*/
-/**************************************************************************/
 .form-box {
   background: #ffffff;
   border-radius: 15px;
@@ -935,9 +799,6 @@ activated by hamburger.js in static/js directory*/
   border-radius: 0px 7px 7px 0px;
 }
 
-/**************************************************************************/
-/*----ISSUE READ----*/
-/**************************************************************************/
 .issue-open, .issue-closed {
   background: #3c4ef1;
   color: #ffffff;
@@ -952,9 +813,6 @@ activated by hamburger.js in static/js directory*/
   width: 100px;
 }
 
-/**************************************************************************/
-/*----ISSUE DELETE----*/
-/**************************************************************************/
 .delete-icon {
   height: 60px;
   width: 60px;
@@ -966,9 +824,6 @@ activated by hamburger.js in static/js directory*/
   background: #c90000;
 }
 
-/**************************************************************************/
-/*----ISSUE LIST----*/
-/**************************************************************************/
 .issues-header {
   background: #ffffff;
   border-radius: 10px 10px 0px 0px;
@@ -984,17 +839,17 @@ activated by hamburger.js in static/js directory*/
     height: 120px;
   }
 }
-.issue-tab > i, .issue-tab > a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
 .issue-tab {
   width: 75px;
   height: 30px;
   position: relative;
   background: #3c4ef1;
   border-radius: 5px 5px 5px 5px;
+}
+
+.issue-tab > i, .issue-tab > a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .search-glass {
@@ -1038,10 +893,6 @@ activated by hamburger.js in static/js directory*/
 
 .check-center {
   line-height: 30px;
-}
-
-.inline {
-  display: inline-block;
 }
 
 .issue-dropdown-filters {
@@ -1124,9 +975,6 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-/**************************************************************************/
-/*USER PAGES*/
-/**************************************************************************/
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
@@ -1135,23 +983,14 @@ activated by hamburger.js in static/js directory*/
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.19);
 }
 
-/**************************************************************************/
-/*FOOTER*/
-/**************************************************************************/
-/*Sets footer size and color*/
 .footer {
   background: #3c4ef1;
   height: 200px;
 }
 
-/*Sets footer text color and centers it*/
 footer .footer-text {
   color: #FFFFFF;
   text-align: center;
 }
-
-/**************************************************************************/
-/*END*/
-/**************************************************************************/
 
 /*# sourceMappingURL=test.css.map */
