@@ -245,6 +245,7 @@ body, html {
     width: 100%;
     order: 3;
     text-align: center;
+    height: 60px;
   }
   #id_master_search{
     margin-right: 0px;
@@ -1103,9 +1104,34 @@ body, html {
   height: 60px;
 }
 
+// Make the search field take up all the available screen width
+.form-search{
+  width: calc(100% - 260px);
+}
+
+.line-break {
+  height: 0;
+}
+
+.header-btn-container{
+  padding-left: 25px;
+}
+
+// Rearrange the new issue button and issue search bar for mobile
 @media(max-width:767px){
+  .header-top{
+    height: 130px;
+  }
+  .line-break {
+    flex-basis: 100%;
+    height: 0;
+  }
   .header-btn-container{
-    order: 1;
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  .form-search{
+    width: calc(100% - 130px);
   }
 }
 
@@ -1205,11 +1231,6 @@ body, html {
   .issue-dropdown-filters{
     float: left;
   }
-}
-
-// Make the search field take up all the available screen width
-.form-search{
-  width: calc(100% - 270px);
 }
 
 // Style the search field

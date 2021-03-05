@@ -164,6 +164,7 @@ body, html {
     width: 100%;
     order: 3;
     text-align: center;
+    height: 60px;
   }
 
   #id_master_search {
@@ -834,9 +835,35 @@ body, html {
   height: 60px;
 }
 
+.form-search {
+  width: calc(100% - 260px);
+}
+
+.line-break {
+  height: 0;
+}
+
+.header-btn-container {
+  padding-left: 25px;
+}
+
 @media (max-width: 767px) {
+  .header-top {
+    height: 130px;
+  }
+
+  .line-break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
   .header-btn-container {
-    order: 1;
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  .form-search {
+    width: calc(100% - 130px);
   }
 }
 .header-bottom > div {
@@ -918,10 +945,6 @@ body, html {
     float: left;
   }
 }
-.form-search {
-  width: calc(100% - 270px);
-}
-
 .issue-search {
   width: 100%;
   height: 40px;

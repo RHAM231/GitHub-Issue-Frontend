@@ -21,13 +21,14 @@
       <div class="col-md-10 col-md-offset-1 col-sm-12 mx-auto">
         <div class="issues-header">
           <div class="row mx-0 border-bottom header-top">
-            <div class="col-12 my-auto mx-auto d-flex">
+            <div class="col-12 my-auto mx-auto d-flex flex-wrap">
               <div class="form-filter">{{ form.filters }}</div>
               <div class="search-glass">
                 <i class="fas fa-search"></i>
               </div>
               <div class="form-search">{{ form.search }}</div>
-              <div class="header-btn-container float-right mx-auto">
+              <div class="line-break"></div>
+              <div class="row header-btn-container float-right">
                 <a href="{% url 'issue-create' %}" class="new-issue-button">New Issue</a>
               </div>
             </div>
