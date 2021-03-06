@@ -306,7 +306,7 @@ body, html {
   display: none;
 }
 
-.button-style-global, .button-search, .delete-button, .sign-up-button, .form-button-cancel, .form-button, .close-button, .edit-issue-button, .new-issue-button, .issue-button {
+.button-style-global, .button-sync, .button-search, .delete-button, .sign-up-button, .form-button-cancel, .form-button, .close-button, .edit-issue-button, .new-issue-button, .issue-button {
   height: 40px;
   border-radius: 7px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 6px 0 rgba(0, 0, 0, 0.15);
@@ -468,6 +468,37 @@ body, html {
 
 .DRF-resize {
   width: 50%;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.site-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.site-subtitle {
+  font-size: 20px;
+}
+
+.description {
+  color: #ffffff;
+  background: #1d1b4b;
+  text-align: center;
+}
+
+.dashboard {
+  text-align: center;
+}
+
+.button-sync {
+  width: 220px;
+  border: none;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(190, 190, 190, 0.6);
 }
 
 .results-tile-container {

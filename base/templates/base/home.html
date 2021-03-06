@@ -5,63 +5,48 @@
 
 <div class="container-no-margin">
 
-<div class="pimgintro">
-<div class="container-parallax">
-  <div class="row mt-5 mb-5 py-5"></div>
-  <div class="row d-flex justify-content-center py-3">
-    <div class="ptext">
-      <span class="align-text-middle">Welcome to my website!</span>
+  <section class="section welcome">
+    <div class="row mt-5 mb-5"></div>
+    <div class="row mt-5 mb-5"></div>
+    <div class="row mt-5 mb-5">
+      <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+        <a class="site-title my-3">Welcome to Issue Tracker</a><br>
+        <a class="site-subtitle py-3 my-3">A GitHub integrated project management application</a>
+      </div>
     </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="ptext-sub my-auto">
-      <span class="align-text-middle">
-        <p>Check out my projects below</p>
-        <p>or read more about me</p>
-      </span>
+    <div class="row mt-5 mb-5"></div>
+  </section>
+
+  <section class="section description">
+    <div class="row py-5 my-5 mx-5">
+      <div class="col-12">
+        <a>
+          Issue Tracker clones some of GitHub's issue tracking features and adds the ability
+          to flag issues against individual projects, folders, and files, down to individual lines of code.
+        </a><br>
+        <a>
+          Synchronize a project from GitHub or check out an existing project.
+        </a><br>
+        <button class="button-sync my-2 my-sm-0" type="submit">Synchronize Project</button><br>
+        <a>
+          When synchronizing It's recomended to use a dummy project
+        </a><br>
+      </div>
     </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="ptext-sub my-auto">
-      <span class="align-text-middle">
-        <a href="" class="link-btn-light">here</a>
-      </span>
-    </div>
-  </div>
-</div>
-</div>
+  </section>
 
-<section class="section section-intro">
-  <h2>Here's What I Know</h2>
-</section>
-
-Welcome to GitHub integrated Issue Tracker. This application
-clones some of GitHub's issue tracking features and adds the ability
-to flag issues against individual projects, folders, files, and lines of code.
-
-Synchronize a project from GitHub or check out an existing project.
-
-When synchronizing It's recomended to use a dummy project
-
-<div class="pimgintro">
-<div class="container-parallax">
-  <div class="row py-5"></div>
-  <div class="row d-flex justify-content-center py-3">
-    <div class="ptext">
-    <span class="align-text-middle">See something you like?</span>
-    </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="ptext-sub my-auto">
-      <span class="align-text-middle">
-        <p>Check out my GitHub</p>
-      </span>
-    </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-  </div>
-</div>
-</div>
+  <section class="section dashboard">
+    <a>
+      Issue Tracker clones some of GitHub's issue tracking features and adds the ability
+      to flag issues against individual projects, folders, files, and lines of code.
+    </a><br>
+    <a>
+      Synchronize a project from GitHub or check out an existing project.
+    </a><br>
+    <a>
+      When synchronizing It's recomended to use a dummy project
+    </a><br>
+  </section>
 
 </div>
 {% endblock content %}

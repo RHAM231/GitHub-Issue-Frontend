@@ -637,7 +637,41 @@ body, html {
 // ----HOME----
 ////////////////////////////////////////////////////////////////////////////
 
+.welcome{
+  // color: #ffffff;
+  // background: #0f0e1e;
+  text-align: center;
+}
 
+.site-title{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.site-subtitle{
+  font-size: 20px;
+}
+
+.description{
+  color: #ffffff;
+  background: #1d1b4b;
+  text-align: center;
+}
+
+.dashboard{
+  // color: #ffffff;
+  // background: #0f0e1e;
+  text-align: center;
+}
+
+.button-sync{
+  @extend .button-style-global;
+  width: 220px;
+  border: none;
+  background: #3c4ef1;
+  color: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(190, 190, 190, 0.6);
+}
 
 ////////////////////////////////////////////////////////////////////////////
 // ----SEARCH RESULTS----
