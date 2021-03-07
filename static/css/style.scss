@@ -654,6 +654,17 @@ body, html {
   font-size: 24px;
 }
 
+@media(max-width:600px){
+  .site-title{
+    line-height: 40px;
+    font-size: 40px;
+  }
+  .site-subtitle{
+    line-height: 20px;
+    font-size: 20px;
+  }
+}
+
 .description{
   color: #ffffff;
   background: #1d1b4b;
@@ -694,8 +705,8 @@ body, html {
     font-size: 40px;
   }
   .tracking-text{
-    line-height: 35px;
-    font-size: 35px;
+    line-height: 25px;
+    font-size: 25px;
   }
 }
 
@@ -1410,6 +1421,10 @@ footer .footer-text {
   text-align: center;
 }
 
+.footer-text > a, .footer-text > i{
+  line-height: 26px;
+}
+
 .footer-link{
   color: #000000;
   font-weight: bold;
@@ -1418,6 +1433,10 @@ footer .footer-text {
 .footer-link:hover{
   color: #ffffff;
   // text-decoration: none;
+}
+
+.footer-icon{
+  font-size: 26px;
 }
 
 ////////////////////////////////////////////////////////////////////////////
