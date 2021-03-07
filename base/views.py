@@ -8,7 +8,11 @@ from .forms import UserRegisterForm
 # Create your views here.
 def home(request):
     context = {
-        'title': 'Home'
+        'title': 'Home',
+        'project_count': 1,
+        'folder_count': 12,
+        'file_count': 37,
+        'issue_count': 63,
     }
     return render(request, 'base/home.html', context)
 

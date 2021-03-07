@@ -475,12 +475,12 @@ body, html {
 }
 
 .site-title {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
 }
 
 .site-subtitle {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .description {
@@ -489,16 +489,46 @@ body, html {
   text-align: center;
 }
 
+.description-text {
+  font-size: 20px;
+}
+
 .dashboard {
   text-align: center;
 }
 
+.dash-panel {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.tracking-header {
+  font-size: 55px;
+  font-weight: 700;
+  color: #3c4ef1;
+}
+
+.tracking-text {
+  font-size: 50px;
+  color: #3c4ef1;
+}
+
 .button-sync {
+  font-size: 20px;
+  height: 45px;
   width: 220px;
   border: none;
   background: #3c4ef1;
   color: #FFFFFF;
+}
+
+.button-sync:hover {
   box-shadow: 0px 0px 15px rgba(190, 190, 190, 0.6);
+}
+
+.button-sync:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .results-tile-container {
@@ -1049,12 +1079,21 @@ body, html {
 
 .footer {
   background: #3c4ef1;
-  height: 200px;
+  height: 250px;
 }
 
 footer .footer-text {
   color: #FFFFFF;
   text-align: center;
+}
+
+.footer-link {
+  color: #000000;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
