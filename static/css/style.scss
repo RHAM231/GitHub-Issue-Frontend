@@ -645,10 +645,12 @@ body, html {
 
 .site-title{
   font-size: 60px;
+  line-height: 60px;
   font-weight: bold;
 }
 
 .site-subtitle{
+  line-height: 24px;
   font-size: 24px;
 }
 
@@ -675,13 +677,26 @@ body, html {
 
 .tracking-header{
   font-size: 55px;
+  line-height: 55px;
   font-weight: 700;
   color:#3c4ef1;
 }
 
 .tracking-text{
+  line-height: 50px;
   font-size: 50px;
   color:#3c4ef1;
+}
+
+@media(max-width:600px){
+  .tracking-header {
+    line-height: 40px;
+    font-size: 40px;
+  }
+  .tracking-text{
+    line-height: 35px;
+    font-size: 35px;
+  }
 }
 
 .button-sync{
