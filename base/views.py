@@ -17,6 +17,14 @@ def home(request):
     return render(request, 'base/home.html', context)
 
 
+def confirm_sync(request):
+    return render(request, 'base/confirm_sync.html')
+
+
+def sync_success(request):
+    return render(request, 'base/sync_success.html')
+
+
 def search_results(request):
     context = {
         'title': 'Search Results'

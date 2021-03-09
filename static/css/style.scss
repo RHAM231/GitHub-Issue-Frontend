@@ -19,6 +19,7 @@
 // BASE PAGES
 //   ABOUT
 //   HOME
+//   CONFIRM SYNC
 //   SEARCH RESULTS
 // PROJECT/FOLDER/FILE PAGES
 //   PROJECT CONTENTS
@@ -714,6 +715,7 @@ body, html {
   @extend .button-style-global;
   font-size: 20px;
   height: 45px;
+  line-height: 45px;
   width: 220px;
   border: none;
   background: #3c4ef1;
@@ -722,12 +724,43 @@ body, html {
 
 .button-sync:hover{
   box-shadow: 0px 0px 15px rgba(190, 190, 190, 0.6);
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .button-sync:focus{
   outline: none;
   box-shadow: none;
 }
+
+////////////////////////////////////////////////////////////////////////////
+// ----CONFIRM SYNC----
+////////////////////////////////////////////////////////////////////////////
+
+// Create and style the delete icon on the issues delete page
+.sync-icon{
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  background: #3c4ef1;
+}
+
+// Create and style the delete icon on the issues delete page
+.sync-success-icon{
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  background: #009926;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////
 // ----SEARCH RESULTS----

@@ -542,6 +542,7 @@ body, html {
 .button-sync {
   font-size: 20px;
   height: 45px;
+  line-height: 45px;
   width: 220px;
   border: none;
   background: #3c4ef1;
@@ -550,11 +551,35 @@ body, html {
 
 .button-sync:hover {
   box-shadow: 0px 0px 15px rgba(190, 190, 190, 0.6);
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .button-sync:focus {
   outline: none;
   box-shadow: none;
+}
+
+.sync-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  background: #3c4ef1;
+}
+
+.sync-success-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 60px;
+  background: #009926;
 }
 
 .results-tile-container {

@@ -36,7 +36,10 @@
           <a class=description-text>Synchronize a project from GitHub or check out the existing sample project.</a>
         </div>
         <div class="row py-2 justify-content-center">
-          <button class="button-sync my-2 my-sm-0" type="submit">Synchronize Project</button>
+          <!-- <button class="button-sync my-2 my-sm-0" type="submit">Synchronize Project</button> -->
+          <div class="row">
+            <a href="{% url 'confirm-sync' %}" class="button-sync">Synchronize Project</a>
+          </div>
         </div>
       </div>
     </div>
