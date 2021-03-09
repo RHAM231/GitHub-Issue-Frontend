@@ -601,7 +601,7 @@ body, html {
 // Remove default focus effect for buttons
 .form-button-cancel:focus, .sign-up-button:focus, .form-button:focus,
 .delete-button:focus, .close-button:focus, .issue-button:focus,
-.new-issue-button:focus, .issues-count-btn:focus{
+.new-issue-button:focus, .issues-count-btn:focus, .button-sync:focus{
   outline: none;
   box-shadow: none;
 }
@@ -638,9 +638,8 @@ body, html {
 // ----HOME----
 ////////////////////////////////////////////////////////////////////////////
 
+// Style the home page sections
 .welcome{
-  // color: #ffffff;
-  // background: #0f0e1e;
   text-align: center;
 }
 
@@ -655,6 +654,7 @@ body, html {
   font-size: 24px;
 }
 
+// Shrink the header text for smaller devices
 @media(max-width:600px){
   .site-title{
     line-height: 40px;
@@ -677,8 +677,6 @@ body, html {
 }
 
 .dashboard{
-  // color: #ffffff;
-  // background: #0f0e1e;
   text-align: center;
 }
 
@@ -716,7 +714,7 @@ body, html {
   font-size: 20px;
   height: 45px;
   line-height: 45px;
-  width: 220px;
+  width: 260px;
   border: none;
   background: #3c4ef1;
   color: #FFFFFF;
@@ -728,17 +726,13 @@ body, html {
   color: #ffffff;
 }
 
-.button-sync:focus{
-  outline: none;
-  box-shadow: none;
-}
-
 ////////////////////////////////////////////////////////////////////////////
 // ----CONFIRM SYNC----
 ////////////////////////////////////////////////////////////////////////////
 
-// Create and style the delete icon on the issues delete page
-.sync-icon{
+// Create a circular symbol with related icon for delete, sync, and success
+// icons
+.circular-icon{
   height: 60px;
   width: 60px;
   border-radius: 30px;
@@ -746,18 +740,16 @@ body, html {
   font-size: 32px;
   text-align: center;
   line-height: 60px;
+}
+
+// Style the sync and sync success icons on their respective pages
+.sync-icon{
+  @extend .circular-icon;
   background: #3c4ef1;
 }
 
-// Create and style the delete icon on the issues delete page
 .sync-success-icon{
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
-  color: #ffffff;
-  font-size: 32px;
-  text-align: center;
-  line-height: 60px;
+  @extend .circular-icon;
   background: #009926;
 }
 
@@ -1201,14 +1193,9 @@ body, html {
 ////////////////////////////////////////////////////////////////////////////
 
 // Create and style the delete icon on the issues delete page
+// Extend the circular-icon class from the sync pages
 .delete-icon{
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
-  color: #ffffff;
-  font-size: 32px;
-  text-align: center;
-  line-height: 60px;
+  @extend .circular-icon;
   background: #c90000;
 }
 
